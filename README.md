@@ -140,7 +140,7 @@ module.exports = {
 }
 ```
 
-#### 4. Start coding 🏁
+#### 6. Start coding 🏁
 - create `src` folder
 - create `src/index.js` file
 
@@ -422,8 +422,8 @@ export { default as Home } from './Home'
 export { default as Html } from './Html'
 ```
 
-#### 5. `npm start`
+#### 7. `npm start`
 
 Your application should be running now. Type `control + c` to stop the application.
 
-#### 6. `npm run build`
+#### 8. `npm run build`
