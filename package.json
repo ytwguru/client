@@ -6,8 +6,8 @@
   "scripts": {
     "start": "better-npm-run start-dev",
     "lint": "standard",
-    "build-prod": "better-npm-run build-prod",
-    "deploy-prod": "npm run build-prod; aws s3 sync ./dist s3://benjamintatum.com --exclude '.DS_Store' --profile home"
+    "build": "better-npm-run build",
+    "deploy": "npm run build; aws s3 sync ./dist s3://static-site-demo --exclude '.DS_Store' --profile home"
   },
   "betterScripts": {
     "start-dev": {
@@ -17,7 +17,7 @@
         "DEVTOOLS": true
       }
     },
-    "build-prod": {
+    "build": {
       "command": "webpack -p",
       "env": {
         "DEVELOPMENT": false,

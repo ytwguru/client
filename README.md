@@ -4,18 +4,58 @@ How to create a static site using today's Javascript
 Build a full-scale static javascript application using a modern javascript toolchain. The goal for this is to demonstrate a modern workflow with minimal tooling and the abiity to retain things like page-specific meta data for search engines and social media bots.
 
 #### 1. Start your project
-We're going to use [npm](https://www.npmjs.com) to manage dependencies. You'll need [Node.js and npm](https://docs.npmjs.com/getting-started/installing-node) to continue.
+We're going to use [npm](https://www.npmjs.com) to manage dependencies. Chances are they are installed already but you can check by running the following commands in your terminal:
 
-Open up your terminal, navigate to your project folder and type `npm init` at the prompt. Here is where you'll define basic information about your project (Name, description, author, ...).
+```
+node -v
+npm -v
+```
+
+A decent tutorial on how to install both lives [here](https://docs.npmjs.com/getting-started/installing-node).
+
+If you have both installed, open up your terminal and navigate to your project folder and type `npm init` at the prompt. Here is where you'll define basic information about your project (Name, description, author, ...).
 
 #### 2. Install dependencies
 
-While we're here, lets go ahead and install everything we are going to need today. In your terminal, type the following:
+Once npm knows your project details it can take care of all it's dependencies. Lets go ahead and install everything we are going to need today. Copy and paste the following into your terminal window.
 ```
-npm i -D webpack
+npm i -D babel-core babel-loader babel-plugin-transform-decorators-legacy babel-preset-es2015 babel-preset-react babel-preset-stage-0 better-npm-run can-use-dom clean-webpack-plugin history jsx-control-statements react react-dom react-helmet react-router react-router-redux redux redux-devtools redux-devtools-dock-monitor redux-devtools-log-monitor redux-logger scroll-behavior standard standard-loader static-site-generator-webpack-plugin webpack webpack-dev-server
 ```
 
-#### 3. Babel
+#### 3. Project Scripts
+Open up `package.json` and place the following json blob anywhere you like.
+```json
+"betterScripts": {
+  "start-dev": {
+    "command": "webpack-dev-server --progress --hot --colors --history-api-fallback --display-error-details",
+    "env": {
+      "DEVELOPMENT": true,
+      "DEVTOOLS": true
+    }
+  },
+  "build": {
+    "command": "webpack -p",
+    "env": {
+      "DEVELOPMENT": false,
+      "DEVTOOLS": false,
+      "NODE_ENV": "production"
+    }
+  }
+}
+```
+
+next, find the `"scripts"` key in your `package.json` file, and replace it with the following:
+```json
+"scripts": {
+  "start": "better-npm-run start-dev",
+  "lint": "standard",
+  "build": "better-npm-run build",
+  "deploy": "npm run build; aws s3 sync ./dist s3://static-site-demo --exclude '.DS_Store' --profile home"
+}
+```
+
+#### 4. Babel
+Since we're using [Babel](https://babeljs.io/) and react with [JSX syntax](https://facebook.github.io/react/docs/jsx-in-depth.html) we need to configure babel as such. We just need to tell Babel that we want to use a few plugins and presets to help us with that. Open up `package.json` and place this json blob anywhere you'd like.
 ```json
   "babel": {
     "presets": [
@@ -30,11 +70,11 @@ npm i -D webpack
   }
 ```
 
-#### 3. Webpack!
+Now that we're all set up in package.json, we can move on to Webpack.
 
-We're using `webpack` and `webpack-dev-server` to serve-up our application at `localhost:8080` and later export everything into a format that will work statically (either on a service like Amazcon S3 or locally).
+#### 5. Webpack!
 
-Create a new file called `webpack.config.js` & copy and paste the following into your new webpack configuation file.
+We're using `webpack` and `webpack-dev-server` to serve-up our application at `localhost:8080` and later exporting everything into a static format. Create a new file called `webpack.config.js` & copy and paste the following into your new webpack configuation file.
 
 ```javascript
 // webpack.config.js
@@ -101,8 +141,8 @@ module.exports = {
 ```
 
 #### 4. Start coding 🏁
-- create src folder
-- create src/index.js
+- create `src` folder
+- create `src/index.js` file
 
 ```javascript
 // src/index.js
@@ -126,7 +166,7 @@ render(
 )
 ```
 
-In a normal single page application, this logic would be fine because we would only need to run this in the browser. Remember, we need webpack to render our application as a static site for seo purposes. In order to accomplish that, `static-site-generator-webpack-plugin` requires us to export a default function inside of our `index.js` file. Here's what our index.js file looks like as a result.
+In a normal single page application, this logic would be fine because we would only need to run this in the browser. Remember, we need webpack to render our application as a static site for seo purposes. In order to accomplish that, `static-site-generator-webpack-plugin` requires us to export a default function inside of our `index.js` file. Here's what our final index.js file looks like.
 
 ```javascript
 // src/index.js
@@ -180,12 +220,10 @@ export default ({ assets, path }, callback) => {
 }
 ```
 
-Pay special attention to the package `can-use-dom`. This is a neat little package whose job is simply to detect if we're in the browser or running on a computer (using Node.js or something). The reason we need this is because we're referencing the `document` object and Node doesn't know about `document`. `document` and `window` are browser things and we need to treat them that way. Welcome to isomorphic javascript. 🤓
+Take a look at the package called `can-use-dom`. This thing's job is to detect if it's in the browser or running on a computer (using Node.js or something). We need to know because Node doesn't know about `document`. `document` and `window` are browser-only global objects and will break when assumed global when ran anywhere else. Welcome to isomorphic javascript. 🤓
 
-Awesome, so in order to fire up our app we still need a couple things.
-
-- create src/components folder
-- create src/components/Html.js
+- create `src/components` folder
+- create `src/components/Html.js`
 
 ```javascript
 // src/components/Html.js
@@ -227,11 +265,11 @@ Html.propTypes = {
 export default Html
 ```
 
-- create src/components/App.js
+- create `src/components/App.js`
 
 ```javascript
 // src/components/App.js
-import { default as React, Component, PropTypes } from 'react'
+import { default as React, PropTypes } from 'react'
 import { default as Helmet } from 'react-helmet'
 
 const App = ({ children }) =>
@@ -243,18 +281,16 @@ const App = ({ children }) =>
       link={[
         { rel: 'stylesheet', href: '//cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css' },
         { rel: 'stylesheet', href: '/style.css' },
-        { rel: 'shortcut icon', href: '/favicon.png' },
-        { rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Oswald:400,700,300' }
+        { rel: 'shortcut icon', href: '/favicon.png' }
       ]}
       meta={[
-        { name: 'description', content: 'Software application and web developer located in Ann Arbor, Michigan and available for remote hire. Services include product design, development & deployment.' },
+        { name: 'description', content: 'A demonstration of creating a static site with webpack, es6 and react.' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' }
       ]}
       script={[
-        { src: '//code.jquery.com/jquery-2.1.4.min.js' },
-        { src: '//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.7.0/lodash.min.js' }
+        { src: '//code.jquery.com/jquery-2.1.4.min.js' }
       ]}
-      titleTemplate='How to create a static site with webpack and es6 - %s'
+      titleTemplate='A modern approach to static sites - %s'
     />
     {children}
   </div>
@@ -266,8 +302,8 @@ App.propTypes = {
 export default App
 ```
 
-- create src/redux folder
-- create src/redux/create.js
+- create `src/redux` folder
+- create `src/redux/create.js`
 
 ```javascript
 // src/redux/modules/create.js
@@ -310,8 +346,8 @@ export default function createStore (browserHistory) {
 }
 ```
 
-- create src/redux/modules folder
-- create src/redux/modules/reducer.js
+- create `src/redux/modules` folder
+- create `src/redux/modules/reducer.js`
 
 ```
 // src/redux/modules/reducer.js
@@ -323,7 +359,8 @@ export default combineReducers({
 })
 ```
 
-- create src/components/DevTools.js
+- create `src/components/DevTools.js`
+
 ```javascript
 import { default as React } from 'react'
 import { createDevTools } from 'redux-devtools'
@@ -341,7 +378,7 @@ export default createDevTools(
 )
 ```
 
-- create src/components/Home.js
+- create `src/components/Home.js`
 
 ```javascript
 // src/components/Home.js
@@ -355,7 +392,7 @@ const Home = () =>
 export default Home
 ```
 
-- create src/components/About.js
+- create `src/components/About.js`
 
 ```javascript
 // src/components/About.js
@@ -369,7 +406,7 @@ const About = () =>
 export default About
 ```
 
-- create src/components/index.js
+- create `src/components/index.js`
 
 we want to be able to reference all of our project's components from the src/components folder like this:
 ```javascript
@@ -384,3 +421,9 @@ export { default as App } from './App'
 export { default as Home } from './Home'
 export { default as Html } from './Html'
 ```
+
+#### 5. `npm start`
+
+Your application should be running now. Type `control + c` to stop the application.
+
+#### 6. `npm run build`
