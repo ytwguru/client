@@ -424,6 +424,8 @@ export { default as Html } from './Html'
 
 #### 7. `npm start`
 
-Your application should be running now. Type `control + c` to stop the application.
+The application should be running now. Visit [127.0.0.1:8080](http://127.0.0.1:8080) to verify.
 
 #### 8. `npm run build`
+
+Type `control + c` to stop the application and run the command `npm run build`. Once the build process is complete, you can head over to the `dist` folder located in the root folder to verify that a static export of application has been successfully built.
