@@ -10,7 +10,7 @@ Open up your terminal, navigate to your project folder and type `npm init` at th
 
 #### 2. Install dependencies
 
-While we're here, lets go ahead and install everything we are going to need today. In your terminal, type the following:
+While we're here, lets go ahead and install everything we are going to need today. Copy and paste the following into your terminal window.
 ```
 npm i -D babel-core babel-loader babel-plugin-transform-decorators-legacy babel-preset-es2015 babel-preset-react babel-preset-stage-0 better-npm-run can-use-dom clean-webpack-plugin history jsx-control-statements react react-dom react-helmet react-router react-router-redux redux redux-devtools redux-devtools-dock-monitor redux-devtools-log-monitor redux-logger scroll-behavior standard standard-loader static-site-generator-webpack-plugin webpack webpack-dev-server
 ```
