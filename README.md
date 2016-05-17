@@ -11,7 +11,13 @@ node -v
 npm -v
 ```
 
-Open up your terminal and navigate to your project folder and type `npm init` at the prompt. Here is where you'll define basic information about your project (Name, description, author, ...).
+Assuming you have node and npm installed, enter the following into your command prompt.
+
+```
+npm init
+```
+
+This is where you'll define basic information about your project (Name, description, author, ...).
 
 #### 2. Install dependencies
 
