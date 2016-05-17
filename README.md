@@ -17,7 +17,7 @@ Assuming you have node and npm installed, enter the following into your command 
 npm init
 ```
 
-This is where you'll define basic information about your project (Name, description, author, ...).
+This is where you'll define basic information about your project (Name, description, author, so on).
 
 #### 2. Install dependencies
 
