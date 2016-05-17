@@ -366,6 +366,7 @@ export default combineReducers({
 - create `src/components/DevTools.js`
 
 ```javascript
+// src/components/DevTools.js
 import { default as React } from 'react'
 import { createDevTools } from 'redux-devtools'
 import { default as LogMonitor } from 'redux-devtools-log-monitor'
