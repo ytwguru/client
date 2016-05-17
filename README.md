@@ -226,6 +226,23 @@ export default ({ assets, path }, callback) => {
 
 Take a look at the package called `can-use-dom`. This thing's job is to detect if it's in the browser or running on a computer (using Node.js or something). We need to know because Node doesn't know about `document`. `document` and `window` are browser-only global objects and will break when assumed global when ran anywhere else. Welcome to isomorphic javascript. 🤓
 
+- create `src/routes.js`
+
+```javascript
+// src/routes.js
+import { default as React } from 'react'
+import * as views from 'components'
+import { IndexRoute, Route } from 'react-router'
+
+export default (
+  <Route path='/' component={views.App}>
+    <IndexRoute component={views.Home} />
+    <Route path='about' component={views.About} />
+    <Route path='*' component={views.Error404} />
+  </Route>
+)
+```
+
 - create `src/components` folder
 - create `src/components/Html.js`
 
