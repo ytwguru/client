@@ -413,14 +413,10 @@ export default About
 
 - create `src/components/index.js`
 
-we want to be able to reference all of our project's components from the src/components folder like this:
-```javascript
-import { default as Home } from 'components'
-```
-
-we just need an index file in src/components to handle that.
+we want to be able to reference all of our project's components from the src/components folder like this: `javascript import { default as Home } from 'components'` we will use an index file in src/components to handle that.
 
 ```javascript
+// src/components/index.js
 export { default as About } from './About'
 export { default as App } from './App'
 export { default as Home } from './Home'
