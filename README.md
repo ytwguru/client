@@ -26,6 +26,8 @@ Lets install everything we are going to need. Copy and paste the following into 
 npm i -D babel-core babel-loader babel-plugin-transform-decorators-legacy babel-preset-es2015 babel-preset-react babel-preset-stage-0 better-npm-run can-use-dom clean-webpack-plugin history jsx-control-statements react react-dom react-helmet react-router react-router-redux redux redux-devtools redux-devtools-dock-monitor redux-devtools-log-monitor redux-logger scroll-behavior standard standard-loader static-site-generator-webpack-plugin webpack webpack-dev-server
 ```
 
+☕️ This may take a minute or two. Feel free to grab a coffee. ☕️
+
 #### 3. Project Scripts
 Open up `package.json` and place the following json anywhere.
 ```json
