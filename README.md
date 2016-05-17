@@ -4,26 +4,24 @@ How to create a static site using today's Javascript
 Build a full-scale static javascript application using a modern javascript toolchain. The goal for this is to demonstrate a modern workflow with minimal tooling and the abiity to retain things like page-specific meta data for search engines and social media bots.
 
 #### 1. Start your project
-We're going to use [npm](https://www.npmjs.com) to manage dependencies. Chances are they are installed already but you can check by running the following commands in your terminal:
+We're going to use [npm](https://www.npmjs.com) to manage dependencies. Run the following commands in your terminal to verify you have these two installed. If not, a decent tutorial on how to install both lives [here](https://docs.npmjs.com/getting-started/installing-node).
 
 ```
 node -v
 npm -v
 ```
 
-A decent tutorial on how to install both lives [here](https://docs.npmjs.com/getting-started/installing-node).
-
-If you have both installed, open up your terminal and navigate to your project folder and type `npm init` at the prompt. Here is where you'll define basic information about your project (Name, description, author, ...).
+Open up your terminal and navigate to your project folder and type `npm init` at the prompt. Here is where you'll define basic information about your project (Name, description, author, ...).
 
 #### 2. Install dependencies
 
-Once npm knows your project details it can take care of all it's dependencies. Lets go ahead and install everything we are going to need today. Copy and paste the following into your terminal window.
+Lets install everything we are going to need. Copy and paste the following into your terminal window.
 ```
 npm i -D babel-core babel-loader babel-plugin-transform-decorators-legacy babel-preset-es2015 babel-preset-react babel-preset-stage-0 better-npm-run can-use-dom clean-webpack-plugin history jsx-control-statements react react-dom react-helmet react-router react-router-redux redux redux-devtools redux-devtools-dock-monitor redux-devtools-log-monitor redux-logger scroll-behavior standard standard-loader static-site-generator-webpack-plugin webpack webpack-dev-server
 ```
 
 #### 3. Project Scripts
-Open up `package.json` and place the following json blob anywhere you like.
+Open up `package.json` and place the following json anywhere.
 ```json
 "betterScripts": {
   "start-dev": {
@@ -44,7 +42,7 @@ Open up `package.json` and place the following json blob anywhere you like.
 }
 ```
 
-next, find the `"scripts"` key in your `package.json` file, and replace it with the following:
+next, find the `"scripts"` key in `package.json`, and replace it with the following:
 ```json
 "scripts": {
   "start": "better-npm-run start-dev",
@@ -55,7 +53,7 @@ next, find the `"scripts"` key in your `package.json` file, and replace it with 
 ```
 
 #### 4. Babel
-Since we're using [Babel](https://babeljs.io/) and react with [JSX syntax](https://facebook.github.io/react/docs/jsx-in-depth.html) we need to configure babel as such. We just need to tell Babel that we want to use a few plugins and presets to help us with that. Open up `package.json` and place this json blob anywhere you'd like.
+Since we're using [Babel](https://babeljs.io/) and react along with it's [JSX syntax](https://facebook.github.io/react/docs/jsx-in-depth.html) we need to configure babel as such. Once again,place this json blob in `package.json` anywhere you'd like 
 ```json
   "babel": {
     "presets": [
@@ -70,11 +68,9 @@ Since we're using [Babel](https://babeljs.io/) and react with [JSX syntax](https
   }
 ```
 
-Now that we're all set up in package.json, we can move on to Webpack.
+#### 5. Webpack
 
-#### 5. Webpack!
-
-We're using `webpack` and `webpack-dev-server` to serve-up our application at `localhost:8080` and later exporting everything into a static format. Create a new file called `webpack.config.js` & copy and paste the following into your new webpack configuation file.
+We're using `webpack` and `webpack-dev-server` to serve our application on `localhost:8080` and later export it into a static format. Create a new file called `webpack.config.js` & copy and paste the following.
 
 ```javascript
 // webpack.config.js
