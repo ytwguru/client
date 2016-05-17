@@ -351,7 +351,7 @@ export default function createStore (browserHistory) {
 - create `src/redux/modules` folder
 - create `src/redux/modules/reducer.js`
 
-```
+```javascript
 // src/redux/modules/reducer.js
 import { combineReducers } from 'redux'
 import { routerReducer } from 'react-router-redux'
