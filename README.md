@@ -61,17 +61,17 @@ next, find the `"scripts"` key in `package.json`, and replace it with the follow
 #### 4. Babel
 Since we're using [Babel](https://babeljs.io/) and react along with it's [JSX syntax](https://facebook.github.io/react/docs/jsx-in-depth.html) we need to configure babel as such. Once again,place this json blob in `package.json` anywhere you'd like 
 ```json
-  "babel": {
-    "presets": [
-      "react",
-      "es2015",
-      "stage-0"
-    ],
-    "plugins": [
-      "jsx-control-statements",
-      "transform-decorators-legacy"
-    ]
-  }
+"babel": {
+  "presets": [
+    "react",
+    "es2015",
+    "stage-0"
+  ],
+  "plugins": [
+    "jsx-control-statements",
+    "transform-decorators-legacy"
+  ]
+}
 ```
 
 #### 5. Webpack
