@@ -1,27 +1,20 @@
-const routes = ['/', '/about/']
-const path = require('path')
-const webpack = require('webpack')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin')
+const routes = ['/', '/about/'];
+const path = require('path');
+const webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
   entry: {
-    main: path.resolve('./src/index.js')
+    main: path.resolve(__dirname, './src/index.js')
   },
   output: {
     filename: 'package.js',
-    path: path.resolve('./dist'),
+    path: path.resolve(__dirname, './dist'),
     libraryTarget: 'umd'
   },
   module: {
-    preLoaders: [
-      {
-        test: /\.js$/,
-        include: path.resolve('./src'),
-        loader: 'standard'
-      }
-    ],
     loaders: [
       {
         test: /\.js$/,
@@ -32,8 +25,8 @@ module.exports = {
   },
   resolve: {
     root: [
-      path.resolve('./src'),
-      path.resolve('./node_modules')
+      path.resolve(__dirname, './src'),
+      path.resolve(__dirname, './node_modules')
     ],
     modulesDirectories: [
       'src',
