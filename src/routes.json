@@ -1,0 +1,11 @@
+[
+  {
+    "path" : "/",
+    "page" : "./src/pages/Home",
+    "index" : true
+  },
+  {
+    "path" : "/about",
+    "page" : "./src/pages/About"
+  }
+]

@@ -1,5 +1,5 @@
-export { default as About } from './About'
-export { default as App } from './App'
-export { default as DevTools } from './DevTools'
-export { default as Home } from './Home'
-export { default as Html } from './Html'
+import { default as App } from './App'
+import { default as DevTools } from './DevTools'
+import { default as Html } from './Html'
+
+export {App, DevTools, Html};

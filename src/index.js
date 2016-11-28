@@ -12,9 +12,9 @@ import { Html } from './components'
 import { default as canUseDOM } from 'can-use-dom'
 
 if (canUseDOM) {
-  let history = withScroll(browserHistory)
-  const store = createStore(history)
-  history = syncHistoryWithStore(history, store)
+  let history = withScroll(browserHistory);
+  const store = createStore(history);
+  history = syncHistoryWithStore(history, store);
   render(
     <Provider store={store}>
       <Router history={history} routes={routes} />
@@ -24,9 +24,9 @@ if (canUseDOM) {
 }
 
 export default ({ assets, path }, callback) => {
-  const history = createMemoryHistory()
-  const store = createStore(history)
-  const location = history.createLocation(path)
+  const history = createMemoryHistory();
+  const store = createStore(history);
+  const location = history.createLocation(path);
 
   match({ routes, location }, (error, redirectLocation, props) => {
     if (error) {
@@ -42,7 +42,7 @@ export default ({ assets, path }, callback) => {
           </Provider>
         }
       />
-    )
+    );
     callback(null, `<!doctype html>${html}`)
   })
 }

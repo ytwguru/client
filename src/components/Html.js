@@ -3,8 +3,8 @@ import { renderToString } from 'react-dom/server'
 import { default as Helmet } from 'react-helmet'
 
 const Html = ({ assets, component }) => {
-  const content = component ? renderToString(component) : ''
-  const head = Helmet.rewind()
+  const content = component ? renderToString(component) : '';
+  const head = Helmet.rewind();
   return (
     <html {...head.htmlAttributes.toComponent()}>
       <head>
@@ -18,19 +18,21 @@ const Html = ({ assets, component }) => {
         <div
           dangerouslySetInnerHTML={{ __html: content }}
           id='content'
-        />
+        >
+        </div>
         <script
           charSet='UTF-8'
           src={`/${assets.main}`}
-        />
+        >
+        </script>
       </body>
     </html>
   )
-}
+};
 
 Html.propTypes = {
   assets: PropTypes.object.isRequired,
   component: PropTypes.node.isRequired
-}
+};
 
 export default Html

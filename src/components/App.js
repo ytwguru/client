@@ -9,7 +9,7 @@ const App = ({ children }) =>
       ]}
       link={[
         { rel: 'stylesheet', href: '//cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css' },
-        { rel: 'stylesheet', href: '/style.css' },
+        { rel: 'stylesheet', href: '/style.min.css' },
         { rel: 'shortcut icon', href: '/favicon.png' }
       ]}
       meta={[
@@ -22,10 +22,10 @@ const App = ({ children }) =>
       titleTemplate='A modern approach to static sites - %s'
     />
     {children}
-  </div>
+  </div>;
 
 App.propTypes = {
   children: PropTypes.node
-}
+};
 
 export default App
