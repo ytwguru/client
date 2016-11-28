@@ -4,9 +4,9 @@ import { default as Helmet } from 'react-helmet'
 const App = ({ children }) =>
   <div>
     <Helmet
-      htmlAttributes={[
+      htmlAttributes={
         { lang: 'en' }
-      ]}
+      }
       link={[
         { rel: 'stylesheet', href: '//cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css' },
         { rel: 'stylesheet', href: '/style.min.css' },
