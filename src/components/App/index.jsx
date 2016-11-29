@@ -16,7 +16,8 @@ class App extends React.Component{
         { lang: 'en' }
       }
         link={[
-        { rel: 'stylesheet', href: '/vendor.min.css' },
+        { rel : 'stylesheet', href :"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"},
+        { rel : 'stylesheet', href :"https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"},
         { rel: 'stylesheet', href: '/main.min.css' },
         { rel: 'shortcut icon', href: 'http://cdn.ytadvisors.com/favicons/favicon.ico' },
         { rel: 'apple-touch-icon', sizes : "57x57", href : "http://cdn.ytadvisors.com/favicons/apple-icon-57x57.png"},

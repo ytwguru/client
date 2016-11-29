@@ -17,9 +17,6 @@ let config  = {
   entry: {
     main: [
       path.resolve(__dirname, './src/index.js')
-    ],
-    vendor : [
-      path.resolve(__dirname, './src/vendor.js')
     ]
   },
   output: {

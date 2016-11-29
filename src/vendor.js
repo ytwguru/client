@@ -1,8 +1,6 @@
 "use strict";
 
-import "normalize.css";
 import "animate.css";
-import 'bootstrap/dist/css/bootstrap.css';
 import "flickity/dist/flickity.min.css"
 import "bootstrap/dist/js/bootstrap.js";
 import "jquery-ui";
