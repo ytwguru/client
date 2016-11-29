@@ -13,20 +13,20 @@ const ExtractJS = new ExtractTextPlugin('[name].min.js');
 const S3Plugin = require("webpack-s3-plugin");
 
 let config  = {
-  context: __dirname,
   devtool: 'source-map',
   entry: {
     main: [
       path.resolve(__dirname, './src/index.js')
     ],
-    "vendor" : [ './src/vendor.js' ]
+    vendor : [
+      path.resolve(__dirname, './src/vendor.js')
+    ]
   },
   output: {
     filename: '[name].min.js',
     path: path.resolve(__dirname, './dist'),
     libraryTarget: 'umd',
-    chunkFilename: '[id].js?[chunkhash]',
-    sourcePrefix: '  '
+    chunkFileName: '[id].chunk.js'
   },
   module: {
     exprContextCritical: false,
@@ -49,8 +49,14 @@ let config  = {
     ]
   },
   resolve: {
-    root: path.resolve(__dirname),
+    root: [
+      path.resolve(__dirname, './src'),
+      path.resolve(__dirname, './node_modules')
+    ],
     modulesDirectories: [
+      'src',
+      'src/components',
+      'src/pages',
       'node_modules'
     ],
     alias: {
@@ -60,7 +66,7 @@ let config  = {
       respond: 'respond.js/src/respond',
       "jquery.stellar" : "jquery.stellar/jquery.stellar"
     },
-    extensions : ["", ".js", ".jsx", ".less", ".css"]
+    extensions: ['', '.js', '.jsx', '.json', ".less", ".css"]
   },
   plugins: [
     new webpack.ProvidePlugin({
