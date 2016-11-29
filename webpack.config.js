@@ -6,38 +6,46 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractCSS = new ExtractTextPlugin('[name].min.css', {
+  allChunks: false
+});
+const ExtractJS = new ExtractTextPlugin('[name].min.js');
 const S3Plugin = require("webpack-s3-plugin");
 
 let config  = {
   devtool: 'source-map',
   entry: {
-    main: path.resolve(__dirname, './src/index.js')
+    main: [
+      path.resolve(__dirname, './src/index.js')
+    ],
+    vendor : [
+      path.resolve(__dirname, './src/vendor.js')
+    ]
   },
   output: {
-    filename: 'package.js',
+    filename: '[name].min.js',
     path: path.resolve(__dirname, './dist'),
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    chunkFileName: '[id].chunk.js'
   },
   module: {
+    exprContextCritical: false,
     loaders: [
-      {
-        test: /\.jsx?$/,
-        include: path.resolve('./src'),
-        loaders: ['babel']
-      },
-      {
-        test: /\.json?$/,
-        include: path.resolve('./src'),
-        loaders: ['json']
-      },
-      {
-        test : /\.css$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader")
-      },
-      {
-        test : /\.less$/, 
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
-      }
+      { test: /\.jsx?$/, exclude : /(node_modules)/, loaders: ['babel']},
+      { test: /\.json?$/, loader: 'json'},
+      { test : /\.css$/, loader: ExtractCSS.extract("style", "css")},
+      { test : /\.less$/, loader: ExtractCSS.extract("style", "css!less")},
+      { test: /\.ejs$/, loader: 'ejs?variable=data' },
+      { test: /\.(woff|woff2)(\?.+)?$/, loader: 'url?limit=10000&mimetype=application/font-woff'},
+      { test: /\.ttf(\?.+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream'},
+      { test: /\.eot(\?.+)?$/, loader: 'file'},
+      { test: /\.svg(\?.+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'},
+      { test: /\.png$/, loader: 'url?mimetype=image/png'},
+      { test: /\.gif$/, loader: 'url?mimetype=image/gif'},
+      { test: /\.jpe?g$/, loader: 'url?mimetype=image/jpeg'},
+      { test: /\.(svg)$/, loader: 'url?limit=10000' },
+      { test: /\.(wav|mp3)$/, loader: 'file' },
+      { test: /\.modernizrrc$/, loader: "modernizr" },
     ]
   },
   resolve: {
@@ -48,18 +56,32 @@ let config  = {
     modulesDirectories: [
       'src',
       'src/components',
+      'src/pages',
       'node_modules'
     ],
-    extensions: ['', '.js', '.jsx', '.json']
+    alias: {
+      modernizr$: ".modernizrrc",
+      masonry : "masonry-layout",
+      isotope: 'isotope-layout',
+      respond: 'respond.js/src/respond',
+      "jquery.stellar" : "jquery.stellar/jquery.stellar"
+    },
+    extensions: ['', '.js', '.jsx', '.json', ".less", ".css"]
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery",
+      "window.$": "jquery"
+    }),
     new StaticSiteGeneratorPlugin('main', routes),
     new CleanWebpackPlugin(['dist'], {
       root: __dirname,
       verbose: true,
       dry: false
     }),
-    new ExtractTextPlugin('style.min.css'),
+    ExtractCSS,
     new webpack.DefinePlugin({
       'process.env': {
         DEVELOPMENT: JSON.stringify(process.env.DEVELOPMENT),

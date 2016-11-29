@@ -1,20 +1,20 @@
-import { createStore as _createStore, applyMiddleware, compose } from 'redux'
-import { routerMiddleware } from 'react-router-redux'
-import { default as reducer } from './modules/reducer'
-import { DevTools } from '../components'
-import { persistState } from 'redux-devtools'
-import { default as createLogger } from 'redux-logger'
+import { createStore as _createStore, applyMiddleware, compose } from 'redux';
+import { routerMiddleware } from 'react-router-redux';
+import { default as reducer } from './modules/reducer';
+import DevTools from '../components/DevTools';
+import { persistState } from 'redux-devtools';
+import { default as createLogger } from 'redux-logger';
 
-export default function createStore (browserHistory) {
+export default (browserHistory) => {
   const middleware = [
     routerMiddleware(browserHistory)
-  ]
+  ];
 
   if (process.env.DEVTOOLS) {
     middleware.push(createLogger())
   }
 
-  let finalCreateStore
+  let finalCreateStore;
   if (typeof window !== 'undefined' && process.env.DEVELOPMENT && process.env.DEVTOOLS) {
     finalCreateStore = compose(
       applyMiddleware(...middleware),
@@ -25,7 +25,7 @@ export default function createStore (browserHistory) {
     finalCreateStore = applyMiddleware(...middleware)(_createStore)
   }
 
-  const store = finalCreateStore(reducer)
+  const store = finalCreateStore(reducer);
 
   if (process.env.DEVELOPMENT && module.hot) {
     module.hot.accept('./modules/reducer', () => {

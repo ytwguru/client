@@ -1,14 +1,21 @@
-import { default as React } from 'react'
-import * as views from './components'
-import About from "./pages/about";
-import Error from "./pages/error";
-import Home from "./pages/home"
-import { IndexRoute, Route } from 'react-router'
+import React from 'react';
+import App from './components/App';
+import { IndexRoute, Route } from 'react-router';
+import routes from "./routes.json";
 
 export default (
-  <Route path='/' component={views.App}>
-    <IndexRoute component={Home} />
-    <Route path='about' component={About} />
-    <Route path='*' component={Error} />
+  <Route path='/' component={App}>
+      {
+        routes.map((route) => {
+          let module = require(route.page).default;
+          if(route.index){
+            return <IndexRoute component={module} key = {route.key}/>
+          }
+          else{
+            return < Route path={route.path} component={module} key = {route.key}/>;
+          }
+        })
+      }
   </Route>
-)
+);
+

@@ -1,17 +1,19 @@
-import { default as React } from 'react'
-import { render } from 'react-dom'
-import { Router, RouterContext, match, browserHistory } from 'react-router'
-import { default as withScroll } from 'scroll-behavior'
-import { default as createStore } from './redux/create'
-import { syncHistoryWithStore } from 'react-router-redux'
-import { Provider } from 'react-redux'
-import { default as routes } from './routes'
-import { createMemoryHistory } from 'history'
-import { renderToString } from 'react-dom/server'
-import { Html } from './components'
-import { default as canUseDOM } from 'can-use-dom'
+import React from 'react';
+import withScroll from 'scroll-behavior';
+import routes from './routes';
+import Html  from './components/Html';
+import canUseDOM from 'can-use-dom';
+import createStore from './redux/create';
+import { render } from 'react-dom';
+import { Router, RouterContext, match, browserHistory } from 'react-router';
+import { syncHistoryWithStore } from 'react-router-redux';
+import { Provider } from 'react-redux';
+import { createMemoryHistory } from 'history';
+import { renderToString } from 'react-dom/server';
+
 
 if (canUseDOM) {
+  require("./vendor");
   let history = withScroll(browserHistory);
   const store = createStore(history);
   history = syncHistoryWithStore(history, store);

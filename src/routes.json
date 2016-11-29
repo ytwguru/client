@@ -1,11 +1,18 @@
 [
   {
     "path" : "/",
-    "page" : "./src/pages/Home",
+    "page" : "./pages/home/index.jsx",
+    "key" : "index",
     "index" : true
   },
   {
     "path" : "/about",
-    "page" : "./src/pages/About"
+    "key" : "about",
+    "page" : "./pages/about/index.jsx"
+  },
+  {
+    "path" : "/error",
+    "key" : "error",
+    "page" : "./pages/error/index.jsx"
   }
 ]

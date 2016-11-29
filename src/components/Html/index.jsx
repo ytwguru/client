@@ -1,6 +1,6 @@
-import { default as React, PropTypes } from 'react'
-import { renderToString } from 'react-dom/server'
-import { default as Helmet } from 'react-helmet'
+import React, { PropTypes } from 'react';
+import { renderToString } from 'react-dom/server';
+import Helmet from 'react-helmet';
 
 const Html = ({ assets, component }) => {
   const content = component ? renderToString(component) : '';
@@ -15,16 +15,9 @@ const Html = ({ assets, component }) => {
         {head.script.toComponent()}
       </head>
       <body>
-        <div
-          dangerouslySetInnerHTML={{ __html: content }}
-          id='content'
-        >
-        </div>
-        <script
-          charSet='UTF-8'
-          src={`/${assets.main}`}
-        >
-        </script>
+        <div dangerouslySetInnerHTML={{ __html: content }} id='content'></div>
+        <script charSet='UTF-8' src={`/${assets.vendor}`} ></script>
+        <script charSet='UTF-8' src={`/${assets.main}`} ></script>
       </body>
     </html>
   )
