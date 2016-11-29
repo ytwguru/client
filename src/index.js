@@ -13,7 +13,6 @@ import { renderToString } from 'react-dom/server';
 
 
 if (canUseDOM) {
-  require("./vendor");
   let history = withScroll(browserHistory);
   const store = createStore(history);
   history = syncHistoryWithStore(history, store);

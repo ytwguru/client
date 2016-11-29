@@ -14,7 +14,7 @@ const Html = ({ assets, component }) => {
         {head.link.toComponent()}
         {head.script.toComponent()}
       </head>
-      <body>
+      <body data-spy="scroll" data-target=".navbar" data-offset="50">
         <div dangerouslySetInnerHTML={{ __html: content }} id='content'></div>
         <script charSet='UTF-8' src={`/${assets.vendor}`} ></script>
         <script charSet='UTF-8' src={`/${assets.main}`} ></script>

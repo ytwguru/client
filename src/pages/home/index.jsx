@@ -89,8 +89,6 @@ export default React.createClass({
       <div id="globalWrapper" className="localscroll">
         <Header>
         </Header>
-        <LargeSlider ref={(slider) => { this._slider = slider; }}>
-        </LargeSlider>
         <Services>
         </Services>
         <ArrowsNav data={this.getArrowNav(2)}>
