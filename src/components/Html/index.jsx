@@ -5,7 +5,6 @@ import Helmet from 'react-helmet';
 const Html = ({ assets, component }) => {
   const content = component ? renderToString(component) : '';
   const head = Helmet.rewind();
-  const showAnalytics = process.env.DEPLOY === "true" ? head.script.toComponent() : () => {};
   return (
     <html {...head.htmlAttributes.toComponent()}>
       <head>
@@ -13,7 +12,7 @@ const Html = ({ assets, component }) => {
         {head.title.toComponent()}
         {head.meta.toComponent()}
         {head.link.toComponent()}
-        {showAnalytics}
+        {head.script.toComponent()}
       </head>
       <body data-spy="scroll" data-target=".navbar" data-offset="50">
         <div dangerouslySetInnerHTML={{ __html: content }} id='content'></div>
