@@ -6,6 +6,7 @@ const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
 const ExtractCSS = new ExtractTextPlugin('[name].min.css', {
   allChunks: false
 });
@@ -77,6 +78,13 @@ let config  = {
       root: __dirname,
       verbose: true,
       dry: false
+    }),
+    new CompressionPlugin({
+      asset: "[path].gz[query]",
+      algorithm: "gzip",
+      test: /\.js$|\.html|\.css$/,
+      threshold: 10240,
+      minRatio: 0.8
     }),
     ExtractCSS,
     new webpack.DefinePlugin({

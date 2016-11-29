@@ -18,7 +18,7 @@ export default React.createClass({
 
   submit : function(model, reset){
     var $form = $('#quoteFormWrapper');
-    $.post("/api/quotes", model)
+    $.post("/quotes", model)
       .done( data => {
         reset();
         $("#projectQuote").find("input[type=text], textarea").val("");

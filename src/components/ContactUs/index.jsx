@@ -10,6 +10,7 @@ export default React.createClass({
   },
 
   componentDidMount(){
+    console.log(process.env);
   },
 
   enableButton : function () {
@@ -21,7 +22,7 @@ export default React.createClass({
   },
 
   submit : function(model, reset){
-    $.post("/api/contacts", model)
+    $.post("/contacts", model)
       .done( data => {
         console.log("Resetting");
         reset();
@@ -49,7 +50,7 @@ export default React.createClass({
                   </i>
                 </div>
               </div>
-              <p>For more information please submit an inquiry in the contact us form or send an email to&nbsp;<a href = "mailto:support@ytadvisors.com">support@ytadvisors.com</a>.</p>
+              <p>For more information please submit an inquiry in the contact us form or send an email to <a href = "mailto:support@ytadvisors.com"> support@ytadvisors.com</a>.</p>
             </div>
             <div className="col-md-6">
               <Formsy.Form id="contactfrm" ref="contactfrm" className="form"
