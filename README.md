@@ -41,4 +41,6 @@ DEPLOY_AWS_SECRET_ACCESS_KEY=<update with amazon secret key>
 DEPLOY_AWS_REGION=<update with amazon region>
 CDN_BASE=<update with CloudFront cdn>
 S3_BUCKET=<update with S3 bucket name>
+GA_TRACKER=<update with Google Analytics tracker>
+MIXPANEL_TRACKER=<update with mixpanel tracker>
 ```

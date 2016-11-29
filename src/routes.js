@@ -4,7 +4,7 @@ import { IndexRoute, Route } from 'react-router';
 import routes from "./routes.json";
 
 export default (
-  <Route path='/' component={App}>
+  <Route path='/' component={App} >
       {
         routes.map((route) => {
           let module = require(route.page).default;

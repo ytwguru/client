@@ -91,7 +91,10 @@ let config  = {
       'process.env': {
         DEVELOPMENT: JSON.stringify(process.env.DEVELOPMENT),
         DEVTOOLS: JSON.stringify(process.env.DEVTOOLS),
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        DEPLOY: JSON.stringify(process.env.DEPLOY),
+        GA_TRACKER : JSON.stringify(process.env.GA_TRACKER),
+        MIXPANEL_TRACKER : JSON.stringify(process.env.MIXPANEL_TRACKER)
       }
     })
   ]

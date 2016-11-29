@@ -10,7 +10,6 @@ export default React.createClass({
   },
 
   componentDidMount(){
-    console.log(process.env);
   },
 
   enableButton : function () {
@@ -24,7 +23,6 @@ export default React.createClass({
   submit : function(model, reset){
     $.post("/contacts", model)
       .done( data => {
-        console.log("Resetting");
         reset();
         $("#contactfrm").find("input[type=text], textarea").val("");
         $("#contactUsModal").modal("show");
