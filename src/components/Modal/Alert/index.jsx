@@ -7,8 +7,7 @@ export default React.createClass({
       <div id={this.props.id} className="alert modal fade" role="dialog">
         <div className="modal-dialog">
           <div className="modal-content">
-            <div className="modal-header">
-              <button type="button" className="close" data-dismiss="modal">&times;</button>
+            <div className="modal-header color4">
               <h3 className="modal-title">{this.props.data.header}</h3>
             </div>
             <div className="modal-body"  dangerouslySetInnerHTML={{__html: this.props.data.message}}>
