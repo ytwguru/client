@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDom from "react-dom";
 import "./styles.less";
 
 import Header from "../../components/Header";
@@ -87,7 +86,7 @@ export default React.createClass({
       <Preloader>
       </Preloader>
       <div id="globalWrapper" className="localscroll">
-        <Header>
+        <Header data={{page : "home"}}>
         </Header>
         <LargeSlider ref={(slider) => { this._slider = slider; }}>
         </LargeSlider>

@@ -5,10 +5,11 @@ import PureRenderMixin from 'react-addons-pure-render-mixin';
 export default React.createClass({
   mixins: [PureRenderMixin],
   componentDidMount : function(){
-    /*$(window).on("load", function() {
+    $(document).ready(function(){
+      $(document.body).trigger('load');
+    });
 
-    });*/
-    $("#main-image").on("load", function(){
+    $(document.body).on("load", function () {
       $('#preloader').delay(450).fadeOut('slow'); // will fade out the white DIV that covers the website.
     });
   },

@@ -14,12 +14,20 @@ export default React.createClass({
           </div>
           <div className="col-md-6">
             <article className="boxWrapper color1">
-              <div><img className="img-responsive" src="http://cdn.ytadvisors.com/images/team/yomi.gif" alt="" /></div>
-              <div className="boxContent2">
-                <h3>Yomi Toba </h3>
-                <p>Co-Founder / CEO</p>
-              </div>
-              <div className="boxContent color3"> <a href="mailto:yomi@ytadvisors.com">yomi@ytadvisors.com</a>
+              <a href = "/members/yomi">
+                <div>
+                  <img className="img-responsive" src="http://cdn.ytadvisors.com/images/team/yomi.gif" alt="" />
+                </div>
+                <div className="boxContent2">
+                  <h3>Yomi Toba </h3>
+                  <p>Co-Founder / CEO</p>
+                </div>
+              </a>
+              <div className="boxContent color3"> 
+                <p>
+                  <a href="/members/yomi">View Profile</a>
+                </p>
+                <a href="mailto:yomi@ytadvisors.com">yomi@ytadvisors.com</a>
                 <ul className="socialNetwork">
                   <li><a href="http://www.facebook.com/yomi.toba.39" className="tips" title="" data-original-title="follow me on Facebook"><i className="icon-facebook"></i></a></li>
                   <li><a href="http://www.twitter.com/ytwguru" className="tips" title="" data-original-title="follow me on Twitter"><i className="icon-twitter-bird"></i></a></li>
@@ -32,12 +40,20 @@ export default React.createClass({
           </div>
           <div className="col-md-6">
             <article className="boxWrapper color1">
-              <div><img className="img-responsive" src="http://cdn.ytadvisors.com/images/team/tanya.png" alt="" /></div>
-              <div className="boxContent2">
-                <h3>Tanya Toba</h3>
-                <p>Co-Founder / COO</p>
-              </div>
-              <div className="boxContent color3"> <a href="mailto:tanya@ytadvisors.com">tanya@ytadvisors.com</a>
+              <a href = "/members/tanya">
+                <div>
+                  <img className="img-responsive" src="http://cdn.ytadvisors.com/images/team/tanya.png" alt="" />
+                </div>
+                <div className="boxContent2">
+                  <h3>Tanya Toba</h3>
+                  <p>Co-Founder / COO</p>
+                </div>
+              </a>
+              <div className="boxContent color3">
+                <p>
+                  <a href="/members/tanya">View Profile</a>
+                </p>
+                <a href="mailto:tanya@ytadvisors.com">tanya@ytadvisors.com</a>
                 <ul className="socialNetwork">
                   <li><a href="http://www.facebook.com/tanya.hamilton.9" className="tips" title="" data-original-title="follow me on Facebook"><i className="icon-facebook"></i></a></li>
                   <li><a href="#" className="tips" title="" data-original-title="follow me on Twitter"><i className="icon-twitter-bird"></i></a></li>

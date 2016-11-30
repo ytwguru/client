@@ -10,7 +10,11 @@ export default React.createClass({
       $navMain.collapse('hide');
     });
   },
+  getLinkClass : function(page){
+    return page === this.props.data.page ? "active" : "";
+  },
   render : function (){
+    let prefix = this.props.data.page === "home" ? "" : "/";
     return <nav role="navigation" className="navbar navbar-default navbar-fixed-top ">
       <div className="container">
         <div className="navbar-header">
@@ -20,18 +24,18 @@ export default React.createClass({
             <span className="icon-bar"></span>
             <span className="icon-bar"></span>
           </button>
-          <a href="#" className="navbar-brand">
+          <a href={`${prefix}#`} className="navbar-brand">
             <img className="img-responsive" src="http://cdn.ytadvisors.com/images/main-logo.png" alt="YT Advisors" width="130" />
           </a>
         </div>
         <div id="navbarCollapse" className="collapse navbar-collapse">
           <ul className="nav navbar-nav">
-            <li className="active"><a href="#home">Home</a> </li>
-            <li><a href="#services">Services</a> </li>
-            <li><a href="#team">Team</a> </li>
-            <li><a href="#contactSlice">Contact</a> </li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/members">Members</a></li>
+            <li className={this.getLinkClass("home")}><a href={`${prefix}#home`}>Home</a> </li>
+            <li><a href={`${prefix}#services`}>Services</a> </li>
+            <li><a href={`${prefix}#team`}>Team</a> </li>
+            <li><a href={`${prefix}#contactSlice`}>Contact</a> </li>
+            <li className={this.getLinkClass("about")}><a href="/about">About Us</a></li>
+            <li className={this.getLinkClass("members")}><a href="/members">Members</a></li>
           </ul>
         </div>
       </div>

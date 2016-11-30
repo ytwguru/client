@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import "./global.less";
 import "./icons.less";
 import "./colors.less";
+import "./styles.less"
 import "./custom-icons/custom-icons.css";
 import "./custom-icons/custom-icons-ie7.css";
 
