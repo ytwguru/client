@@ -19,7 +19,7 @@ export default React.createClass({
                 <h3>Yomi Toba </h3>
                 <p>Co-Founder / CEO</p>
               </div>
-              <div className="boxContent"> <a href="mailto:yomi@ytadvisors.com">yomi@ytadvisors.com</a>
+              <div className="boxContent color3"> <a href="mailto:yomi@ytadvisors.com">yomi@ytadvisors.com</a>
                 <ul className="socialNetwork">
                   <li><a href="http://www.facebook.com/yomi.toba.39" className="tips" title="" data-original-title="follow me on Facebook"><i className="icon-facebook"></i></a></li>
                   <li><a href="http://www.twitter.com/ytwguru" className="tips" title="" data-original-title="follow me on Twitter"><i className="icon-twitter-bird"></i></a></li>
@@ -37,7 +37,7 @@ export default React.createClass({
                 <h3>Tanya Toba</h3>
                 <p>Co-Founder / COO</p>
               </div>
-              <div className="boxContent"> <a href="mailto:tanya@ytadvisors.com">tanya@ytadvisors.com</a>
+              <div className="boxContent color3"> <a href="mailto:tanya@ytadvisors.com">tanya@ytadvisors.com</a>
                 <ul className="socialNetwork">
                   <li><a href="http://www.facebook.com/tanya.hamilton.9" className="tips" title="" data-original-title="follow me on Facebook"><i className="icon-facebook"></i></a></li>
                   <li><a href="#" className="tips" title="" data-original-title="follow me on Twitter"><i className="icon-twitter-bird"></i></a></li>
