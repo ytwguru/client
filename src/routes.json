@@ -14,5 +14,10 @@
     "path" : "/error",
     "key" : "error",
     "page" : "./pages/error/index.jsx"
+  },
+  {
+    "path" : "/members",
+    "key" : "members",
+    "page" : "./pages/members/index.jsx"
   }
 ]

@@ -5,6 +5,7 @@ const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const ExtractCSS = new ExtractTextPlugin('[name].min.css', {
@@ -127,6 +128,12 @@ if(isDeploy){
     }
   }));
   config.plugins.push(new webpack.optimize.AggressiveMergingPlugin());
+} else {
+  config.plugins.push(new BrowserSyncPlugin({
+    host: 'localhost',
+    port: 3000,
+    server: { baseDir: ['dist'] }
+  }));
 }
 
 module.exports = config;

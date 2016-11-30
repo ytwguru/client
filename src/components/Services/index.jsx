@@ -36,40 +36,48 @@ export default React.createClass({
                 <h1>Our services</h1>
               </div>
               <div className="col-md-3">
-                <article className="boxIcon">
-                  <div className="iconWrapper iconBig"> <i className="icon-mobile-1"></i></div>
-                  <section className="boxContent">
-                    <h2>Product Development</h2>
-                    <p>We design and develop web, mobile and desktop applications following a value-driven, iterative process.</p>
-                  </section>
-                </article>
+                <a href ="/about#product_development">
+                  <article className="boxIcon">
+                    <div className="iconWrapper iconBig"> <i className="icon-mobile-1"></i></div>
+                    <section className="boxContent">
+                      <h2>Product Development</h2>
+                      <p>We design and develop web, mobile and desktop applications following a value-driven, iterative process.</p>
+                    </section>
+                  </article>
+                </a>
               </div>
               <div className="col-md-3">
-                <article className="boxIcon">
-                  <div className="iconWrapper iconBig"> <i className="icon-light-bulb"></i></div>
-                  <section className="boxContent">
-                    <h2>Technology Consulting</h2>
-                    <p>We help teams understand trends, and security risks, and create road maps to reach development goals.</p>
-                  </section>
-                </article>
+                <a href ="/about#technology_consulting">
+                  <article className="boxIcon">
+                    <div className="iconWrapper iconBig"> <i className="icon-light-bulb"></i></div>
+                    <section className="boxContent">
+                      <h2>Technology Consulting</h2>
+                      <p>We help teams understand trends, and security risks, and create road maps to reach development goals.</p>
+                    </section>
+                  </article>
+                </a>
               </div>
               <div className="col-md-3">
-                <article className="boxIcon">
-                  <div className="iconWrapper iconBig"> <i className="icon-star-empty"></i></div>
-                  <section className="boxContent">
-                    <h2>System Integration</h2>
-                    <p>We create software integration solutions allowing companies to integrate with third party platforms.</p>
-                  </section>
-                </article>
+                <a href ="/about#system_integration">
+                  <article className="boxIcon">
+                    <div className="iconWrapper iconBig"> <i className="icon-star-empty"></i></div>
+                    <section className="boxContent">
+                      <h2>System Integration</h2>
+                      <p>We create software integration solutions allowing companies to integrate with third party platforms.</p>
+                    </section>
+                  </article>
+                </a>
               </div>
               <div className="col-md-3">
-                <article className="boxIcon">
-                  <div className="iconWrapper iconBig"> <i className="icon-server"></i></div>
-                  <section className="boxContent">
-                    <h2>Hosting & Support</h2>
-                    <p>We setup production environments, oversee server security, perform daily backups and monitor performance.</p>
-                  </section>
-                </article>
+                <a href ="/about#hosting_support">
+                  <article className="boxIcon">
+                    <div className="iconWrapper iconBig"> <i className="icon-server"></i></div>
+                    <section className="boxContent">
+                      <h2>Hosting & Support</h2>
+                      <p>We setup production environments, oversee server security, perform daily backups and monitor performance.</p>
+                    </section>
+                  </article>
+                </a>
               </div>
             </div>
           </div>
@@ -80,28 +88,38 @@ export default React.createClass({
             <div className="col-md-4"> <img className="img-responsive" src="http://cdn.ytadvisors.com/images/target.jpg" alt="services" />
             </div>
             <div className="col-md-4">
-              <h2>Custom Application Development</h2>
+              <div className = "serviceBlock">
+                <h2>Custom Application Development</h2>
+                <p>
+                  We design and develop software tailored to your specific demands in a way
+                  that ultimately meets all your business goals, expectations, and requirements.
+                </p>
+                <p> Our applications are built using the latest in web and mobile technologies
+                  solving your toughest problems and fitting seamlessly into your current processes
+                  and systems, to produce measurable results for your business.
+                </p>
+                <p>
+                  Along with full-cycle custom software development,
+                  we provide software maintenance and platform-based customization.
+                </p>
+              </div>
               <p>
-                We design and develop software tailored to your specific demands in a way
-                that ultimately meets all your business goals, expectations, and requirements.
-              </p>
-              <p> Our applications are built using the latest in web and mobile technologies
-                solving your toughest problems and fitting seamlessly into your current processes
-                and systems, to produce measurable results for your business.
-              </p>
-              <p>
-                Along with full-cycle custom software development,
-                we provide software maintenance and platform-based customization.
+                <a href = "/about#custom_application_development" className = "btn">Read More</a>
               </p>
             </div>
             <div className="col-md-4">
-              <h2>Website Design</h2>
-              <p> We develop responsive sites that provide the best user experience across devices, combining great design, form and function so
-                users can find the information they need quickly.  We leverage usability testing tools and techniques to understand how users interact
-                with your product to maximize user engagement and satisfaction.
-              </p>
-              <h2>Working with Startups</h2>
-              <p> We quickly deploy an MVP for your new business with hand-crafted solutions that merge smart design, leading-edge technology and your unique business goals.
+              <div className = "serviceBlock">
+                <h2>Website Design</h2>
+                <p> We develop responsive sites that provide the best user experience across devices, combining great design, form and function so
+                  users can find the information they need quickly.  We leverage usability testing tools and techniques to understand how users interact
+                  with your product to maximize user engagement and satisfaction.
+                </p>
+                <h2>Working with Startups</h2>
+                <p> We quickly deploy an MVP for your new business with hand-crafted solutions that merge smart design, leading-edge technology and your unique business goals.
+                </p>
+              </div>
+              <p>
+                <a href = "/about#custom_application_development" className = "btn">Read More</a>
               </p>
             </div>
           </div>
