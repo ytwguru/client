@@ -12,9 +12,12 @@ const ExtractCSS = new ExtractTextPlugin('[name].min.css', {
 });
 const ExtractJS = new ExtractTextPlugin('[name].min.js');
 const S3Plugin = require("webpack-s3-plugin");
+const isDebug = process.env.DEVELOPMENT === "true";
+const isDeploy = process.env.DEPLOY === "true";
 
 let config  = {
-  devtool: 'source-map',
+  devtool: isDebug ? 'source-map' : false,
+  debug: isDebug,
   entry: {
     main: [
       path.resolve(__dirname, './src/index.js')
@@ -94,13 +97,14 @@ let config  = {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
         DEPLOY: JSON.stringify(process.env.DEPLOY),
         GA_TRACKER : JSON.stringify(process.env.GA_TRACKER),
-        MIXPANEL_TRACKER : JSON.stringify(process.env.MIXPANEL_TRACKER)
+        MIXPANEL_TRACKER : JSON.stringify(process.env.MIXPANEL_TRACKER),
+        API_URL : JSON.stringify(process.env.API_URL)
       }
     })
   ]
 };
 
-if(process.env.DEPLOY === "true"){
+if(isDeploy){
   config.plugins.push(
     new S3Plugin({
       s3Options: {
@@ -116,6 +120,13 @@ if(process.env.DEPLOY === "true"){
       }
     })
   );
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin({
+    compress: {
+      warnings: false,
+      screw_ie8: true
+    }
+  }));
+  config.plugins.push(new webpack.optimize.AggressiveMergingPlugin());
 }
 
 module.exports = config;

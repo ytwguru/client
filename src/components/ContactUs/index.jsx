@@ -21,7 +21,8 @@ export default React.createClass({
   },
 
   submit : function(model, reset){
-    $.post("/contacts", model)
+    let api_url = process.env.API_URL;
+    $.post(`${api_url}/contacts`, model)
       .done( data => {
         reset();
         $("#contactfrm").find("input[type=text], textarea").val("");
@@ -30,7 +31,7 @@ export default React.createClass({
   },
 
   render: function () {
-    var alertData = {
+    let alertData = {
       header : "Message Sent",
       message : "<p>We just received your message </p><p>A member of our team will get in touch with you soon.</p>"
     };

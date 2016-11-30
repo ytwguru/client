@@ -17,8 +17,9 @@ export default React.createClass({
   },
 
   submit : function(model, reset){
-    var $form = $('#quoteFormWrapper');
-    $.post("/quotes", model)
+    let $form = $('#quoteFormWrapper');
+    let api_url = process.env.API_URL;
+    $.post(`${api_url}/quotes`, model)
       .done( data => {
         reset();
         $("#projectQuote").find("input[type=text], textarea").val("");
@@ -30,10 +31,10 @@ export default React.createClass({
   },
 
   componentDidMount : function(){
-    var $form = $('#quoteFormWrapper');
+    let $form = $('#quoteFormWrapper');
     $('#quoteTrigger').click(function (e) {
       e.preventDefault();
-      var $this = $(this);
+      let $this = $(this);
 
       if(!$form.is(':visible')){
         $('html, body').animate({ scrollTop: $("#quoteWrapper").offset().top }, 300);
@@ -45,7 +46,7 @@ export default React.createClass({
     });
   },
   render : function(){
-    var alertData = {
+    let alertData = {
       header : "Request Sent",
       message : "<p>We just received your quote request. </p><p>A member of our team will get in touch with you soon.</p>"
     };

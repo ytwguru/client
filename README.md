@@ -43,4 +43,5 @@ CDN_BASE=<update with CloudFront cdn>
 S3_BUCKET=<update with S3 bucket name>
 GA_TRACKER=<update with Google Analytics tracker>
 MIXPANEL_TRACKER=<update with mixpanel tracker>
+API_URL=<update with api url.  Include http:// or https://>
 ```
