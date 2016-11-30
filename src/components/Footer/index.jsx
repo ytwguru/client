@@ -18,10 +18,10 @@ export default React.createClass({
                 </div>
                 <div className="col-md-12">
                   <ul className="socialNetwork">
-                    <li><a href="https://www.facebook.com/ytadvisors" className="iconWrapper color4 tips icoFacebook" title="Facebook"><i className="icon-facebook"></i></a></li>
-                    <li><a href="https://twitter.com/ytadvisors" className="iconWrapper color4 tips icoTwitter" title="Twitter"><i className="icon-twitter"></i></a></li>
-                    <li><a href="https://plus.google.com/104285030611184554232" className="iconWrapper color4 tips icoGoogle" title="Google +"><i className="icon-gplus"></i></a></li>
-                    <li className="last"><a href="https://www.linkedin.com/company/15158921" className="iconWrapper color4 tips icoLinkedin" title="Linkedin"><i className="icon-linkedin"></i></a></li>
+                    <li><a href="http://www.facebook.com/ytadvisors" className="iconWrapper color4 tips icoFacebook" title="Facebook"><i className="icon-facebook"></i></a></li>
+                    <li><a href="http://twitter.com/ytadvisors" className="iconWrapper color4 tips icoTwitter" title="Twitter"><i className="icon-twitter"></i></a></li>
+                    <li><a href="http://plus.google.com/104285030611184554232" className="iconWrapper color4 tips icoGoogle" title="Google +"><i className="icon-gplus"></i></a></li>
+                    <li className="last"><a href="http://www.linkedin.com/company/15158921" className="iconWrapper color4 tips icoLinkedin" title="Linkedin"><i className="icon-linkedin"></i></a></li>
                   </ul>
                 </div>
                 <div className="col-md-12"> </div>
