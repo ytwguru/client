@@ -14,7 +14,7 @@ export default React.createClass({
           </div>
           <div className="col-md-6">
             <article className="boxWrapper color1">
-              <div><img className="img-responsive" src="http://cdn.ytadvisors.com/images/team/yomi.gif" alt="" /></div>
+              <div><img className="img-responsive" src="https://cdn.ytadvisors.com/images/team/yomi.gif" alt="" /></div>
               <div className="boxContent2">
                 <h3>Yomi Toba </h3>
                 <p>Co-Founder / CEO</p>
@@ -32,7 +32,7 @@ export default React.createClass({
           </div>
           <div className="col-md-6">
             <article className="boxWrapper color1">
-              <div><img className="img-responsive" src="http://cdn.ytadvisors.com/images/team/tanya.png" alt="" /></div>
+              <div><img className="img-responsive" src="https://cdn.ytadvisors.com/images/team/tanya.png" alt="" /></div>
               <div className="boxContent2">
                 <h3>Tanya Toba</h3>
                 <p>Co-Founder / COO</p>
