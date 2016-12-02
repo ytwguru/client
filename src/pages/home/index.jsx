@@ -96,7 +96,7 @@ export default React.createClass({
         </ArrowsNav>
         <MidBreaker data={this.getBreakerContent(1)}>
         </MidBreaker>
-        <Quote>
+        <Quote data={{ color: "color3" }}>
         </Quote>
         <Team>
         </Team>

@@ -47,38 +47,25 @@ export default React.createClass({
           <div id="memberSlide">
             <div className="col-md-3">
               <div href="" title="" id="mapTriggerLoader">
-                <img class="img-responsive" id = "teamProfilepic" src ={this.props.data.profilePicture} data-src={this.props.data.profilePicture} />
+                <img className="img-responsive" id = "teamProfilepic" src ={this.props.data.profilePicture} data-src={this.props.data.profilePicture} />
               </div>
-              <p>For more information please submit an inquiry in the member us form or send an email to <a href = "mailto:support@ytadvisors.com"> support@ytadvisors.com</a>.</p>
+              <p>
+                <h3 className = "text-center">{this.props.data.title}</h3>
+              </p>
             </div>
-            <div className="col-md-6">
-              <Formsy.Form id="memberfrm" ref="memberfrm" className="form"
-                           onValidSubmit={this.submit} onValid={this.enableButton} onInvalid={this.disableButton}>
-                <TextInput name="name" id="name" placeholder="Name" required
-                           validations="maxLength:150" />
-                <TextInput id="email" placeholder="Email" name="email"
-                           validations="isEmail" validationError="This is not a valid email" required
-                />
-                <TextInput name="phone" id="phone" placeholder="Phone" required
-                           validations="maxLength:20" />
-
-                <TextArea name="comment" id="comments" placeholder="Enter your message..." cols="3" rows="5" >
-                </TextArea>
-                <button name="submit" type="submit" className="btn" id="submit" disabled={!this.state.canSubmit}> Submit</button>
-              </Formsy.Form>
-
+            <div className="col-md-6" dangerouslySetInnerHTML={{__html: this.props.data.bio}} >
             </div>
             <div className="col-md-3">
               <address>
-                <strong>Address:</strong><br/>
-                YT Advisors<br/>
-                7733 Forsyth Blvd. Suite 1100<br/>
-                Clayton, MO. 63105 USA <br/>
-                <br/>
-                <strong>Phone:</strong><br/>
-                314.669.1750<br/><br/>
-                <strong>Fax:</strong><br/>
-                314.652.2092<br/>
+                <strong>Address:</strong>
+                <p dangerouslySetInnerHTML={{__html: this.props.data.address}} >
+                </p>
+                <strong>Phone:</strong>
+                <p dangerouslySetInnerHTML={{__html: this.props.data.phone}} >
+                </p>
+                <strong>Fax:</strong>
+                <p dangerouslySetInnerHTML={{__html: this.props.data.fax}} >
+                </p>
               </address>
             </div>
           </div>

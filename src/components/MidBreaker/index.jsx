@@ -14,37 +14,38 @@ export default React.createClass({
     return "iconWrapper iconBig col-centered";
   },
   render : function(){
-    var data = this.getProps();
+    let data = this.getProps();
+    let text = () => {};
+    let icon = <div className="row emptyRow"></div>;
+
+    if(data.text) {
+      if(data.header === true){
+        text = <div className="row">
+          <div className="topHeader col-md-12" dangerouslySetInnerHTML={{__html: data.text}}>
+          </div>
+        </div>;
+      }
+      else {
+        text = <div className="row">
+          <blockquote className="bigTitle col-md-12" dangerouslySetInnerHTML={{__html: data.text}}>
+          </blockquote>
+        </div>;
+      }
+    }
+
+    if(data.icon){
+      icon = <div className="row">
+        <div className={this.getIconClass(data.color)}>
+          <i className={data.icon}>
+          </i>
+        </div>
+      </div>;
+    }
+
     return <div id={data.id} data-stellar-background-ratio="0.5">
       <div className="paralaxText container">
-        {
-          (((icon, color) => {
-            if(icon) {
-              return <div className="row">
-                <div className={this.getIconClass(color)}>
-                  <i className={icon}>
-                  </i>
-                </div>
-              </div>;
-            }
-            else{
-              return <div className="row emptyRow"></div>
-            }
-          })( data.icon, data.color))
-        }
-        {
-          (((text) =>{
-            if(text){
-              return <div className="row">
-                <blockquote className="bigTitle col-md-12" dangerouslySetInnerHTML={{__html: data.text}}>
-                </blockquote>
-              </div>;
-            }
-            else {
-              return <div className="row"></div>
-            }
-          })(data.text))
-        }
+        {icon}
+        {text}
       </div>
     </div>;
   }

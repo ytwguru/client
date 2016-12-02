@@ -36,7 +36,7 @@ export default React.createClass({
                 <h1>Our services</h1>
               </div>
               <div className="col-md-3">
-                <a href ="/about/product_development">
+                <a href ="/services/product_development">
                   <article className="boxIcon">
                     <div className="iconWrapper iconBig"> <i className="icon-mobile-1"></i></div>
                     <section className="boxContent">
@@ -47,7 +47,7 @@ export default React.createClass({
                 </a>
               </div>
               <div className="col-md-3">
-                <a href ="/about/technology_consulting">
+                <a href ="/services/technology_consulting">
                   <article className="boxIcon">
                     <div className="iconWrapper iconBig"> <i className="icon-light-bulb"></i></div>
                     <section className="boxContent">
@@ -58,7 +58,7 @@ export default React.createClass({
                 </a>
               </div>
               <div className="col-md-3">
-                <a href ="/about/system_integration">
+                <a href ="/services/system_integration">
                   <article className="boxIcon">
                     <div className="iconWrapper iconBig"> <i className="icon-star-empty"></i></div>
                     <section className="boxContent">
@@ -69,7 +69,7 @@ export default React.createClass({
                 </a>
               </div>
               <div className="col-md-3">
-                <a href ="/about/hosting_support">
+                <a href ="/services/hosting_support">
                   <article className="boxIcon">
                     <div className="iconWrapper iconBig"> <i className="icon-server"></i></div>
                     <section className="boxContent">
@@ -99,12 +99,11 @@ export default React.createClass({
                   and systems, to produce measurable results for your business.
                 </p>
                 <p>
-                  Along with full-cycle custom software development,
                   we provide software maintenance and platform-based customization.
                 </p>
               </div>
               <p>
-                <a href = "/about/custom_application_development" className = "btn">Read More</a>
+                <a href = "/services/custom_application_development" className = "btn">Read More</a>
               </p>
             </div>
             <div className="col-md-4">
@@ -119,7 +118,7 @@ export default React.createClass({
                 </p>
               </div>
               <p>
-                <a href = "/about/website_startup" className = "btn">Read More</a>
+                <a href = "/services/website_startup" className = "btn">Read More</a>
               </p>
             </div>
           </div>

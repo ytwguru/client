@@ -106,6 +106,9 @@ let config  = {
 };
 
 if(isDeploy){
+  var expireDate = new Date();
+  expireDate.setMinutes(expireDate.getMinutes() + 30);
+
   config.plugins.push(
     new S3Plugin({
       s3Options: {
@@ -114,7 +117,8 @@ if(isDeploy){
         region: process.env.DEPLOY_AWS_REGION
       },
       s3UploadOptions: {
-        Bucket: process.env.S3_BUCKET
+        Bucket: process.env.S3_BUCKET,
+        Expires: expireDate
       },
       cdnizerOptions: {
         defaultCDNBase: process.env.CDN_BASE

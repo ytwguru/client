@@ -14,7 +14,7 @@ export default React.createClass({
           </div>
           <div className="col-md-6">
             <article className="boxWrapper color1">
-              <a href = "/members/yomi">
+              <a href = "/team/yomi">
                 <div>
                   <img className="img-responsive" src="http://cdn.ytadvisors.com/images/team/yomi.gif" alt="" />
                 </div>
@@ -25,7 +25,7 @@ export default React.createClass({
               </a>
               <div className="boxContent color3"> 
                 <p>
-                  <a href="/members/yomi">View Profile</a>
+                  <a href="/team/yomi">View Profile</a>
                 </p>
                 <a href="mailto:yomi@ytadvisors.com">yomi@ytadvisors.com</a>
                 <ul className="socialNetwork">
@@ -40,18 +40,18 @@ export default React.createClass({
           </div>
           <div className="col-md-6">
             <article className="boxWrapper color1">
-              <a href = "/members/tanya">
+              <a href = "/team/tanya">
                 <div>
                   <img className="img-responsive" src="http://cdn.ytadvisors.com/images/team/tanya.png" alt="" />
                 </div>
                 <div className="boxContent2">
-                  <h3>Tanya Toba</h3>
+                  <h3>Tanya Hamilton Toba</h3>
                   <p>Co-Founder / COO</p>
                 </div>
               </a>
               <div className="boxContent color3">
                 <p>
-                  <a href="/members/tanya">View Profile</a>
+                  <a href="/team/tanya">View Profile</a>
                 </p>
                 <a href="mailto:tanya@ytadvisors.com">tanya@ytadvisors.com</a>
                 <ul className="socialNetwork">

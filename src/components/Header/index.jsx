@@ -31,11 +31,9 @@ export default React.createClass({
         <div id="navbarCollapse" className="collapse navbar-collapse">
           <ul className="nav navbar-nav">
             <li className={this.getLinkClass("home")}><a href={`${prefix}#home`}>Home</a> </li>
-            <li><a href={`${prefix}#services`}>Services</a> </li>
-            <li><a href={`${prefix}#team`}>Team</a> </li>
-            <li><a href={`${prefix}#contactSlice`}>Contact</a> </li>
-            <li className={this.getLinkClass("about")}><a href="/about">About Us</a></li>
-            <li className={this.getLinkClass("members")}><a href="/members">Members</a></li>
+            <li className={this.getLinkClass("services")}><a href={`${prefix}#services`}>Services</a> </li>
+            <li className={this.getLinkClass("team")}><a href={`${prefix}#team`}>Team</a> </li>
+            <li className={this.getLinkClass("contact")}><a href={`${prefix}#contactSlice`}>Contact</a> </li>
           </ul>
         </div>
       </div>

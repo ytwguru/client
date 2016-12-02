@@ -29,6 +29,9 @@ export default React.createClass({
             <div className = "content">
               <h2>Professional software development</h2>
               <h3>We build custom web, mobile, and cross-platform solutions that keep you one step ahead of the competition.</h3>
+              <p>
+                <a href = "/services/product_development" className = "btn pull-right">Read More</a>
+              </p>
             </div>
           </section>
         </div>
@@ -41,6 +44,9 @@ export default React.createClass({
             <div className = "content">
               <h2>Custom software solutions</h2>
               <h3>Whether you are a start-up or an established business, we create solutions to engage your customers.</h3>
+              <p>
+                <a href = "/services/custom_application_development" className = "btn pull-right">Read More</a>
+              </p>
             </div>
           </section>
         </div>
@@ -53,6 +59,9 @@ export default React.createClass({
             <div className = "content">
               <h2>Information Security</h2>
               <h3>Address data security challenges in software, systems, and organizational processes.</h3>
+              <p>
+                <a href = "/services/technology_consulting#security" className = "btn pull-right">Read More</a>
+              </p>
             </div>
           </section>
         </div>
@@ -65,6 +74,9 @@ export default React.createClass({
             <div className = "content">
               <h2>Product management</h2>
               <h3>Our experienced consultants will tailor solutions that deliver results.</h3>
+              <p>
+                <a href = "/services/technology_consulting#product_management" className = "btn pull-right">Read More</a>
+              </p>
             </div>
           </section>
         </div>

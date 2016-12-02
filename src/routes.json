@@ -11,39 +11,39 @@
     "page" : "./pages/about/index.jsx"
   },
   {
-    "path" : "/about/product_development",
-    "key" : "about_product_development",
-    "page" : "./pages/about/product_development/index.jsx"
+    "path" : "/services/product_development",
+    "key" : "services_product_development",
+    "page" : "./pages/services/product_development/index.jsx"
   },
   {
-    "path" : "/about/technology_consulting",
-    "key" : "about_technology_consulting",
-    "page" : "./pages/about/technology_consulting/index.jsx"
+    "path" : "/services/technology_consulting",
+    "key" : "services_technology_consulting",
+    "page" : "./pages/services/technology_consulting/index.jsx"
   },
   {
-    "path" : "/about/system_integration",
-    "key" : "about_system_integration",
-    "page" : "./pages/about/system_integration/index.jsx"
+    "path" : "/services/system_integration",
+    "key" : "services_system_integration",
+    "page" : "./pages/services/system_integration/index.jsx"
   },
   {
-    "path" : "/about/hosting_support",
-    "key" : "about_hosting_support",
-    "page" : "./pages/about/hosting_support/index.jsx"
+    "path" : "/services/hosting_support",
+    "key" : "services_hosting_support",
+    "page" : "./pages/services/hosting_support/index.jsx"
   },
   {
-    "path" : "/about/product_development",
-    "key" : "about_product_development",
-    "page" : "./pages/about/product_development/index.jsx"
+    "path" : "/services/product_development",
+    "key" : "services_product_development",
+    "page" : "./pages/services/product_development/index.jsx"
   },
   {
-    "path" : "/about/website_startup",
-    "key" : "about_website_startup",
-    "page" : "./pages/about/website_startup/index.jsx"
+    "path" : "/services/website_startup",
+    "key" : "services_website_startup",
+    "page" : "./pages/services/website_startup/index.jsx"
   },
   {
-    "path" : "/about/custom_application_development",
-    "key" : "about_custom_application_development",
-    "page" : "./pages/about/custom_application_development/index.jsx"
+    "path" : "/services/custom_application_development",
+    "key" : "services_custom_application_development",
+    "page" : "./pages/services/custom_application_development/index.jsx"
   },
   {
     "path" : "/error",
@@ -51,18 +51,13 @@
     "page" : "./pages/error/index.jsx"
   },
   {
-    "path" : "/members",
-    "key" : "members",
-    "page" : "./pages/members/index.jsx"
+    "path" : "/team/tanya",
+    "key" : "team_tanya",
+    "page" : "./pages/team/tanya/index.jsx"
   },
   {
-    "path" : "/members/tanya",
-    "key" : "members_tanya",
-    "page" : "./pages/members/tanya/index.jsx"
-  },
-  {
-    "path" : "/members/yomi",
-    "key" : "members_yomi",
-    "page" : "./pages/members/yomi/index.jsx"
+    "path" : "/team/yomi",
+    "key" : "team_yomi",
+    "page" : "./pages/team/yomi/index.jsx"
   }
 ]

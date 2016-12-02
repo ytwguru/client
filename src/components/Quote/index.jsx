@@ -50,7 +50,7 @@ export default React.createClass({
       header : "Request Sent",
       message : "<p>We just received your quote request. </p><p>A member of our team will get in touch with you soon.</p>"
     };
-    return <section className="slice color3" id="quoteWrapper">
+    return <section className={`slice ${this.props.data.color}`} id="quoteWrapper">
       <div className="container">
         <div className="ctaBox clearfix">
           <div className="row-fluid">
