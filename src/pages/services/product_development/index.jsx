@@ -15,7 +15,25 @@ export default React.createClass({
       page : "product_development",
       content : `
       <p>
-      We design and develop web, mobile and desktop applications following a value-driven, iterative process.</p>
+      We design and develop web, mobile and desktop applications following a value-driven, iterative process.
+      </p>
+      <h3>Full Cycle Product Development</h3>
+      <p>
+      We are a full-cycle software product development service provider supporting you at any stage of your product evolution. 
+       We bring your product vision to life, whether it's a new product, new features, or re-platforming legacy products.  
+      </p>
+      <h3>Project Rescue</h3>
+      <p>
+      If you have a partially completed product and you need it completed under tight deadlines we can be a great solution. 
+       While documentation might be incomplete or unavailable, we will analyze what you have, assess the remain requirements to reach
+        a finished product, and provide you with a plan and budget.
+      </p>
+      <h3>Team Expansion</h3>
+      <p>
+      If you have an existing established team with well defined processes, but need to extend your development capability,
+       we can be a resource for you.   We will analyze your processes and adjust our team to plug into your system. 
+        We will assign a dedicated team and scale on demand.
+      </p>
       `
     };
   },
