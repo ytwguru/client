@@ -12,7 +12,14 @@ export default React.createClass({
   getServiceData : function(){
     return {
       mainImage : "http://cdn.ytadvisors.com/images/services/website_design.png",
-      page : "website_startup"
+      page : "website_startup",
+      content: `
+      <p> 
+      We develop responsive sites that provide the best user experience across devices, combining great design, form and function so
+       users can find the information they need quickly.  We leverage usability testing tools and techniques to understand how users interact
+       with your product to maximize user engagement and satisfaction.
+      </p>
+                `
     };
   },
   render : function(){

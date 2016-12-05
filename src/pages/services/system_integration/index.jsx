@@ -12,7 +12,10 @@ export default React.createClass({
   getServiceData : function(){
     return {
       mainImage : "http://cdn.ytadvisors.com/images/services/integration.png",
-      page : "system_integration"
+      page : "system_integration",
+      content: `
+      <p>We create software integration solutions allowing companies to integrate with third party platforms.</p>
+      `
     };
   },
   render : function(){

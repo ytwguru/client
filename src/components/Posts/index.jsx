@@ -17,27 +17,13 @@ export default React.createClass({
                 <img src={this.props.data.mainImage} alt="" />
               </div>
             </header>
-            <section className="blogPost clearfix">
-              <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut magna velit. Quisque placerat, risus in adipiscing rhoncus,
-                quam purus bibendum sapien, a bibendum odio leo sit amet metus. Sed sed dolor sit amet lacus luctus blandit ut a lorem. Fusce feugiat
-                aliquam imperdiet. </p>
-              <h3>Quisque vitae ipsum ac justo porta </h3>
-              <p> Orem ipsum dolor sit amet Consectetur adipiscing elit. Vestibulum ut
-                magna velit. Quisque placerat, risus in adipiscing rhoncus, quam purus bibendum sapien, a bibendum odio leo sit amet metus. Sed sed
-                dolor sit amet lacus luctus blandit ut a lorem. Fusce feugiat aliquam imperdiet. Quisque vitae ipsum ac justo porta gravida
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut magna velit. Quisque placerat, risus in adipiscing rhoncus,
-                quam purus bibendum sapien, a bibendum odio leo sit amet metus. Sed sed dolor sit amet lacus luctus blandit ut a lorem. Fusce feugiat
-                aliquam imperdiet. Quisque vitae ipsum ac justo porta gravida.orem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut
-                magna velit. Quisque placerat, risus in adipiscing rhoncus, quam purus bibendum sapien, a bibendum odio leo sit amet metus. Sed sed
-                dolor sit amet lacus luctus blandit ut a lorem. Fusce feugiat aliquam imperdiet. Quisque vitae ipsum ac justo porta gravida </p>
-              <div id="shareme" data-url="" data-title="Awesome html5 css3 premium template" data-desc="Check out this great #themeforest item Altea One page HTML5, CSS3, Bootstrap website template">
-              </div>
+            <section className="blogPost clearfix" dangerouslySetInnerHTML={{__html: this.props.data.content}} >
             </section>
           </article>
         </div>
         <div className="col-md-4">
           <section>
-            <p>Nullam sed tortor odio. Suspendisse tincidunt dictum nisi, nec convallis odio lacinia ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+            <p>Our services focus on our clients' critical issues and opportunities across all industries and geographies.</p>
           </section>
           <section className="blogUpdates">
             <ul className="serviceList">

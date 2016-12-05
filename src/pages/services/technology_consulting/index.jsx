@@ -12,7 +12,10 @@ export default React.createClass({
   getServiceData : function(){
     return {
       mainImage : "http://cdn.ytadvisors.com/images/services/security.png",
-      page : "technology_consulting"
+      page : "technology_consulting",
+      content : `
+      <p>We help teams understand trends, and security risks, and create road maps to reach development goals.</p>
+      `
     };
   },
   render : function(){
