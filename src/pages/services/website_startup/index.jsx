@@ -28,7 +28,7 @@ export default React.createClass({
       </p>
       <h3>Best practices in web design</h3>
       <p> 
-      We create the fastest experiences for you visitors.  Using best practices in web design and engineering, we create fast
+      We create the fastest experiences for your visitors.  Using best practices in web design and engineering, we create fast
        loading pages, shorter buying processes and high conversion e-commerce checkout pages. Your customers can seamlessly
         flow through your website and provide immediate monetary value for your company.
       </p>

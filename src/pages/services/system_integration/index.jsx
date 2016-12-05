@@ -15,6 +15,15 @@ export default React.createClass({
       page : "system_integration",
       content: `
       <p>We create software integration solutions allowing companies to integrate with third party platforms.</p>
+      <h3>Manage the complexity</h3>
+      <p>We create solutions that allow clients to integrate with complex systems within their organization walls and with
+       external partners, suppliers, and clients.  Our system integration specialist will help you manage the complexity
+        inherent with technology changes, from requirements planning to architecture, testing, deployment and beyond. 
+        </p>
+      <h3>Services to help with integration</h3>
+      <p>We offer a complete range of industry leading services to help with integration. 
+       These include systems development solutions, platform integration, program management,
+        and function and testing services.  </p>
       `
     };
   },
