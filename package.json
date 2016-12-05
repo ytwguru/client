@@ -106,6 +106,7 @@
     "redux-devtools-log-monitor": "^1.0.11",
     "redux-logger": "^2.6.1",
     "scroll-behavior": "^0.7.0",
+    "sitemap-webpack-plugin": "0.1.0",
     "smooth-scroll": "0.1.4",
     "standard": "^7.0.1",
     "standard-loader": "^3.0.0",

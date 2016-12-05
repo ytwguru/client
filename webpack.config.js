@@ -8,6 +8,7 @@ const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin'
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
+const SitemapPlugin = require('sitemap-webpack-plugin');
 const ExtractCSS = new ExtractTextPlugin('[name].min.css', {
   allChunks: false
 });
@@ -101,7 +102,8 @@ let config  = {
         MIXPANEL_TRACKER : JSON.stringify(process.env.MIXPANEL_TRACKER),
         API_URL : JSON.stringify(process.env.API_URL)
       }
-    })
+    }),
+    new SitemapPlugin(process.env.SITE_URL, routes, 'sitemap.xml')
   ]
 };
 
