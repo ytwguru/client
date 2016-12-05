@@ -32,7 +32,7 @@ export default React.createClass({
       <p>
       If you have an existing established team with well defined processes, but need to extend your development capability,
        we can be a resource for you.   We will analyze your processes and adjust our team to plug into your system. 
-        We will assign a dedicated team and scale on demand.
+        We will dedicated a team to your project and scale on demand.
       </p>
       `
     };

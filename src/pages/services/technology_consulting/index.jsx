@@ -25,10 +25,10 @@ export default React.createClass({
         Our implementation specialist work directly with our clients to help develop workforce skills,
         improve operational experience, and apply new working methods.
       </p>
-      <h3>Lean Startup and Design Thinking</h3>
-      <p>When working with top management, we incorporate modern conventions using Lean Startup and Design
-       Thinking methods by analyzing markets, interviewing customers, looking at the competition and helping
-        define roadmaps to set a course for your success.
+      <h3>Internal and external security infrastructure</h3>
+      <p>We offer a complete line of audit services covering a range of both system analysis and review.  Our system review highlights
+       the strengths and weaknesses of a company's internal and external security infrastructure.  While our detailed analysis allow
+        us to document physical security, network security and computer systems security.
       </p>
       `
     };
