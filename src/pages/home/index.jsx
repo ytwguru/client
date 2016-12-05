@@ -11,6 +11,7 @@ import Quote from "../../components/Quote";
 import Team from "../../components/Team";
 import ContactUs from "../../components/ContactUs";
 import Footer from "../../components/Footer";
+import Helmet from "react-helmet";
 
 export default React.createClass({
   componentDidMount : function(){

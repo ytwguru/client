@@ -7,6 +7,7 @@ import MidBreaker from "../../../components/MidBreaker";
 import Preloader from "../../../components/Preloader";
 import Footer from "../../../components/Footer";
 import Quote from "../../../components/Quote";
+import Helmet from "react-helmet";
 
 
 export default React.createClass({
@@ -31,6 +32,13 @@ export default React.createClass({
   },
   render : function() {
     return <div>
+      <Helmet
+        title ="YT Advisors Co-founder / COO Tanya Hamilton Toba"
+        meta={[
+        { name: 'description', content: 'Mrs. Toba is responsible for managing the daily operations of the company, interacting with clients, and overseeing the administration organizational duties.' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' }
+        ]}
+      />
       <Preloader >
       </Preloader>
       <div id="globalWrapper" className="localscroll">

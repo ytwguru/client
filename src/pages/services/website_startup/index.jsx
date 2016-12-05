@@ -7,6 +7,7 @@ import MidBreaker from "../../../components/MidBreaker";
 import Preloader from "../../../components/Preloader";
 import Footer from "../../../components/Footer";
 import Quote from "../../../components/Quote";
+import Helmet from "react-helmet";
 
 export default React.createClass({
   getServiceData : function(){
@@ -41,6 +42,13 @@ export default React.createClass({
   },
   render : function(){
     return <div>
+      <Helmet
+        title ="Website design and working with startups"
+        meta={[
+        { name: 'description', content: 'We develop responsive sites that provide the best user experience across devices, combining great design, form and function so users can find the information they need quickly.' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' }
+        ]}
+      />
       <Preloader >
       </Preloader>
       <div id="globalWrapper" className="localscroll">

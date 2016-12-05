@@ -58,7 +58,8 @@ mixpanel.init("${process.env.MIXPANEL_TRACKER}");
         `
         }
       ] : [] }
-        titleTemplate='Consulting and development services for small, medium and large companies'
+        defaultTitle = 'Consulting and development services for small, medium and large companies'
+        titleTemplate='%s | YTAdvisors.com'
       />
       {this.props.children}
     </div>
