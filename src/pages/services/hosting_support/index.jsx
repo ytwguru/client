@@ -31,7 +31,7 @@ export default React.createClass({
       <h3>Support services</h3>
       <p>
       We offer 1st, 2nd, and 3rd level support services for application developed by YT Advisors or any third party vendor. 
-       Our team will help you with troubles of any complexity level – from providing workarounds and hot fixes to security
+       Our team will help you with troubles of any complexity level - from providing workarounds and hot fixes to security
         audits and application enhancements. 
       </p>
       <p>
