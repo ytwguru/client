@@ -8,12 +8,14 @@ export default React.createClass({
   },
   
   render : function(){
+    let title = this.props.data.title ? <h3>{this.props.data.title}</h3> : () => {};
     return <section className="slice color1" id="postSlice">
       <div className="container">
         <div className="col-md-8">
           <article>
             <header>
               <div className="imgWrapper">
+                {title}
                 <img src={this.props.data.mainImage} alt="" />
               </div>
             </header>

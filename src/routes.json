@@ -59,5 +59,15 @@
     "path" : "/team/yomi",
     "key" : "team_yomi",
     "page" : "./pages/team/yomi/index.jsx"
+  },
+  {
+    "path" : "/blog",
+    "key" : "blog",
+    "page" : "./pages/blog/index.jsx"
+  },
+  {
+    "path" : "/blog/shut_up_do_it",
+    "key" : "blog_shut_up_do_it",
+    "page" : "./pages/blog/shut_up_do_it/index.jsx"
   }
 ]
