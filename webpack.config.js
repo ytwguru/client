@@ -100,7 +100,8 @@ let config  = {
         DEPLOY: JSON.stringify(process.env.DEPLOY),
         GA_TRACKER : JSON.stringify(process.env.GA_TRACKER),
         MIXPANEL_TRACKER : JSON.stringify(process.env.MIXPANEL_TRACKER),
-        API_URL : JSON.stringify(process.env.API_URL)
+        API_URL : JSON.stringify(process.env.API_URL),
+        SITE_URL : JSON.stringify(process.env.SITE_URL)
       }
     }),
     new SitemapPlugin(process.env.SITE_URL, routes, 'sitemap.xml')

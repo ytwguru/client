@@ -12,55 +12,40 @@ import Helmet from "react-helmet";
 export default React.createClass({
   getServiceData : function(){
     return {
-      mainImage : "http://cdn.ytadvisors.com/images/services/custom_development.png",
-      page : "custom_application_development",
+      mainImage : "http://cdn.ytadvisors.com/images/blog/shutup.jpg",
+      page : "blog",
+      month : "Dec",
+      day : "08",
+      title : "Shut up & Do it!",
       content : `
-        <p>
-        We design and develop software tailored to your specific demands in a way
-         that ultimately meets all your business goals, expectations, and requirements.
-        </p>
-        <h3>
-        Latest in web and mobile technologies
-        </h3>
-        <p>
-        Our applications are built using the latest in web and mobile technologies
-         solving your toughest problems and fitting seamlessly into your current processes
-         and systems, to produce measurable results for your business.
-        </p>
-        <h3>
-        Personalized Solutions
-        </h3>
-        <p>
-        We provide solutions that satisfy customers' needs more precisely than any off-the-shelf product. 
-         We have ample experience providing personalized solutions in Media, Entertainment, Education and Talent sourcing.
-        </p>
-        <h3>
-        Technologies
-        </h3>
-        <p>
-        <b>Backend</b>: .NET, Java, PHP, Node.js </br>
-        <b>Mobile</b>: iOS, Andriod, Windows Phone </br>
-        <b>Frontend</b>: HTML5, CSS3, ReactJS, AngularJS </br>
-        <b>Databases</b>: Miscrosoft SQL Server, MySQL, Oracle, PostgreSQL, MongoDB </br>
-        </p>
+        <div class = "shut_up_do_it">
+          <p>
+          "Most startups fail". We've been told this so many times as entrepreneurs we've practically memorized the failure statistic (90 percent). 
+           Chances our little startup will fall in the gutter are so high, that entrepreneurs willing to go forward with their
+            business are either:
+          </p>
+          <p>
+            <a href ="/blog/shut_up_do_it/" class = "btn">Read More</a>
+          </p>
+      </div>
       `
     };
   },
   render : function(){
     return <div>
       <Helmet
-        title ="Custom application development"
+        title ="Blog"
         meta={[
-        { name: 'description', content: 'We design and develop software tailored to your specific demands in a way that ultimately meets all your business goals, expectations, and requirements.' },
+        { name: 'description', content: 'YT Advisors blog' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' }
         ]}
       />
       <Preloader >
       </Preloader>
       <div id="globalWrapper" className="localscroll">
-        <Header data={{page : "services"}}>
+        <Header data={{page : "blog"}}>
         </Header>
-        <MidBreaker data={{id : "paralaxSlice9", text: "Custom Application Development", header: true }}>
+        <MidBreaker data={{id : "paralaxSlice9", text: "Blog", header: true }}>
         </MidBreaker>
         <Posts data={this.getServiceData()}>
         </Posts>

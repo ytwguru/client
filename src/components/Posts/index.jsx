@@ -9,14 +9,20 @@ export default React.createClass({
   
   render : function(){
     let title = this.props.data.title ? <h3>{this.props.data.title}</h3> : () => {};
+    let month = this.props.data.month ? <span>{this.props.data.month}</span> : null;
+    let day = this.props.data.day ? <h4>{this.props.data.day}</h4> : null;
+    let date = month && day ? <div className="newsDate">{day}{month}</div> : () => {};
     return <section className="slice color1" id="postSlice">
       <div className="container">
         <div className="col-md-8">
           <article>
             <header>
-              <div className="imgWrapper">
-                {title}
-                <img src={this.props.data.mainImage} alt="" />
+              {title}
+              <div className="postPic">
+                <div className="imgWrapper">
+                  <img src={this.props.data.mainImage} alt="" />
+                </div>
+                {date}
               </div>
             </header>
             <section className="blogPost clearfix" dangerouslySetInnerHTML={{__html: this.props.data.content}} >
