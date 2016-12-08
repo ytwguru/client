@@ -164,10 +164,10 @@ export default React.createClass({
         { name: 'og:locale', content: "en_US" },
         { name: 'og:url', content: `${process.env.SITE_URL}/blog/shut_up_do_it/` },
         { name: 'og:locale', content: "en_US" },
-        { name: 'og:title', content: "Ten steps to get your idea off the ground." },
+        { name: 'og:title', content: "Shut up & Do it! - Ten steps to get your idea off the ground." },
         { name: 'og:type', content: "article" },
         { name: 'author', content: "Yomi Toba" },
-        { name: 'twitter:title', content: "Ten steps to get your idea off the ground." },
+        { name: 'twitter:title', content: "Shut up & Do it! - Ten steps to get your idea off the ground." },
         { name: 'twitter:site', content: '@ytadvisors' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:creator', content: '@ytadvisors' }
