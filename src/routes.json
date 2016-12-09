@@ -6,67 +6,67 @@
     "index" : true
   },
   {
-    "path" : "/about",
+    "path" : "/about/",
     "key" : "about",
     "page" : "./pages/about/index.jsx"
   },
   {
-    "path" : "/services/product_development",
+    "path" : "/services/product_development/",
     "key" : "services_product_development",
     "page" : "./pages/services/product_development/index.jsx"
   },
   {
-    "path" : "/services/technology_consulting",
+    "path" : "/services/technology_consulting/",
     "key" : "services_technology_consulting",
     "page" : "./pages/services/technology_consulting/index.jsx"
   },
   {
-    "path" : "/services/system_integration",
+    "path" : "/services/system_integration/",
     "key" : "services_system_integration",
     "page" : "./pages/services/system_integration/index.jsx"
   },
   {
-    "path" : "/services/hosting_support",
+    "path" : "/services/hosting_support/",
     "key" : "services_hosting_support",
     "page" : "./pages/services/hosting_support/index.jsx"
   },
   {
-    "path" : "/services/product_development",
+    "path" : "/services/product_development/",
     "key" : "services_product_development",
     "page" : "./pages/services/product_development/index.jsx"
   },
   {
-    "path" : "/services/website_startup",
+    "path" : "/services/website_startup/",
     "key" : "services_website_startup",
     "page" : "./pages/services/website_startup/index.jsx"
   },
   {
-    "path" : "/services/custom_application_development",
+    "path" : "/services/custom_application_development/",
     "key" : "services_custom_application_development",
     "page" : "./pages/services/custom_application_development/index.jsx"
   },
   {
-    "path" : "/error",
+    "path" : "/error/",
     "key" : "error",
     "page" : "./pages/error/index.jsx"
   },
   {
-    "path" : "/team/tanya",
+    "path" : "/team/tanya/",
     "key" : "team_tanya",
     "page" : "./pages/team/tanya/index.jsx"
   },
   {
-    "path" : "/team/yomi",
+    "path" : "/team/yomi/",
     "key" : "team_yomi",
     "page" : "./pages/team/yomi/index.jsx"
   },
   {
-    "path" : "/blog",
+    "path" : "/blog/",
     "key" : "blog",
     "page" : "./pages/blog/index.jsx"
   },
   {
-    "path" : "/blog/shut_up_do_it",
+    "path" : "/blog/shut_up_do_it/",
     "key" : "blog_shut_up_do_it",
     "page" : "./pages/blog/shut_up_do_it/index.jsx"
   }
