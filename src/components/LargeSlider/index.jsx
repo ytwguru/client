@@ -39,7 +39,7 @@ export default React.createClass({
       <div className="carousel">
         <div className="carousel-cell">
           <section className = "imgWrapper">
-            <img data-src= "http://cdn.ytadvisors.com/images/slider/super/placeholder.jpg"
+            <img data-src= "http://cdn.ytadvisors.com/images/slider/super/placeholder.jpg" alt="Black family"
                  data-flickity-lazyload="http://cdn.ytadvisors.com/images/slider/super/supersized-2.jpg" className="img-responsive" />
             <div className = "content">
               <h2>Custom software solutions</h2>
@@ -69,7 +69,7 @@ export default React.createClass({
       <div className="carousel">
         <div className="carousel-cell">
           <section className = "imgWrapper">
-            <img data-src= "http://cdn.ytadvisors.com/images/slider/super/placeholder.jpg"
+            <img data-src= "http://cdn.ytadvisors.com/images/slider/super/placeholder.jpg" alt="Project managers"
                  data-flickity-lazyload="http://cdn.ytadvisors.com/images/slider/super/supersized-4.jpg" className="img-responsive" />
             <div className = "content">
               <h2>Product management</h2>

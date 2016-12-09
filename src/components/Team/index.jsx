@@ -16,7 +16,7 @@ export default React.createClass({
             <article className="boxWrapper color1">
               <a href = "/team/yomi/">
                 <div>
-                  <img className="img-responsive" src="http://cdn.ytadvisors.com/images/team/yomi.gif" alt="" />
+                  <img className="img-responsive" src="http://cdn.ytadvisors.com/images/team/yomi.gif" alt="Yomi Toba" />
                 </div>
                 <div className="boxContent2">
                   <h3>Yomi Toba </h3>
@@ -42,7 +42,7 @@ export default React.createClass({
             <article className="boxWrapper color1">
               <a href = "/team/tanya/">
                 <div>
-                  <img className="img-responsive" src="http://cdn.ytadvisors.com/images/team/tanya.png" alt="" />
+                  <img className="img-responsive" src="http://cdn.ytadvisors.com/images/team/tanya.png" alt="Tanya Hamilton Toba" />
                 </div>
                 <div className="boxContent2">
                   <h3>Tanya Hamilton Toba</h3>

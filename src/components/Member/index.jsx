@@ -47,7 +47,7 @@ export default React.createClass({
           <div id="memberSlide">
             <div className="col-md-3">
               <div href="" title="" id="mapTriggerLoader">
-                <img className="img-responsive" id = "teamProfilepic" src ={this.props.data.profilePicture} data-src={this.props.data.profilePicture} />
+                <img className="img-responsive" id = "teamProfilepic" src ={this.props.data.profilePicture} data-src={this.props.data.profilePicture}  alt={this.props.data.name}/>
               </div>
               <p>
                 <h3 className = "text-center">{this.props.data.title}</h3>

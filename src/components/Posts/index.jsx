@@ -20,7 +20,7 @@ export default React.createClass({
               {title}
               <div className="postPic">
                 <div className="imgWrapper">
-                  <img src={this.props.data.mainImage} alt="" />
+                  <img src={this.props.data.mainImage} alt="Main post image" />
                 </div>
                 {date}
               </div>
