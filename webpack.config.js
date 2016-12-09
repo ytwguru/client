@@ -9,6 +9,7 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const SitemapPlugin = require('sitemap-webpack-plugin');
+const RobotstxtPlugin = require('robotstxt-webpack-plugin').default;
 const ExtractCSS = new ExtractTextPlugin('[name].min.css', {
   allChunks: false
 });
@@ -104,7 +105,8 @@ let config  = {
         SITE_URL : JSON.stringify(process.env.SITE_URL)
       }
     }),
-    new SitemapPlugin(process.env.SITE_URL, routes, 'sitemap.xml')
+    new SitemapPlugin(process.env.SITE_URL, routes, 'sitemap.xml'),
+    new RobotstxtPlugin({})
   ]
 };
 
