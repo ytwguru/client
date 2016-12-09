@@ -13,7 +13,7 @@ export default React.createClass({
   getServiceData : function(){
     return {
       mainImage : "http://cdn.ytadvisors.com/images/services/website_design.png",
-      page : "website_startup",
+      page : "website-startup",
       content: `
       <p> 
       We develop responsive sites that provide the best user experience across devices, combining great design, form and function so

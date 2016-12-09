@@ -13,7 +13,7 @@ export default React.createClass({
   getServiceData : function(){
     return {
       mainImage : "http://cdn.ytadvisors.com/images/services/custom_development.png",
-      page : "custom_application_development",
+      page : "custom-application-development",
       content : `
         <p>
         We design and develop software tailored to your specific demands in a way

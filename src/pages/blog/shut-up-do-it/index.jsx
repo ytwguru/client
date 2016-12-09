@@ -17,7 +17,7 @@ export default React.createClass({
       month : "Dec",
       day : "08",
       content : `
-        <div class = "shut_up_do_it">
+        <div class = "shut-up-do-it">
           <br/><blockquote>Most startups fail</blockquote><br/>
           <p>
           We've been told this so many times as entrepreneurs we've practically memorized the failure statistic (90 percent). 
@@ -163,7 +163,7 @@ export default React.createClass({
         { property: 'og:image:height', content: "497" },
         { property: 'og:site_name', content: "ytadvisors" },
         { property: 'og:locale', content: "en_US" },
-        { property: 'og:url', content: `${process.env.SITE_URL}/blog/shut_up_do_it/` },
+        { property: 'og:url', content: `${process.env.SITE_URL}/blog/shut-up-do-it/` },
         { property: 'og:locale', content: "en_US" },
         { property: 'og:type', content: "article" },
         { name: 'author', content: "Yomi Toba" },

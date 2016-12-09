@@ -18,14 +18,14 @@ export default React.createClass({
       day : "08",
       title : "Shut up & Do it!",
       content : `
-        <div class = "shut_up_do_it">
+        <div class = "shut-up-do-it">
           <p>
           "Most startups fail". We've been told this so many times as entrepreneurs we've practically memorized the failure statistic (90 percent). 
            Chances our little startup will fall in the gutter are so high, that entrepreneurs willing to go forward with their
             business are either:
           </p>
           <p>
-            <a href ="/blog/shut_up_do_it/" class = "btn">Read More</a>
+            <a href ="/blog/shut-up-do-it/" class = "btn">Read More</a>
           </p>
       </div>
       `

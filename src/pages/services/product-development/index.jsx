@@ -13,7 +13,7 @@ export default React.createClass({
   getServiceData : function(){
     return {
       mainImage : "http://cdn.ytadvisors.com/images/services/product_dev.png",
-      page : "product_development",
+      page : "product-development",
       content : `
       <p>
       We design and develop web, mobile and desktop applications following a value-driven, iterative process.

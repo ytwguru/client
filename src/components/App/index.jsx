@@ -58,7 +58,7 @@ mixpanel.init("${process.env.MIXPANEL_TRACKER}");
         `
         }
       ] : [] }
-        defaultTitle = 'Consulting and software development solutions for small, medium and large businesses'
+        defaultTitle = 'Consulting software development for small, medium and large business'
         titleTemplate='%s | YTAdvisors.com'
       />
       {this.props.children}

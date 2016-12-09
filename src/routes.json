@@ -11,39 +11,39 @@
     "page" : "./pages/about/index.jsx"
   },
   {
-    "path" : "/services/product_development/",
-    "key" : "services_product_development",
-    "page" : "./pages/services/product_development/index.jsx"
+    "path" : "/services/product-development/",
+    "key" : "services_product-development",
+    "page" : "./pages/services/product-development/index.jsx"
   },
   {
-    "path" : "/services/technology_consulting/",
-    "key" : "services_technology_consulting",
-    "page" : "./pages/services/technology_consulting/index.jsx"
+    "path" : "/services/technology-consulting/",
+    "key" : "services_technology-consulting",
+    "page" : "./pages/services/technology-consulting/index.jsx"
   },
   {
-    "path" : "/services/system_integration/",
-    "key" : "services_system_integration",
-    "page" : "./pages/services/system_integration/index.jsx"
+    "path" : "/services/system-integration/",
+    "key" : "services_system-integration",
+    "page" : "./pages/services/system-integration/index.jsx"
   },
   {
-    "path" : "/services/hosting_support/",
-    "key" : "services_hosting_support",
-    "page" : "./pages/services/hosting_support/index.jsx"
+    "path" : "/services/hosting-support/",
+    "key" : "services_hosting-support",
+    "page" : "./pages/services/hosting-support/index.jsx"
   },
   {
-    "path" : "/services/product_development/",
-    "key" : "services_product_development",
-    "page" : "./pages/services/product_development/index.jsx"
+    "path" : "/services/product-development/",
+    "key" : "services_product-development",
+    "page" : "./pages/services/product-development/index.jsx"
   },
   {
-    "path" : "/services/website_startup/",
-    "key" : "services_website_startup",
-    "page" : "./pages/services/website_startup/index.jsx"
+    "path" : "/services/website-startup/",
+    "key" : "services_website-startup",
+    "page" : "./pages/services/website-startup/index.jsx"
   },
   {
-    "path" : "/services/custom_application_development/",
-    "key" : "services_custom_application_development",
-    "page" : "./pages/services/custom_application_development/index.jsx"
+    "path" : "/services/custom-application-development/",
+    "key" : "services_custom-application-development",
+    "page" : "./pages/services/custom-application-development/index.jsx"
   },
   {
     "path" : "/error/",
@@ -66,8 +66,13 @@
     "page" : "./pages/blog/index.jsx"
   },
   {
+    "path" : "/blog/shut-up-do-it/",
+    "key" : "blog_shut-up-do-it",
+    "page" : "./pages/blog/shut-up-do-it/index.jsx"
+  },
+  {
     "path" : "/blog/shut_up_do_it/",
     "key" : "blog_shut_up_do_it",
-    "page" : "./pages/blog/shut_up_do_it/index.jsx"
+    "page" : "./pages/blog/shut-up-do-it/index.jsx"
   }
 ]

@@ -35,12 +35,12 @@ export default React.createClass({
           </section>
           <section className="blogUpdates">
             <ul className="serviceList">
-              <li> <a href="/services/custom_application_development/" className={this.getLinkClass("custom_application_development")}>Custom Application Development</a></li>
-              <li> <a href="/services/hosting_support/" className={this.getLinkClass("hosting_support")}>Hosting & Support</a></li>
-              <li> <a href="/services/product_development/" className={this.getLinkClass("product_development")}>Product Development</a></li>
-              <li> <a href="/services/system_integration/" className={this.getLinkClass("system_integration")}>System Integration</a></li>
-              <li> <a href="/services/technology_consulting/" className={this.getLinkClass("technology_consulting")}>Technology Consulting</a></li>
-              <li> <a href="/services/website_startup/" className={this.getLinkClass("website_startup")}>Website Design</a></li>
+              <li> <a href="/services/custom-application-development/" className={this.getLinkClass("custom-application-development")}>Custom Application Development</a></li>
+              <li> <a href="/services/hosting-support/" className={this.getLinkClass("hosting-support")}>Hosting & Support</a></li>
+              <li> <a href="/services/product-development/" className={this.getLinkClass("product-development")}>Product Development</a></li>
+              <li> <a href="/services/system-integration/" className={this.getLinkClass("system-integration")}>System Integration</a></li>
+              <li> <a href="/services/technology-consulting/" className={this.getLinkClass("technology-consulting")}>Technology Consulting</a></li>
+              <li> <a href="/services/website-startup/" className={this.getLinkClass("website-startup")}>Website Design</a></li>
             </ul>
           </section>
         </div>

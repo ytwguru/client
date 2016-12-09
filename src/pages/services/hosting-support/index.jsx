@@ -13,7 +13,7 @@ export default React.createClass({
   getServiceData : function(){
     return {
       mainImage : "http://cdn.ytadvisors.com/images/services/hosting.png",
-      page : "hosting_support",
+      page : "hosting-support",
       content: `
       <p>
       We setup production environments, oversee server security, perform daily backups and monitor performance.
