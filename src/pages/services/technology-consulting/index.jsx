@@ -12,7 +12,7 @@ import Helmet from "react-helmet";
 export default React.createClass({
   getServiceData : function(){
     return {
-      mainImage : "http://cdn.ytadvisors.com/images/services/security.png",
+      mainImage : "https://cdn.ytadvisors.com/images/services/security.png",
       page : "technology-consulting",
       content : `
       <p>We help teams understand trends, and security risks, and create road maps to reach development goals.</p>
@@ -39,8 +39,25 @@ export default React.createClass({
       <Helmet
         title ="Technology consulting services"
         meta={[
-        { name: 'description', content: 'We help teams understand trends, and security risks, and create road maps to reach development goals.' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' }
+        { name: 'description', content: 'We help teams understand trends, and security risks, and create road maps' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' },
+        { property: 'og:image', content: 'https://cdn.ytadvisors.com/images/services/security.png' },
+        { property: 'og:title', content: "Technology consulting services" },
+        { property: 'og:description', content: "We help teams understand trends, and security risks, and create road maps" },
+        { property: 'og:image:width', content: "500" },
+        { property: 'og:image:height', content: "247" },
+        { property: 'og:site_name', content: "ytadvisors" },
+        { property: 'og:locale', content: "en_US" },
+        { property: 'og:url', content: `${process.env.SITE_URL}/services/technology-consulting/` },
+        { property: 'og:locale', content: "en_US" },
+        { property: 'og:type', content: "article" },
+        { name: 'author', content: "Yomi Toba" },
+        { name: 'twitter:title', content: "Technology consulting services" },
+        { name: 'twitter:description', content: "We help teams understand trends, and security risks, and create road maps" },
+        { name: 'twitter:site', content: '@ytadvisors' },
+        { name: 'twitter:image', content: 'https://cdn.ytadvisors.com/images/services/security.png' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:creator', content: '@ytadvisors' }
         ]}
       />
       <Preloader >

@@ -12,7 +12,7 @@ import Helmet from "react-helmet";
 export default React.createClass({
   getServiceData : function(){
     return {
-      mainImage : "http://cdn.ytadvisors.com/images/services/hosting.png",
+      mainImage : "https://cdn.ytadvisors.com/images/services/hosting.png",
       page : "hosting-support",
       content: `
       <p>
@@ -48,8 +48,25 @@ export default React.createClass({
       <Helmet
         title ="Hosting and support"
         meta={[
-        { name: 'description', content: 'We setup production environments, oversee server security, perform daily backups and monitor performance.' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' }
+        { name: 'description', content: 'We setup production environments, oversee server security, perform daily backups' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' },
+        { property: 'og:image', content: 'https://cdn.ytadvisors.com/images/services/hosting.png' },
+        { property: 'og:title', content: "Hosting and support" },
+        { property: 'og:description', content: "We design and develop web, mobile and desktop applications" },
+        { property: 'og:image:width', content: "730" },
+        { property: 'og:image:height', content: "490" },
+        { property: 'og:site_name', content: "ytadvisors" },
+        { property: 'og:locale', content: "en_US" },
+        { property: 'og:url', content: `${process.env.SITE_URL}/services/hosting-support/` },
+        { property: 'og:locale', content: "en_US" },
+        { property: 'og:type', content: "article" },
+        { name: 'author', content: "Yomi Toba" },
+        { name: 'twitter:title', content: "Hosting and support" },
+        { name: 'twitter:description', content: "We setup production environments, oversee server security, perform daily backups" },
+        { name: 'twitter:site', content: '@ytadvisors' },
+        { name: 'twitter:image', content: 'https://cdn.ytadvisors.com/images/services/hosting.png' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:creator', content: '@ytadvisors' }
         ]}
       />
       <Preloader >

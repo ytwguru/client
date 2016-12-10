@@ -25,7 +25,7 @@ export default React.createClass({
             <span className="icon-bar"></span>
           </button>
           <a href={`${prefix}#`} className="navbar-brand">
-            <img className="img-responsive" src="http://cdn.ytadvisors.com/images/main-logo.png" alt="YT Advisors" width="130" />
+            <img className="img-responsive" src="https://cdn.ytadvisors.com/images/main-logo.png" alt="YT Advisors" width="130" />
           </a>
         </div>
         <div id="navbarCollapse" className="collapse navbar-collapse">

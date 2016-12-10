@@ -15,12 +15,12 @@ export default React.createClass({
     return {
       name : "Yomi Toba",
       title : "Co-Founder / CEO",
-      profilePicture : "http://cdn.ytadvisors.com/images/team/yomi.gif",
+      profilePicture : "https://cdn.ytadvisors.com/images/team/yomi.gif",
       links : [
-        { facebook : "http://www.facebook.com/yomi.toba.39"},
-        { twitter : "http://www.twitter.com/ytwguru" },
-        { google : "http://plus.google.com/109638795509632465576" },
-        { linkedin : "http://www.linkedin.com/in/yomi-toba-569884a" }
+        { facebook : "https://www.facebook.com/yomi.toba.39"},
+        { twitter : "https://www.twitter.com/ytwguru" },
+        { google : "https://plus.google.com/109638795509632465576" },
+        { linkedin : "https://www.linkedin.com/in/yomi-toba-569884a" }
       ],
       address : `YT Advisors<br/>
                 7733 Forsyth Blvd. Suite 1100<br/>
@@ -40,8 +40,25 @@ export default React.createClass({
       <Helmet
         title ="YT Advisors Co-founder / CEO Yomi Toba"
         meta={[
-        { name: 'description', content: 'Mr. Toba is responsible for managing the company, formulating and executing long-term strategies and interacting with clients' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' }
+        { name: 'description', content: 'Mr. Toba is responsible for managing the company' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' },
+        { property: 'og:image', content: 'https://cdn.ytadvisors.com/images/team/yomi.gif' },
+        { property: 'og:title', content: "YT Advisors Co-founder / CEO Yomi Toba" },
+        { property: 'og:description', content: "Mr. Toba is responsible for managing the company" },
+        { property: 'og:image:width', content: "227" },
+        { property: 'og:image:height', content: "311" },
+        { property: 'og:site_name', content: "ytadvisors" },
+        { property: 'og:locale', content: "en_US" },
+        { property: 'og:url', content: `${process.env.SITE_URL}/team/yomi/` },
+        { property: 'og:locale', content: "en_US" },
+        { property: 'og:type', content: "article" },
+        { name: 'author', content: "Yomi Toba" },
+        { name: 'twitter:title', content: "YT Advisors Co-founder / CEO Yomi Toba" },
+        { name: 'twitter:description', content: "Mr. Toba is responsible for managing the company" },
+        { name: 'twitter:site', content: '@ytadvisors' },
+        { name: 'twitter:image', content: 'https://cdn.ytadvisors.com/images/team/yomi.gif' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:creator', content: '@ytadvisors' }
         ]}
       />
       <Preloader >

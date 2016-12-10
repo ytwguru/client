@@ -12,7 +12,7 @@ import Helmet from "react-helmet";
 export default React.createClass({
   getServiceData : function(){
     return {
-      mainImage : "http://cdn.ytadvisors.com/images/services/custom_development.png",
+      mainImage : "https://cdn.ytadvisors.com/images/services/custom_development.png",
       page : "custom-application-development",
       content : `
         <p>
@@ -51,8 +51,25 @@ export default React.createClass({
       <Helmet
         title ="Custom application development"
         meta={[
-        { name: 'description', content: 'We design and develop software tailored to your specific demands in a way that ultimately meets all your business goals, expectations, and requirements.' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' }
+        { name: 'description', content: 'We design and develop software tailored to your specific demands' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' },
+        { property: 'og:image', content: 'https://cdn.ytadvisors.com/images/services/custom_development.png' },
+        { property: 'og:title', content: "Custom application development" },
+        { property: 'og:description', content: "We design and develop software tailored to your specific demands" },
+        { property: 'og:image:width', content: "700" },
+        { property: 'og:image:height', content: "397" },
+        { property: 'og:site_name', content: "ytadvisors" },
+        { property: 'og:locale', content: "en_US" },
+        { property: 'og:url', content: `${process.env.SITE_URL}/services/custom-application-development/` },
+        { property: 'og:locale', content: "en_US" },
+        { property: 'og:type', content: "article" },
+        { name: 'author', content: "Yomi Toba" },
+        { name: 'twitter:title', content: "Custom application development" },
+        { name: 'twitter:description', content: "We design and develop software tailored to your specific demands" },
+        { name: 'twitter:site', content: '@ytadvisors' },
+        { name: 'twitter:image', content: 'https://cdn.ytadvisors.com/images/services/custom_development.png' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:creator', content: '@ytadvisors' }
         ]}
       />
       <Preloader >

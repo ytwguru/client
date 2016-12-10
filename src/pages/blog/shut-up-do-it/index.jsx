@@ -12,7 +12,7 @@ import Helmet from "react-helmet";
 export default React.createClass({
   getServiceData : function(){
     return {
-      mainImage : "http://cdn.ytadvisors.com/images/blog/shutup.jpg",
+      mainImage : "https://cdn.ytadvisors.com/images/blog/shutup.jpg",
       page : "blog",
       month : "Dec",
       day : "08",
@@ -30,8 +30,8 @@ export default React.createClass({
             <li>Certifiable geniuses.</li>
           </ol><br/>
           <p>
-          A few weeks ago, I was given the opportunity to lecture to a group of these entrepreneurs at <a href ="http://cetstl.com/programs/square-one/"><b>Square One</b></a>
-          (a startup bootcamp at <a href="http://cetstl.com/"><b>CET</b></a>) about <i>Creating an MVP</i>. 
+          A few weeks ago, I was given the opportunity to lecture to a group of these entrepreneurs at <a href ="https://cetstl.com/programs/square-one/"><b>Square One</b></a>
+          (a startup bootcamp at <a href="https://cetstl.com/"><b>CET</b></a>) about <i>Creating an MVP</i>. 
             Twenty minutes into my Powerpoint presentation I was fielding practical questions and an hour later a lady, quiet throughout
              the majority of the lecture, looked me straight in the eyes and asked,
           </p>
@@ -154,9 +154,9 @@ export default React.createClass({
       <Helmet
         title ="Shut up and Do it"
         meta={[
-        { name: 'description', content: 'Custom web, mobile, digital, and desktop software development and consulting services.' },
+        { name: 'description', content: 'Ten steps to get your idea off the ground.' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' },
-        { property: 'og:image', content: 'http://cdn.ytadvisors.com/images/blog/shutup.jpg' },
+        { property: 'og:image', content: 'https://cdn.ytadvisors.com/images/blog/shutup.jpg' },
         { property: 'og:title', content: "Shut up & Do it!" },
         { property: 'og:description', content: "Ten steps to get your idea off the ground." },
         { property: 'og:image:width', content: "650" },
@@ -170,7 +170,7 @@ export default React.createClass({
         { name: 'twitter:title', content: "Shut up & Do it!" },
         { name: 'twitter:description', content: "Ten steps to get your idea off the ground." },
         { name: 'twitter:site', content: '@ytadvisors' },
-        { name: 'twitter:image', content: 'http://cdn.ytadvisors.com/images/blog/shutup.jpg' },
+        { name: 'twitter:image', content: 'https://cdn.ytadvisors.com/images/blog/shutup.jpg' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:creator', content: '@ytadvisors' }
         ]}

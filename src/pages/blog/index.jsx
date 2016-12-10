@@ -12,7 +12,7 @@ import Helmet from "react-helmet";
 export default React.createClass({
   getServiceData : function(){
     return {
-      mainImage : "http://cdn.ytadvisors.com/images/blog/shutup.jpg",
+      mainImage : "https://cdn.ytadvisors.com/images/blog/shutup.jpg",
       page : "blog",
       month : "Dec",
       day : "08",
@@ -34,10 +34,27 @@ export default React.createClass({
   render : function(){
     return <div>
       <Helmet
-        title ="Blog"
+        title ="Blog about software, business and technology"
         meta={[
-        { name: 'description', content: 'YT Advisors blog' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' }
+        { name: 'description', content: 'Technology and Business' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' },
+        { property: 'og:image', content: 'https://cdn.ytadvisors.com/images/blog/shutup.jpg' },
+        { property: 'og:title', content: "Blog about software, business and technology" },
+        { property: 'og:description', content: "Technology and Business" },
+        { property: 'og:image:width', content: "650" },
+        { property: 'og:image:height', content: "497" },
+        { property: 'og:site_name', content: "ytadvisors" },
+        { property: 'og:locale', content: "en_US" },
+        { property: 'og:url', content: `${process.env.SITE_URL}/blog/shut-up-do-it/` },
+        { property: 'og:locale', content: "en_US" },
+        { property: 'og:type', content: "article" },
+        { name: 'author', content: "Yomi Toba" },
+        { name: 'twitter:title', content: "Blog about software, business and technology" },
+        { name: 'twitter:description', content: "Technology and Business" },
+        { name: 'twitter:site', content: '@ytadvisors' },
+        { name: 'twitter:image', content: 'https://cdn.ytadvisors.com/images/blog/shutup.jpg' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:creator', content: '@ytadvisors' }
         ]}
       />
       <Preloader >

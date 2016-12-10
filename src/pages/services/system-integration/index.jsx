@@ -12,7 +12,7 @@ import Helmet from "react-helmet";
 export default React.createClass({
   getServiceData : function(){
     return {
-      mainImage : "http://cdn.ytadvisors.com/images/services/integration.png",
+      mainImage : "https://cdn.ytadvisors.com/images/services/integration.png",
       page : "system-integration",
       content: `
       <p>We create software integration solutions allowing companies to integrate with third party platforms.</p>
@@ -33,8 +33,25 @@ export default React.createClass({
       <Helmet
         title ="System integration services"
         meta={[
-        { name: 'description', content: 'We create software integration solutions allowing companies to integrate with third party platforms.' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' }
+        { name: 'description', content: 'We create software integration solutions allowing companies to integrate' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' },
+        { property: 'og:image', content: 'https://cdn.ytadvisors.com/images/services/integration.png' },
+        { property: 'og:title', content: "System integration services" },
+        { property: 'og:description', content: "We create software integration solutions allowing companies to integrate" },
+        { property: 'og:image:width', content: "500" },
+        { property: 'og:image:height', content: "435" },
+        { property: 'og:site_name', content: "ytadvisors" },
+        { property: 'og:locale', content: "en_US" },
+        { property: 'og:url', content: `${process.env.SITE_URL}/services/system-integration/` },
+        { property: 'og:locale', content: "en_US" },
+        { property: 'og:type', content: "article" },
+        { name: 'author', content: "Yomi Toba" },
+        { name: 'twitter:title', content: "System integration services" },
+        { name: 'twitter:description', content: "We create software integration solutions allowing companies to integrate" },
+        { name: 'twitter:site', content: '@ytadvisors' },
+        { name: 'twitter:image', content: 'https://cdn.ytadvisors.com/images/services/integration.png' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:creator', content: '@ytadvisors' }
         ]}
       />
       <Preloader >

@@ -15,10 +15,10 @@ export default React.createClass({
     return {
       name : "Tanya Hamilton Toba",
       title : "Co-Founder / COO",
-      profilePicture : "http://cdn.ytadvisors.com/images/team/tanya.png",
+      profilePicture : "https://cdn.ytadvisors.com/images/team/tanya.png",
       links : [
-        { facebook : "http://www.facebook.com/tanya.hamilton.9"},
-        { linkedin : "http://www.linkedin.com/in/tanyajhamilton" }
+        { facebook : "https://www.facebook.com/tanya.hamilton.9"},
+        { linkedin : "https://www.linkedin.com/in/tanyajhamilton" }
       ],
       address : `YT Advisors<br/>
                 7733 Forsyth Blvd. Suite 1100<br/>
@@ -35,8 +35,25 @@ export default React.createClass({
       <Helmet
         title ="YT Advisors Co-founder / COO Tanya Hamilton Toba"
         meta={[
-        { name: 'description', content: 'Mrs. Toba is responsible for managing the daily operations of the company, interacting with clients, and overseeing the administration organizational duties.' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' }
+        { name: 'description', content: 'Mrs. Toba is responsible for managing the daily operations of the company' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' },
+        { property: 'og:image', content: 'https://cdn.ytadvisors.com/images/team/tanya.png' },
+        { property: 'og:title', content: "YT Advisors Co-founder / COO Tanya Hamilton Toba" },
+        { property: 'og:description', content: "Mrs. Toba is responsible for managing the daily operations of the company" },
+        { property: 'og:image:width', content: "227" },
+        { property: 'og:image:height', content: "311" },
+        { property: 'og:site_name', content: "ytadvisors" },
+        { property: 'og:locale', content: "en_US" },
+        { property: 'og:url', content: `${process.env.SITE_URL}/team/yomi/` },
+        { property: 'og:locale', content: "en_US" },
+        { property: 'og:type', content: "article" },
+        { name: 'author', content: "Yomi Toba" },
+        { name: 'twitter:title', content: "YT Advisors Co-founder / COO Tanya Hamilton Toba" },
+        { name: 'twitter:description', content: "Mrs. Toba is responsible for managing the daily operations of the company" },
+        { name: 'twitter:site', content: '@ytadvisors' },
+        { name: 'twitter:image', content: 'https://cdn.ytadvisors.com/images/team/tanya.png' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:creator', content: '@ytadvisors' }
         ]}
       />
       <Preloader >

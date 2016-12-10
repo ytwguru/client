@@ -85,7 +85,7 @@ export default React.createClass({
       <section className="slice">
         <div className="container">
           <div className="row">
-            <div className="col-md-4"> <img className="img-responsive" src="http://cdn.ytadvisors.com/images/target.jpg" alt="services" />
+            <div className="col-md-4"> <img className="img-responsive" src="https://cdn.ytadvisors.com/images/target.jpg" alt="services" />
             </div>
             <div className="col-md-4">
               <div className = "serviceBlock">

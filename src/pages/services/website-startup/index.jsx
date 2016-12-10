@@ -12,7 +12,7 @@ import Helmet from "react-helmet";
 export default React.createClass({
   getServiceData : function(){
     return {
-      mainImage : "http://cdn.ytadvisors.com/images/services/website_design.png",
+      mainImage : "https://cdn.ytadvisors.com/images/services/website_design.png",
       page : "website-startup",
       content: `
       <p> 
@@ -45,8 +45,25 @@ export default React.createClass({
       <Helmet
         title ="Website design and working with startups"
         meta={[
-        { name: 'description', content: 'We develop responsive sites that provide the best user experience across devices, combining great design, form and function so users can find the information they need quickly.' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' }
+        { name: 'description', content: 'We develop responsive sites that provide the best user experience across devices' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' },
+        { property: 'og:image', content: 'https://cdn.ytadvisors.com/images/services/website_design.png' },
+        { property: 'og:title', content: "Website design and working with startups" },
+        { property: 'og:description', content: "We develop responsive sites that provide the best user experience across devices" },
+        { property: 'og:image:width', content: "540" },
+        { property: 'og:image:height', content: "300" },
+        { property: 'og:site_name', content: "ytadvisors" },
+        { property: 'og:locale', content: "en_US" },
+        { property: 'og:url', content: `${process.env.SITE_URL}/services/website-startup/` },
+        { property: 'og:locale', content: "en_US" },
+        { property: 'og:type', content: "article" },
+        { name: 'author', content: "Yomi Toba" },
+        { name: 'twitter:title', content: "Website design and working with startups" },
+        { name: 'twitter:description', content: "We develop responsive sites that provide the best user experience across devices" },
+        { name: 'twitter:site', content: '@ytadvisors' },
+        { name: 'twitter:image', content: 'https://cdn.ytadvisors.com/images/services/website_design.png' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:creator', content: '@ytadvisors' }
         ]}
       />
       <Preloader >
