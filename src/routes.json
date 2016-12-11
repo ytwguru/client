@@ -61,11 +61,6 @@
     "page" : "./pages/team/yomi/index.jsx"
   },
   {
-    "path" : "/pricing/",
-    "key" : "pricing",
-    "page" : "./pages/pricing/index.jsx"
-  },
-  {
     "path" : "/pricing/website/",
     "key" : "pricing_website",
     "page" : "./pages/pricing/website/index.jsx"

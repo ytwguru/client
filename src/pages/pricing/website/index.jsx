@@ -14,50 +14,61 @@ export default React.createClass({
     return {
       plan: [
         {
-          type: "Free",
-          price: "$0",
-          duration: "per month",
+          type: "Basic",
+          price: "$1,500",
+          duration: "",
           featureList: [
-            "This is a feature",
-            "Feature again"
+            "1 Landing Page",
+            "Lifetime of free hosting",
+            "Unlimited Bandwidth",
+            "500M of storage",
+            "Email support"
           ]
         },
         {
           type: "Silver",
-          price: "$10",
-          duration: "per month",
+          price: "$5,000",
+          duration: "",
           featureList: [
-            "Though",
-            "Not the best",
-            "Honest Pre"
+            "15 pages",
+            "Lifetime of free hosting",
+            "Unlimited Bandwidth",
+            "2G of Storage",
+            "Email support",
+            "Modern site re-design"
           ]
         },
         {
           type: "Gold",
-          price: "$25",
-          duration: "per month",
+          price: "$15,000",
+          duration: "",
           selected: true,
           featureList: [
-            "Honest Pre",
-            "Save a lot",
-            "Cool feature",
-            "Really here now",
-            "Cool",
-            "Help"
+            "50 pages",
+            "Lifetime of free hosting",
+            "Unlimited Bandwidth",
+            "10G of Storage",
+            "Email + Phone support",
+            "Modern site re-design",
+            "6 mo. SEO",
+            "6 mo. Social media marketing"
           ]
         },
         {
           type: "Platinum",
-          price: "$40",
-          duration: "per month",
+          price: "",
+          duration: "Request a quote",
           featureList: [
-            "Help",
-            "Super cool",
-            "Awesome",
-            "Right plan for you",
-            "If not now",
-            "Super bowl",
-            "Test kid"
+            "Unlimited pages",
+            "Lifetime of free hosting",
+            "Unlimited Bandwidth",
+            "Unlimited Storage",
+            "Email + Phone support",
+            "Modern site re-design",
+            "1 yr. SEO",
+            "1 yr. Social media marketing",
+            "User Login and Registration",
+            "E-commerce"
           ]
         }
       ]
@@ -66,7 +77,24 @@ export default React.createClass({
   render: function () {
     return <div>
       <Helmet
-        title="About Us"
+        title ="Website Pricing"
+        meta={[
+        { name: 'description', content: 'Pricing Plans for website development' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' },
+        { property: 'og:title', content: "Website Pricing" },
+        { property: 'og:description', content: "Pricing Plans for website development" },
+        { property: 'og:site_name', content: "ytadvisors" },
+        { property: 'og:locale', content: "en_US" },
+        { property: 'og:url', content: `${process.env.SITE_URL}/pricing/website/` },
+        { property: 'og:locale', content: "en_US" },
+        { property: 'og:type', content: "article" },
+        { name: 'author', content: "Yomi Toba" },
+        { name: 'twitter:title', content: "Website Pricing" },
+        { name: 'twitter:description', content: "Pricing Plans for website development" },
+        { name: 'twitter:site', content: '@ytadvisors' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:creator', content: '@ytadvisors' }
+        ]}
       />
       <Preloader >
       </Preloader>

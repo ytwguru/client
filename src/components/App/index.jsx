@@ -37,7 +37,7 @@ class App extends React.Component{
         { rel: 'manifest', href : "https://cdn.ytadvisors.com/favicons/manifest.json"}
       ]}
         meta={[
-        { name: 'description', content: 'Custom web, mobile, digital, and desktop software development and consulting services' },
+        { name: 'description', content: 'Custom web, mobile, and desktop software development and consulting services' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' }
       ]}
         script={ process.env.DEPLOY === "true" ? [
