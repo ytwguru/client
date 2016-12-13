@@ -66,6 +66,11 @@
     "page" : "./pages/pricing/website/index.jsx"
   },
   {
+    "path" : "/pricing/social-media/",
+    "key" : "pricing_social-media",
+    "page" : "./pages/pricing/social-media/index.jsx"
+  },
+  {
     "path" : "/blog/",
     "key" : "blog",
     "page" : "./pages/blog/index.jsx"

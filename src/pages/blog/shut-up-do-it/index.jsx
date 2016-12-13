@@ -14,6 +14,7 @@ export default React.createClass({
     return {
       mainImage : "https://cdn.ytadvisors.com/images/blog/shutup.jpg",
       page : "blog",
+      params : this.props.location.query,
       month : "Dec",
       day : "08",
       content : `

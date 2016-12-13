@@ -9,11 +9,12 @@ import Footer from "../../../components/Footer";
 import Quote from "../../../components/Quote";
 import Helmet from "react-helmet";
 
-export default React.createClass({
-  getServiceData : function(){
+class WebsiteStartup extends React.Component{
+  getServiceData(){
     return {
       mainImage : "https://cdn.ytadvisors.com/images/services/website_design.png",
       page : "website-startup",
+      params : this.props.location.query,
       content: `
       <p> 
       We develop responsive sites that provide the best user experience across devices, combining great design, form and function so
@@ -39,8 +40,9 @@ export default React.createClass({
       </p>
                 `
     };
-  },
-  render : function(){
+  }
+
+  render(){
     return <div>
       <Helmet
         title ="Website design and working with startups"
@@ -82,4 +84,6 @@ export default React.createClass({
       </Footer>
     </div>
   }
-});
+}
+
+export default WebsiteStartup;

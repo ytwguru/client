@@ -1,21 +1,28 @@
 import "./styles.less";
 import React from "react";
-import PureRenderMixin from 'react-addons-pure-render-mixin';
 
-export default React.createClass({
-  mixins: [PureRenderMixin],
-  componentDidMount : function(){
+class Header extends React.Component{
+  
+  constructor(props){
+    super(props);
+  }
+  
+  componentDidMount(){
+
     var $navMain = $("#navbarCollapse");
     $navMain.on("click", "a", null, function () {
       $navMain.collapse('hide');
     });
-  },
-  getLinkClass : function(page){
+  }
+  
+  getLinkClass(page){
     return page === this.props.data.page ? "active" : "";
-  },
-  render : function (){
+  }
+
+  
+  render(){
     let prefix = this.props.data.page === "home" ? "" : "/";
-    return <nav role="navigation" className="navbar navbar-default navbar-fixed-top ">
+    return <nav role="navigation" className="navbar navbar-default navbar-fixed-top " >
       <div className="container">
         <div className="navbar-header">
           <button type="button" data-target="#navbarCollapse" data-toggle="collapse" className="navbar-toggle">
@@ -40,4 +47,6 @@ export default React.createClass({
       </div>
     </nav>;
   }
-});
+}
+
+export default Header;

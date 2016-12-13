@@ -9,11 +9,12 @@ import Footer from "../../../components/Footer";
 import Quote from "../../../components/Quote";
 import Helmet from "react-helmet";
 
-export default React.createClass({
-  getServiceData : function(){
+class CustomApplicationDevelopment extends React.Component{
+  getServiceData(){
     return {
       mainImage : "https://cdn.ytadvisors.com/images/services/custom_development.png",
       page : "custom-application-development",
+      params : this.props.location.query,
       content : `
         <p>
         We design and develop software tailored to your specific demands in a way
@@ -45,8 +46,9 @@ export default React.createClass({
         </p>
       `
     };
-  },
-  render : function(){
+  }
+
+  render(){
     return <div>
       <Helmet
         title ="Custom application development"
@@ -88,4 +90,6 @@ export default React.createClass({
       </Footer>
     </div>
   }
-});
+}
+
+export default CustomApplicationDevelopment

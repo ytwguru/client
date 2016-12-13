@@ -1,14 +1,12 @@
 import "./styles.less"
 import React from "react";
 
-export default React.createClass({
-  componentDidMount : function(){
+class ArrowsNav extends React.Component{
 
-  },
-  getNav : function(){
+  getNav(){
     return this.props.data;
-  },
-  render : function (){
+  }
+  render(){
     var nav = this.getNav();
     return <nav className="arrowsNav">
       {((nav) => {
@@ -36,4 +34,6 @@ export default React.createClass({
     </nav>;
 
   }
-});
+}
+
+export default ArrowsNav;

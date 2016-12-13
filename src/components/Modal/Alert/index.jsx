@@ -1,8 +1,13 @@
 import "./styles.less";
 import React from "react";
 
-export default React.createClass({
-  render : function(){
+class Alert extends React.Component{
+
+  constructor(props){
+    super(props);
+  }
+
+  render(){
     return (
       <div id={this.props.id} className="alert modal fade" role="dialog">
         <div className="modal-dialog">
@@ -21,4 +26,6 @@ export default React.createClass({
       </div>
     );
   }
-});
+}
+
+export default Alert;

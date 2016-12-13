@@ -9,11 +9,16 @@ import Footer from "../../../components/Footer";
 import Quote from "../../../components/Quote";
 import Helmet from "react-helmet";
 
-export default React.createClass({
-  getServiceData : function(){
+class ProductDevelopment extends React.Component{
+  constructor(props){
+    super(props);
+  }
+
+  getServiceData(){
     return {
       mainImage : "https://cdn.ytadvisors.com/images/services/product_dev.png",
       page : "product-development",
+      params : this.props.location.query,
       content : `
       <p>
       We design and develop web, mobile and desktop applications following a value-driven, iterative process.
@@ -37,8 +42,9 @@ export default React.createClass({
       </p>
       `
     };
-  },
-  render : function(){
+  }
+  
+  render(){
     return <div>
       <Helmet
         title ="Product development services"
@@ -80,4 +86,6 @@ export default React.createClass({
       </Footer>
     </div>
   }
-});
+}
+
+export default ProductDevelopment

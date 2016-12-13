@@ -2,8 +2,13 @@ import "./styles.less";
 import React from 'react';
 let Flickity = "";
 
-export default React.createClass({
-  componentDidMount : function (){
+class LargeSlider extends React.Component{
+
+  constructor(props){
+    super(props);
+  }
+
+  componentDidMount(){
     if (!Flickity){
       Flickity  = require("flickity");
     }
@@ -18,8 +23,9 @@ export default React.createClass({
       cellAlign: 'center'
     });
     
-  },
-  render : function(){
+  }
+
+  render(){
     return <div id="home">
       <div className="carousel" >
         <div className="carousel-cell">
@@ -83,4 +89,6 @@ export default React.createClass({
       </div>
     </div>;
   }
-});
+}
+
+export default LargeSlider;

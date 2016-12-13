@@ -1,19 +1,22 @@
 import "./styles.less";
 import React from "react";
 
-export default React.createClass({
-  componentDidMount : function(){
-    
-  },
-  getProps : function(){
+class MidBreaker extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  
+  getProps(){
     return this.props.data;
-  },
-  getIconClass : function(color){
+  }
+
+  getIconClass(color){
     if(color)
       return "iconWrapper iconBig color4 col-centered";
     return "iconWrapper iconBig col-centered";
-  },
-  render : function(){
+  }
+
+  render(){
     let data = this.getProps();
     let text = () => {};
     let icon = <div className="row emptyRow"></div>;
@@ -49,5 +52,7 @@ export default React.createClass({
       </div>
     </div>;
   }
-});
+}
+
+export default MidBreaker;
 

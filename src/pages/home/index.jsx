@@ -13,8 +13,14 @@ import ContactUs from "../../components/ContactUs";
 import Footer from "../../components/Footer";
 import Helmet from "react-helmet";
 
-export default React.createClass({
-  componentDidMount : function(){
+class Home extends React.Component{
+
+  constructor(props){
+    super(props);
+  }
+
+  componentDidMount(){
+
     var $localScroll = $('.localscroll');
     if($localScroll.length){
       $localScroll.localScroll({
@@ -23,8 +29,9 @@ export default React.createClass({
         hash: false
       });
     }
-  },
-  getArrowNav : function(section){
+  }
+
+  getArrowNav(section){
     var data = [];
     switch(section){
       case 0:
@@ -58,9 +65,9 @@ export default React.createClass({
         break;
     }
     return data;
-  },
+  }
 
-  getBreakerContent : function(section){
+  getBreakerContent(section){
     var data = {};
     switch(section){
       case 0:
@@ -80,9 +87,9 @@ export default React.createClass({
         break;
     }
     return data;
-  },
+  }
 
-  render : function(){
+  render(){
     return <div>
       <Preloader>
       </Preloader>
@@ -114,4 +121,6 @@ export default React.createClass({
       </div>
     </div>
   }
-});
+}
+
+export default Home;

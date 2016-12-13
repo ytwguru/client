@@ -1,11 +1,13 @@
 import "./styles.less";
 import React from "react";
 
-export default React.createClass({
-  componentDidMount : function(){
+class Team extends React.Component{
 
-  },
-  render : function(){
+  constructor(props){
+    super(props);
+  }
+  
+  render(){
     return <section className="slice color3" id="team">
       <div className="container">
         <div className="row">
@@ -68,4 +70,6 @@ export default React.createClass({
       </div>
     </section>;
   }
-});
+}
+
+export default Team;

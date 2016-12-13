@@ -1,13 +1,17 @@
 import "./styles.less";
 import React from "react";
 
-export default React.createClass({
-  
-  getLinkClass : function(page){
+class Posts extends React.Component{
+
+  constructor(props){
+    super(props);
+  }
+
+  getLinkClass(page){
     return this.props.data.page == page ? "active" : "";
-  },
+  }
   
-  render : function(){
+  render(){
     let title = this.props.data.title ? <h3>{this.props.data.title}</h3> : () => {};
     let month = this.props.data.month ? <span>{this.props.data.month}</span> : null;
     let day = this.props.data.day ? <h4>{this.props.data.day}</h4> : null;
@@ -47,4 +51,6 @@ export default React.createClass({
       </div>
     </section>;
   }
-});
+}
+
+export default Posts;

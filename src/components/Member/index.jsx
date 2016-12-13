@@ -4,26 +4,31 @@ import Formsy from 'formsy-react';
 import {TextInput, TextArea} from "./../Form";
 import {Alert} from "./../Modal";
 
-export default React.createClass({
-  getInitialState : function(){
-    return { canSubmit : false };
-  },
+class Member extends React.Component{
+
+  constructor(props){
+    super(props);
+    this.state = { canSubmit : false };
+    this.submit = this.submit.bind(this);
+    this.enableButton = this.enableButton.bind(this);
+    this.disableButton = this.disableButton.bind(this);
+  }
 
   componentWillUnmount(){
     if($("#profilepic").length > 0){
       $("#profilepic").remove();
     }
-  },
+  }
 
-  enableButton : function () {
+  enableButton() {
     this.setState({ canSubmit : true });
-  },
+  }
 
-  disableButton : function(){
+  disableButton(){
     this.setState({ canSubmit : false });
-  },
+  }
 
-  submit : function(model, reset){
+  submit(model, reset){
     let api_url = process.env.API_URL;
     $.post(`${api_url}/members`, model)
       .done( data => {
@@ -31,9 +36,9 @@ export default React.createClass({
         $("#memberfrm").find("input[type=text], textarea").val("");
         $("#memberUsModal").modal("show");
       });
-  },
+  }
 
-  render: function () {
+  render() {
     let alertData = {
       header : "Message Sent",
       message : "<p>We just received your message </p><p>A member of our team will get in touch with you soon.</p>"
@@ -74,4 +79,6 @@ export default React.createClass({
       <Alert id="memberUsModal" data={alertData} />
     </section>;
   }
-});
+}
+
+export default Member;

@@ -9,7 +9,7 @@ import Quote from "../../../components/Quote";
 import Offer from "../../../components/Offer";
 
 
-class Website extends React.Component{
+class SocialMediaMarketing extends React.Component{
 
   constructor(props){
     super(props);
@@ -17,14 +17,14 @@ class Website extends React.Component{
 
   getPlanDetails() {
     return {
-      title : "Website Pricing",
+      title : "Social Media Pricing",
       params : this.props.location.query,
-      product : "Website",
+      product : "Social Media",
       plan: [
         {
           type: "Basic",
-          price: "1,500",
-          duration: "",
+          price: "500",
+          duration: "per month",
           featureList: [
             "1 Landing Page",
             "Lifetime of free hosting",
@@ -35,8 +35,8 @@ class Website extends React.Component{
         },
         {
           type: "Silver",
-          price: "5,000",
-          duration: "",
+          price: "1,500",
+          duration: "per month",
           featureList: [
             "15 pages",
             "Lifetime of free hosting",
@@ -48,8 +48,8 @@ class Website extends React.Component{
         },
         {
           type: "Gold",
-          price: "15,000",
-          duration: "",
+          price: "5,000",
+          duration: "per month",
           selected: true,
           featureList: [
             "50 pages",
@@ -64,8 +64,8 @@ class Website extends React.Component{
         },
         {
           type: "Platinum",
-          price: "",
-          duration: "Request a quote",
+          price: "7,500",
+          duration: "per month",
           featureList: [
             "Unlimited pages",
             "Lifetime of free hosting",
@@ -86,20 +86,20 @@ class Website extends React.Component{
   render() {
     return <div>
       <Helmet
-        title ="Website Pricing"
+        title ="Social Media Marketing Pricing"
         meta={[
-        { name: 'description', content: 'Pricing Plans for website development' },
+        { name: 'description', content: 'Pricing Plans for Social Media Marketing' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' },
-        { property: 'og:title', content: "Website Pricing" },
-        { property: 'og:description', content: "Pricing Plans for website development" },
+        { property: 'og:title', content: "Social Media Marketing Pricing" },
+        { property: 'og:description', content: "Pricing Plans for Social Media Marketing" },
         { property: 'og:site_name', content: "ytadvisors" },
         { property: 'og:locale', content: "en_US" },
-        { property: 'og:url', content: `${process.env.SITE_URL}/pricing/website/` },
+        { property: 'og:url', content: `${process.env.SITE_URL}/pricing/social-media/` },
         { property: 'og:locale', content: "en_US" },
         { property: 'og:type', content: "article" },
         { name: 'author', content: "Yomi Toba" },
         { name: 'twitter:title', content: "Website Pricing" },
-        { name: 'twitter:description', content: "Pricing Plans for website development" },
+        { name: 'twitter:description', content: "Pricing Plans for Social Media Marketing" },
         { name: 'twitter:site', content: '@ytadvisors' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:creator', content: '@ytadvisors' }
@@ -140,4 +140,4 @@ mixpanel.init("${process.env.MIXPANEL_TRACKER}");
   }
 }
 
-export default Website;
+export default SocialMediaMarketing;

@@ -10,10 +10,15 @@ import Quote from "../../../components/Quote";
 import Helmet from "react-helmet";
 
 
-export default React.createClass({
-  getMemberData : function(){
+class Tanya extends React.Component{
+  constructor(props){
+    super(props);
+  }
+
+  getMemberData(){
     return {
       name : "Tanya Hamilton Toba",
+      params : this.props.location.query,
       title : "Co-Founder / COO",
       profilePicture : "https://cdn.ytadvisors.com/images/team/tanya.png",
       links : [
@@ -29,8 +34,9 @@ export default React.createClass({
              <p>Tanya also currently runs Independent Youth Inc, a 501(c)3 non-profit organization that she launched in 2009. Independent Youth empowers teens through entrepreneurship using peer to peer teaching methods.   As the Founder and Executive Director  Tanya has mentored dozens of nationally recognized teen entrepreneurs through the organization, helping them grow their professional brand. The teens Mrs. Toba works with have appeared in various national media outlets, including ABC's hit show Shark Tank. Tanya loves working with students to build the next generation of young entrepreneurs. In this role, Tanya has also worked with companies such as Facebook and Google to execute programs that empower budding entrepreneurs.</p>
              <p>Over the course of her career, Tanya has worked in marketing and business development, gaining professional experience in various industries including; professional sports, healthcare, technology and Real Estate. Utilizing the knowledge and skills she obtained over the years, Mrs. Toba followed her passion of working with youth to build strong, confident, educated entrepreneurs. Mrs. Toba has a Masters of Business Administration Degree with a concentration in Entrepreneurship from The University of Portland and an Undergraduate Degree in Business Management from Johnson C. Smith University in Charlotte, NC.</p></div>`
     };
-  },
-  render : function() {
+  }
+
+  render() {
     return <div>
       <Helmet
         title ="YT Advisors Co-founder / COO Tanya Hamilton Toba"
@@ -72,4 +78,6 @@ export default React.createClass({
       </Footer>
     </div>
   }
-});
+}
+
+export default Tanya;

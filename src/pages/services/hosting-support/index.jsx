@@ -9,11 +9,16 @@ import Footer from "../../../components/Footer";
 import Quote from "../../../components/Quote";
 import Helmet from "react-helmet";
 
-export default React.createClass({
-  getServiceData : function(){
+class HostingSupport extends React.Component{
+  constructor(props){
+    super(props);
+  }
+
+  getServiceData(){
     return {
       mainImage : "https://cdn.ytadvisors.com/images/services/hosting.png",
       page : "hosting-support",
+      params : this.props.location.query,
       content: `
       <p>
       We setup production environments, oversee server security, perform daily backups and monitor performance.
@@ -42,8 +47,8 @@ export default React.createClass({
       </p>
       `
     };
-  },
-  render : function(){
+  }
+  render(){
     return <div>
       <Helmet
         title ="Hosting and support"
@@ -85,4 +90,6 @@ export default React.createClass({
       </Footer>
     </div>
   }
-});
+}
+
+export default HostingSupport;

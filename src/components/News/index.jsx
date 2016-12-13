@@ -1,10 +1,13 @@
 import "./styles.less"
 import React from "react";
 
-export default React.createClass({
-  componentDidMount : function(){
-  },
-  render : function(){
+class News extends React.Component{
+
+  constructor(props){
+    super(props);
+  }
+
+  render(){
     return <section className="slice color4" id="news">
       <div className="container imgHover">
         <div className="row">
@@ -71,4 +74,6 @@ export default React.createClass({
       </div>
     </section>
   }
-});
+}
+
+export default News;

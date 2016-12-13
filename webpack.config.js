@@ -17,6 +17,9 @@ const ExtractJS = new ExtractTextPlugin('[name].min.js');
 const S3Plugin = require("webpack-s3-plugin");
 const isDebug = process.env.DEVELOPMENT === "true";
 const isDeploy = process.env.DEPLOY === "true";
+const stripeKey = process.env.DEVELOPMENT === "true" ? process.env.STRIPE_TEST_KEY : process.env.STRIPE_KEY;
+const stripePublishKey = process.env.DEVELOPMENT === "true" ? process.env.STRIPE_TEST_PUBLISH_KEY : process.env.STRIPE_PUBLISH_KEY;
+const apiUrl = process.env.DEVELOPMENT === "true" ? process.env.TEST_API_URL : process.env.API_URL; 
 
 let config  = {
   devtool: isDebug ? 'source-map' : false,
@@ -49,7 +52,7 @@ let config  = {
       { test: /\.jpe?g$/, loader: 'url?mimetype=image/jpeg'},
       { test: /\.(svg)$/, loader: 'url?limit=10000' },
       { test: /\.(wav|mp3)$/, loader: 'file' },
-      { test: /\.modernizrrc$/, loader: "modernizr" },
+      { test: /\.modernizrrc$/, loader: "modernizr" }
     ]
   },
   resolve: {
@@ -101,8 +104,10 @@ let config  = {
         DEPLOY: JSON.stringify(process.env.DEPLOY),
         GA_TRACKER : JSON.stringify(process.env.GA_TRACKER),
         MIXPANEL_TRACKER : JSON.stringify(process.env.MIXPANEL_TRACKER),
-        API_URL : JSON.stringify(process.env.API_URL),
-        SITE_URL : JSON.stringify(process.env.SITE_URL)
+        API_URL : JSON.stringify(apiUrl),
+        SITE_URL : JSON.stringify(process.env.SITE_URL),
+        STRIPE_KEY : JSON.stringify(stripeKey),
+        STRIPE_PUBLISH_KEY : JSON.stringify(stripePublishKey)
       }
     }),
     new SitemapPlugin(process.env.SITE_URL, routes, 'sitemap.xml'),

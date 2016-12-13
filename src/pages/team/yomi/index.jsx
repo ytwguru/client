@@ -10,11 +10,16 @@ import Quote from "../../../components/Quote";
 import Helmet from "react-helmet";
 
 
-export default React.createClass({
-  getMemberData : function(){
+class Yomi extends React.Component{
+  constructor(props){
+    super(props);
+  }
+
+  getMemberData(){
     return {
       name : "Yomi Toba",
       title : "Co-Founder / CEO",
+      params : this.props.location.query,
       profilePicture : "https://cdn.ytadvisors.com/images/team/yomi.gif",
       links : [
         { facebook : "https://www.facebook.com/yomi.toba.39"},
@@ -34,8 +39,9 @@ export default React.createClass({
              <p>Yomi acted as CTO and co-founder to a second venture funded company &#8212; Pushup Social an online social community and  social media aggregator.  The company subsequently raised 1M dollars in seed money, hired a small team of software developers and engineers and were early disrupters providing social media widgets to small to medium sided companies.</p>
              <p>Yomi is a passionate mentor and sits on the Advisor board of multiple Saint Louis startup companies, providing valuable insight on preventable pitfalls to avoid as a young company.  He has lectured on business and technical topics at Washington University in Saint Louis, Square One at CET, and Saint Louis University.</p></div>`
     };
-  },
-  render : function() {
+  }
+
+  render() {
     return <div>
       <Helmet
         title ="YT Advisors Co-founder / CEO Yomi Toba"
@@ -77,4 +83,6 @@ export default React.createClass({
       </Footer>
     </div>
   }
-});
+}
+
+export default Yomi;

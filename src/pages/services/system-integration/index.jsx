@@ -9,11 +9,16 @@ import Footer from "../../../components/Footer";
 import Quote from "../../../components/Quote";
 import Helmet from "react-helmet";
 
-export default React.createClass({
-  getServiceData : function(){
+class SystemIntegration extends React.Component {
+  constructor(props){
+    super(props)
+  }
+
+  getServiceData(){
     return {
       mainImage : "https://cdn.ytadvisors.com/images/services/integration.png",
       page : "system-integration",
+      params : this.props.location.query,
       content: `
       <p>We create software integration solutions allowing companies to integrate with third party platforms.</p>
       <h3>Manage the complexity</h3>
@@ -27,8 +32,9 @@ export default React.createClass({
         and function and testing services.  </p>
       `
     };
-  },
-  render : function(){
+  }
+
+  render(){
     return <div>
       <Helmet
         title ="System integration services"
@@ -70,4 +76,6 @@ export default React.createClass({
       </Footer>
     </div>
   }
-});
+}
+
+export default SystemIntegration

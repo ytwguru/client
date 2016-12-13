@@ -4,22 +4,28 @@ import Formsy from 'formsy-react';
 import {TextInput, TextArea, SelectOption} from "./../Form";
 import {Alert} from "./../Modal";
 
-export default React.createClass({
-  getInitialState : function(){
-    return { canSubmit : false };
-  },
-  enableButton : function () {
+class Quote extends React.Component{
+
+  constructor(props){
+    super(props);
+    this.state = { canSubmit : false };
+    this.submit = this.submit.bind(this);
+    this.enableButton = this.enableButton.bind(this);
+    this.disableButton = this.disableButton.bind(this);
+  }
+
+  enableButton() {
     this.setState({ canSubmit : true });
-  },
+  }
 
-  disableButton : function(){
+  disableButton(){
     this.setState({ canSubmit : false });
-  },
+  }
 
-  submit : function(model, reset){
+  submit(model, reset){
     let $form = $('#quoteFormWrapper');
-    let api_url = process.env.API_URL;
-    $.post(`${api_url}/quotes`, model)
+    let apiUrl = process.env.API_URL;
+    $.post(`${apiUrl}/quotes`, model)
       .done( data => {
         reset();
         $("#projectQuote").find("input[type=text], textarea").val("");
@@ -28,9 +34,9 @@ export default React.createClass({
           $("#quoteModal").modal("show");
         });
       });
-  },
+  }
 
-  componentDidMount : function(){
+  componentDidMount(){
     let $form = $('#quoteFormWrapper');
     $('#quoteTrigger').click(function (e) {
       e.preventDefault();
@@ -44,8 +50,9 @@ export default React.createClass({
         $this.text($form.is(':visible') ? "Close form" : "I have a project");
       });
     });
-  },
-  render : function(){
+  }
+
+  render(){
     let alertData = {
       header : "Request Sent",
       message : "<p>We just received your quote request. </p><p>A member of our team will get in touch with you soon.</p>"
@@ -119,4 +126,6 @@ export default React.createClass({
       <Alert id="quoteModal" data={alertData} />
     </section>;
   }
-});
+}
+
+export default Quote;

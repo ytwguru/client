@@ -1,8 +1,13 @@
 import "./styles.less";
 import React from "react";
 
-export default React.createClass({
-  componentDidMount : function (){
+class Services extends React.Component{
+
+  constructor(props){
+    super(props);
+  }
+
+  componentDidMount(){
     var $boxIcon = $('.boxIcon');
     /*if($boxIcon.length){
 
@@ -26,9 +31,9 @@ export default React.createClass({
           .css({'display' : 'none', 'margin-top' : '250px'});
       });
     }*/
-  },
-  render : function(){
-    return <div id="services">
+  }
+  render(){
+    return <div id="services" >
         <section className="slice no-bottom-padding color4">
           <div className="container">
             <div className="row">
@@ -124,7 +129,8 @@ export default React.createClass({
           </div>
         </div>
       </section>
-    </div>
-      ;
+    </div>;
   }
-});
+}
+
+export default Services;
