@@ -27,8 +27,14 @@ class CheckoutButton extends React.Component{
       locale: 'auto',
       token: function(token) {
         let apiUrl = process.env.API_URL;
-        token.amount = $this.props.data.price.replace(/,/g, "") * 100;
-        token.product = `${$this.props.data.product} ${$this.props.data.type}`;
+        if($this.props.data.ref == "000"){
+          token.amount = 1000;
+          token.product = "Integration";
+        }
+        else{
+          token.amount = $this.props.data.price.replace(/,/g, "") * 100;
+          token.product = `${$this.props.data.product} ${$this.props.data.type}`;
+        }
         token.ref = $this.props.data.ref;
 
         $.ajax({
@@ -60,7 +66,10 @@ class CheckoutButton extends React.Component{
 
   openCheckout(e){
     if(this.props.data.price){
-      let amount = this.props.data.price.replace(/,/g, "") * 100;
+      let amount = 1000;
+      if(this.props.data.ref != "000")
+        amount = this.props.data.price.replace(/,/g, "") * 100;
+      
       this.handler.open({
         name: 'YT Advisors',
         description: `${this.props.data.product} ${this.props.data.type}`,
