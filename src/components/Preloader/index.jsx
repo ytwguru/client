@@ -17,7 +17,8 @@ class Preloader extends React.Component{
       $("#globalWrapper").css("visibility", "visible");
       $('#preloader').delay(450).fadeOut('slow', function(){
         let link = window.location.hash;
-        $("html, body").animate({ scrollTop: $(link).offset().top }, 1000);
+        if(link && link != "#")
+          $("html, body").animate({ scrollTop: $(link).offset().top }, 1000);
       }); // will fade out the white DIV that covers the website.
     });
   }

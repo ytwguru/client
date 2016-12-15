@@ -1,6 +1,7 @@
 import "./styles.less"
 import React from "react";
 import CheckoutButton from "./../CheckoutButton"
+import {Alert} from "./../Modal";
 
 class Offer extends React.Component{
 
@@ -8,26 +9,28 @@ class Offer extends React.Component{
     super(props);
   }
 
+  componentDidMount(){
+    $(document.body).on("paymentSuccess", () => {
+      $("#paymentSuccessModal").modal("show");
+    });
+
+    $(document.body).on("paymentError", () => {
+      console.log("Payment error");
+      $("#paymentErrorModal").modal("show");
+    });
+  }
+
   render(){
 
     let className = `col-md-${Math.floor(12/this.props.data.plan.length)}`;
-    let discount = () => {};
-    let coupon = () => {};
-    let discountPercent = 0;
-    let couponCode = "";
-    if(this.props.data.params.coupon){
-      let couponDetails = this.props.data.params.coupon.split(" ");
-      if(couponDetails.length > 1){
-        [couponCode, discountPercent] = [ ...couponDetails ];
-        discount = <h4>{`Valid coupon is for a ${discountPercent}% discount`}</h4>;
-        coupon = <div className = "couponContainer">
-          <h3>
-            Coupon : <span>{couponDetails[0]}</span>
-          </h3>
-          {discount}
-        </div>;
-      }
-    }
+    let successData = {
+      header : "Payment Success",
+      message : "<p>Congratulations! Your payment was successful. </p><p>A member of our team will get in touch with you soon.</p>"
+    };
+    let errorData = {
+      header : "Payment Error",
+      message : "<p>There was an error processing your payment </p><p>Please contact customer support: (314)669-1750.</p>"
+    };
 
     return <section className="slice color1" id="offer">
       <div className="container">
@@ -36,16 +39,20 @@ class Offer extends React.Component{
             <h1>{this.props.data.title}</h1>
           </div>
         </div>
-        {coupon}
         <div className="row mb30">
           {
             (((sections) => sections.map((section) =>{
                 let price = (section.price) ? `$${section.price}`: "";
                 let plan = section;
+                let ref = this.props.data.params.ref ? this.props.data.params.ref : "";
                 plan.title = this.props.data.title;
                 plan.product = this.props.data.product;
-                plan.discountPercent = discountPercent;
-                plan.couponCode =  couponCode;
+                plan.ref = ref;
+                let btnAction = !price ?
+                  <p className="sign">
+                    <a href ="#" className ="btn" onClick ={()=> $("#quoteTrigger").click() }>Sign up</a>
+                  </p> :
+                  <CheckoutButton data={plan}/>;
 
                 return <div className={className}>
                     <div className={section.selected ? "pricingBloc focusPlan" : "pricingBloc"} >
@@ -57,7 +64,7 @@ class Offer extends React.Component{
                         (((featureList) => featureList.map((feature) => <li>{feature}</li>))(section.featureList))
                       }
                     </ul>
-                    <CheckoutButton data={plan}/>
+                    {btnAction}
                   </div>
                 </div>;
               })
@@ -65,6 +72,8 @@ class Offer extends React.Component{
           }
         </div>
       </div>
+      <Alert id="paymentSuccessModal" data={successData} />
+      <Alert id="paymentErrorModal" data={errorData} />
     </section>;
   }
 }

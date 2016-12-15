@@ -14,16 +14,22 @@ class CheckoutButton extends React.Component{
   }
 
   componentDidMount(){
+    /**
+     * amount:  charge.amount,
+     product: request.product,
+     email:  request.email,
+     ref: request.ref
+     */
     let $this = this;
     this.handler = StripeCheckout.configure({
       key: process.env.STRIPE_PUBLISH_KEY,
       image: 'https://s3.amazonaws.com/stripe-uploads/acct_19P0JiEOOTIWXoKdmerchant-icon-1481534554612-square-logo.png',
       locale: 'auto',
-      zipCode : true,
       token: function(token) {
         let apiUrl = process.env.API_URL;
-        let currentPrice = $this.props.data.price.replace(/,/g, "");
-        token.amount = (currentPrice - ($this.props.data.discountPercent/100 * currentPrice)) * 100;
+        token.amount = $this.props.data.price.replace(/,/g, "") * 100;
+        token.product = `${$this.props.data.product} ${$this.props.data.type}`;
+        token.ref = $this.props.data.ref;
 
         $.ajax({
           url:`${apiUrl}/customers`,
@@ -33,9 +39,11 @@ class CheckoutButton extends React.Component{
           dataType: "json",
           success: function(data){
             console.log(data);
+            $(document.body).trigger("paymentSuccess", data);
           },
-          failure : function(err){
-            console.log();
+          error : function(err){
+            console.log("ERROR");
+            $(document.body).trigger("paymentError", err);
           }
         });
 
@@ -52,8 +60,7 @@ class CheckoutButton extends React.Component{
 
   openCheckout(e){
     if(this.props.data.price){
-      let currentPrice = this.props.data.price.replace(/,/g, "");
-      let amount = (currentPrice - (this.props.data.discountPercent/100 * currentPrice)) * 100;
+      let amount = this.props.data.price.replace(/,/g, "") * 100;
       this.handler.open({
         name: 'YT Advisors',
         description: `${this.props.data.product} ${this.props.data.type}`,
