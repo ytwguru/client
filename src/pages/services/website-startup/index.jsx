@@ -38,6 +38,12 @@ class WebsiteStartup extends React.Component{
       <p> We quickly deploy an MVP for your new business with hand-crafted solutions that merge smart design, leading-edge
        technology and your unique business goals.
       </p>
+      <br/>
+      <p>
+       <h3 class="pull-right">
+       For pricing click <a href = "/pricing/website/">here</a>
+       </h3>
+      </p>
                 `
     };
   }
