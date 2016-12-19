@@ -24,10 +24,18 @@ export default React.createClass({
         </MidBreaker>
       </div>
       <div className = "careerHeader container">
-        <h3>Join our team</h3>
+        <h1>Join our team</h1>
         <p>
           We're looking for energetic and enthusiastic people who push themselves and inspire those around them.
            We provide opportunities for talented people who thrive in a fast-paced environment.
+        </p>
+        <h3>Open positions</h3>
+        <p>
+          <ul>
+            <li><a href = "#">Project Manager</a></li>
+            <li><a href = "#">Software developer</a></li>
+            <li><a href = "#">Sales Representative</a></li>
+          </ul>
         </p>
       </div>
       <Quote data={{ color: "color4" }}>
