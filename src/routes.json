@@ -81,6 +81,11 @@
     "page" : "./pages/blog/index.jsx"
   },
   {
+    "path" : "/careers/",
+    "key" : "careers",
+    "page" : "./pages/careers/index.jsx"
+  },
+  {
     "path" : "/blog/shut-up-do-it/",
     "key" : "blog_shut-up-do-it",
     "page" : "./pages/blog/shut-up-do-it/index.jsx"

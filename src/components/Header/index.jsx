@@ -42,6 +42,7 @@ class Header extends React.Component{
             <li className={this.getLinkClass("team")}><a href={`${prefix}#team`}>Team</a> </li>
             <li className={this.getLinkClass("contact")}><a href={`${prefix}#contactSlice`}>Contact</a> </li>
             <li className={this.getLinkClass("blog")}><a href="/blog/">Blog</a> </li>
+            <li className={this.getLinkClass("careers")}><a href="/careers/">Careers</a> </li>
           </ul>
         </div>
       </div>
