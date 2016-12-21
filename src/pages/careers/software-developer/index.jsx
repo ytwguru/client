@@ -52,10 +52,10 @@ export default React.createClass({
             </ul>
             <h2>Bonuses (these things are a plus)</h2>
             <ul>
-              <li>You’ve published NPM modules</li>
+              <li>You've published NPM modules</li>
               <li>You contribute to open source software (like on Github)</li>
               <li>Have given presentations on technologies</li>
-              <li>You’re familiar with the Agile Scrum process</li>
+              <li>You're familiar with the Agile Scrum process</li>
             </ul>
           </div>
           <p>

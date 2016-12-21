@@ -58,8 +58,8 @@ export default React.createClass({
           <div className = "jobQualifications">
             <h2>Qualifications and Skills</h2>
             <ul>
-              <li>Bachelor’s degree preferred</li>
-              <li>2+ years’ project management</li>
+              <li>Bachelor's degree preferred</li>
+              <li>2+ years' project management</li>
               <li>Ability to translate complicated technical jargon</li>
               <li>Willingness to work from alternate locations when need</li>
               <li>Word processing</li>

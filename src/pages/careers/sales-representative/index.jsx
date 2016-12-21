@@ -26,7 +26,7 @@ export default React.createClass({
           <div className = "jobSummary">
             <h2>Job Summary</h2>
             <p>
-              We’re looking for a results-driven sales representative to actively seek out and engage customer prospects.
+              We're looking for a results-driven sales representative to actively seek out and engage customer prospects.
               The ideal candidate can quickly absorb and retain product knowledge.
             </p>
           </div>
@@ -38,7 +38,7 @@ export default React.createClass({
               <li>Expedite the resolution of customer problems and complaints to maximize satisfaction</li>
               <li>Achieve agreed upon sales targets and outcomes within schedule</li>
               <li>Monitor competition by gathering current marketplace information on pricing, products, new products etc.</li>
-              <li>Analyze the territory/market’s potential, track sales and status reports</li>
+              <li>Analyze the territory/market's potential, track sales and status reports</li>
               <li>Recommend changes in products, service, and policy by evaluating results and competitive developments.</li>
               <li>Keep abreast of best practices and promotional trends</li>
               <li>Continuously improve through feedback </li>
@@ -47,9 +47,9 @@ export default React.createClass({
           <div className = "jobQualifications">
             <h2>Qualifications and Skills</h2>
             <ul>
-              <li>Bachelor’s degree preferred</li>
-              <li>2+ years’ direct or inside sales experience</li>
-              <li>4+ years’ retail experience a plus</li>
+              <li>Bachelor's degree preferred</li>
+              <li>2+ years' direct or inside sales experience</li>
+              <li>4+ years' retail experience a plus</li>
               <li>Ability to translate complicated technical jargon for the average consumer</li>
               <li>Willingness to work from alternate locations when need</li>
             </ul>
