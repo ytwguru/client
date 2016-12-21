@@ -86,6 +86,21 @@
     "page" : "./pages/careers/index.jsx"
   },
   {
+    "path" : "/careers/project-manager/",
+    "key" : "careers_project-manager",
+    "page" : "./pages/careers/project-manager/index.jsx"
+  },
+  {
+    "path" : "/careers/software-developer/",
+    "key" : "careers_software-developer",
+    "page" : "./pages/careers/software-developer/index.jsx"
+  },
+  {
+    "path" : "/careers/sales-representative/",
+    "key" : "careers_sales-representative",
+    "page" : "./pages/careers/sales-representative/index.jsx"
+  },
+  {
     "path" : "/blog/shut-up-do-it/",
     "key" : "blog_shut-up-do-it",
     "page" : "./pages/blog/shut-up-do-it/index.jsx"

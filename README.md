@@ -11,7 +11,6 @@ Advisors Website
 
 * From the root of the project `npm install`
 
-
 ### Tests
 
 * **All:** `npm test`
@@ -20,7 +19,6 @@ Advisors Website
 
 * The application uses webpack to bundle the source code and hot loader to allow live refresh while developing.
 * To run in development mode `npm run start`
-
 
 ### Build
 

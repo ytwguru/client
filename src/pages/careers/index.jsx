@@ -22,21 +22,21 @@ export default React.createClass({
         </Header>
         <MidBreaker data={{id : "paralaxSlice16", text: "Careers", header : true   }}>
         </MidBreaker>
-      </div>
-      <div className = "careerHeader container">
-        <h1>Join our team</h1>
-        <p>
-          We're looking for energetic and enthusiastic people who push themselves and inspire those around them.
-           We provide opportunities for talented people who thrive in a fast-paced environment.
-        </p>
-        <h3>Open positions</h3>
-        <p>
-          <ul>
-            <li><a href = "#">Project Manager</a></li>
-            <li><a href = "#">Software developer</a></li>
-            <li><a href = "#">Sales Representative</a></li>
-          </ul>
-        </p>
+        <div className = "careerHeader container">
+          <h1>Join our team</h1>
+          <p>
+            We're looking for energetic and enthusiastic people who push themselves and inspire those around them.
+            We provide opportunities for talented people who thrive in a fast-paced environment.
+          </p>
+          <h3>Open positions</h3>
+          <p>
+            <ul>
+              <li><a href = "/careers/project-manager/">Project Manager</a></li>
+              <li><a href = "/careers/software-developer/">Software developer</a></li>
+              <li><a href = "/careers/sales-representative/">Sales Representative</a></li>
+            </ul>
+          </p>
+        </div>
       </div>
       <Quote data={{ color: "color4" }}>
       </Quote>
