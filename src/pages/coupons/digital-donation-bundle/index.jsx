@@ -105,11 +105,12 @@ mixpanel.init("${process.env.MIXPANEL_TRACKER}");
                 <div className = "col-md-6 vcenter">
                   <div className = "couponDetails">
                     <h2>1. New Website</h2>
+                    <p>
+                      <h4>Responsive websites double giving on mobile devices</h4>
+                    </p>
                     <ul>
-                      <li>15 pages</li>
+                      <li>15 web pages</li>
                       <li>Lifetime of free hosting</li>
-                      <li>Unlimited Bandwidth</li>
-                      <li>2G of Storage</li>
                       <li>Email Support</li>
                       <li>Modern site re-design</li>
                     </ul>
@@ -124,11 +125,13 @@ mixpanel.init("${process.env.MIXPANEL_TRACKER}");
                 <div className = "col-md-6 vcenter">
                   <div className = "couponDetails">
                     <h2>2. Online Donation Button</h2>
+                    <p>
+                      <h4>Custom-branded donate pages raise 6X more money.</h4>
+                    </p>
                     <ul>
-                      <li>Donate with card, PayPal, or Bank transfer</li>
+                      <li>Donate with your card, PayPal, or Bank transfer</li>
                       <li>Allow donors to select monthly recurring donations</li>
-                      <li>Secured  by SSL/TLS.  PCI compliant</li>
-                      <li>Optimized for desktop, mobile phones, and tablets</li>
+                      <li>100% Secure Donations</li>
                     </ul>
                   </div>
                 </div>
@@ -151,9 +154,11 @@ mixpanel.init("${process.env.MIXPANEL_TRACKER}");
                 <div className = "col-md-6 vcenter">
                   <div className = "couponDetails">
                     <h2>3. Text to give</h2>
+                    <p>
+                      <h4>Monthly donors give 42% more than one-time donors</h4>
+                    </p>
                     <ul>
-                      <li>2 minute setup</li>
-                      <li>Donation as simple as sending a text</li>
+                      <li>Setup in 2 minutes</li>
                       <li>Text any amount to give</li>
                     </ul>
                   </div>
@@ -167,11 +172,12 @@ mixpanel.init("${process.env.MIXPANEL_TRACKER}");
                 <div className = "col-md-6 vcenter">
                   <div className = "couponDetails">
                     <h2>4. Three months social media marketing</h2>
+                    <p>
+                      <h4>55% of those who engage with nonprofits via social media have been inspired to take further action.</h4>
+                    </p>
                     <ul>
-                      <li>Scheduled social media posts</li>
-                      <li>Targeted twitter follows </li>
-                      <li>Curated social media content</li>
-                      <li>Improved online presence</li>
+                      <li>Increase your Twitter and Facebook followers</li>
+                      <li>Schedule your social media posts</li>
                     </ul>
                   </div>
                 </div>
