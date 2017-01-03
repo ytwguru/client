@@ -48,8 +48,8 @@ export default React.createClass({
             <h2>Qualifications and Skills</h2>
             <ul>
               <li>Bachelor's degree preferred</li>
-              <li>2+ years' direct or inside sales experience</li>
-              <li>4+ years' retail experience a plus</li>
+              <li>2+ years direct or inside sales experience</li>
+              <li>4+ years retail experience a plus</li>
               <li>Ability to translate complicated technical jargon for the average consumer</li>
               <li>Willingness to work from alternate locations when need</li>
             </ul>

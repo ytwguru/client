@@ -81,6 +81,16 @@
     "page" : "./pages/blog/index.jsx"
   },
   {
+    "path" : "/blog/shut-up-do-it/",
+    "key" : "blog_shut-up-do-it",
+    "page" : "./pages/blog/shut-up-do-it/index.jsx"
+  },
+  {
+    "path" : "/blog/shut_up_do_it/",
+    "key" : "blog_shut_up_do_it",
+    "page" : "./pages/blog/shut-up-do-it/index.jsx"
+  },
+  {
     "path" : "/careers/",
     "key" : "careers",
     "page" : "./pages/careers/index.jsx"
@@ -101,13 +111,13 @@
     "page" : "./pages/careers/sales-representative/index.jsx"
   },
   {
-    "path" : "/blog/shut-up-do-it/",
-    "key" : "blog_shut-up-do-it",
-    "page" : "./pages/blog/shut-up-do-it/index.jsx"
+    "path" : "/careers/sales-representative/",
+    "key" : "careers_sales-representative",
+    "page" : "./pages/careers/sales-representative/index.jsx"
   },
   {
-    "path" : "/blog/shut_up_do_it/",
-    "key" : "blog_shut_up_do_it",
-    "page" : "./pages/blog/shut-up-do-it/index.jsx"
+    "path" : "/coupons/digital-donation-bundle/",
+    "key" : "coupons_digital-donation-bundle",
+    "page" : "./pages/coupons/digital-donation-bundle/index.jsx"
   }
 ]

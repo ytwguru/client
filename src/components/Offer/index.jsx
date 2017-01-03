@@ -52,7 +52,7 @@ class Offer extends React.Component{
                   <p className="sign">
                     <a href ="#" className ="btn" onClick ={()=> $("#quoteTrigger").click() }>Sign up</a>
                   </p> :
-                  <CheckoutButton data={plan}/>;
+                  <div className="sign"><CheckoutButton data={plan}>Sign Up</CheckoutButton></div>;
 
                 return <div className={className}>
                     <div className={section.selected ? "pricingBloc focusPlan" : "pricingBloc"} >

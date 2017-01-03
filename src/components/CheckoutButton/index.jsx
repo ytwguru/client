@@ -81,11 +81,9 @@ class CheckoutButton extends React.Component{
 
   render() {
     return <form className = "checkoutButton" method="POST" action="/your-server-side-code">
-      <p className="sign">
-        <a className="btn" href="#" onClick={this.openCheckout}>
-          Sign up
-        </a>
-      </p>
+      <a className="btn" href="#" onClick={this.openCheckout}>
+        {this.props.children}
+      </a>
     </form>
   }
 }
