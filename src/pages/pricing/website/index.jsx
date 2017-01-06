@@ -129,13 +129,20 @@ mixpanel.init("${process.env.MIXPANEL_TRACKER}");
       <div id="globalWrapper" className="localscroll">
         <Header data={{page : "pricing"}}>
         </Header>
+        <section className = "pricing">
+          <div className = "pricingHeader topPadded color4">
+            <div className = "container">
+              <img src = "https://cdn.ytadvisors.com/images/services/website.png" className="img-responsive" />
+            </div>
+          </div>
+        </section>
         <Offer data={this.getPlanDetails()}>
         </Offer>
+        <Quote data={{ color: "color4" }}>
+        </Quote>
+        <Footer>
+        </Footer>
       </div>
-      <Quote data={{ color: "color4" }}>
-      </Quote>
-      <Footer>
-      </Footer>
     </div>
   }
 }
