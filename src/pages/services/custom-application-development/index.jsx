@@ -12,7 +12,6 @@ import Helmet from "react-helmet";
 class CustomApplicationDevelopment extends React.Component{
   getServiceData(){
     return {
-      mainImage : "https://cdn.ytadvisors.com/images/services/custom_development.png",
       page : "custom-application-development",
       params : this.props.location.query,
       content : `
@@ -55,7 +54,7 @@ class CustomApplicationDevelopment extends React.Component{
         meta={[
         { name: 'description', content: 'We design and develop software tailored to your specific demands' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' },
-        { property: 'og:image', content: 'https://cdn.ytadvisors.com/images/services/custom_development.png' },
+        { property: 'og:image', content: 'https://cdn.ytadvisors.com/images/services/integration.png' },
         { property: 'og:title', content: "Custom application development" },
         { property: 'og:description', content: "We design and develop software tailored to your specific demands" },
         { property: 'og:image:width', content: "700" },
@@ -69,7 +68,7 @@ class CustomApplicationDevelopment extends React.Component{
         { name: 'twitter:title', content: "Custom application development" },
         { name: 'twitter:description', content: "We design and develop software tailored to your specific demands" },
         { name: 'twitter:site', content: '@ytadvisors' },
-        { name: 'twitter:image', content: 'https://cdn.ytadvisors.com/images/services/custom_development.png' },
+        { name: 'twitter:image', content: 'https://cdn.ytadvisors.com/images/services/integration.png' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:creator', content: '@ytadvisors' }
         ]}
@@ -79,7 +78,7 @@ class CustomApplicationDevelopment extends React.Component{
       <div id="globalWrapper" className="localscroll">
         <Header data={{page : "services"}}>
         </Header>
-        <MidBreaker data={{id : "paralaxSlice9", text: "Custom Application Development", header: true }}>
+        <MidBreaker data={{id : "paralaxSlice19", text: "Custom Application Development", header: true }}>
         </MidBreaker>
         <Posts data={this.getServiceData()}>
         </Posts>

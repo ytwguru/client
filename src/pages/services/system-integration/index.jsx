@@ -16,7 +16,6 @@ class SystemIntegration extends React.Component {
 
   getServiceData(){
     return {
-      mainImage : "https://cdn.ytadvisors.com/images/services/integration.png",
       page : "system-integration",
       params : this.props.location.query,
       content: `
@@ -65,7 +64,7 @@ class SystemIntegration extends React.Component {
       <div id="globalWrapper" className="localscroll">
         <Header data={{page : "services"}}>
         </Header>
-        <MidBreaker data={{id : "paralaxSlice9", text: "System Integration", header: true }}>
+        <MidBreaker data={{id : "paralaxSlice19", text: "System Integration", header: true }}>
         </MidBreaker>
         <Posts  data={this.getServiceData()}>
         </Posts>

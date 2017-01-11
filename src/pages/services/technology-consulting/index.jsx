@@ -17,7 +17,6 @@ class TechnologyConsulting extends React.Component{
 
   getServiceData(){
     return {
-      mainImage : "https://cdn.ytadvisors.com/images/services/security.png",
       page : "technology-consulting",
       params : this.props.location.query,
       content : `
@@ -72,7 +71,7 @@ class TechnologyConsulting extends React.Component{
       <div id="globalWrapper" className="localscroll">
         <Header data={{page : "services"}}>
         </Header>
-        <MidBreaker data={{id : "paralaxSlice9", text: "Technology Consulting", header: true }}>
+        <MidBreaker data={{id : "paralaxSlice19", text: "Technology Consulting", header: true }}>
         </MidBreaker>
         <Posts  data={this.getServiceData()}>
         </Posts>

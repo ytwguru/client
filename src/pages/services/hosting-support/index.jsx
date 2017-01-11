@@ -16,7 +16,6 @@ class HostingSupport extends React.Component{
 
   getServiceData(){
     return {
-      mainImage : "https://cdn.ytadvisors.com/images/services/hosting.png",
       page : "hosting-support",
       params : this.props.location.query,
       content: `
@@ -79,7 +78,7 @@ class HostingSupport extends React.Component{
       <div id="globalWrapper" className="localscroll">
         <Header data={{page : "services"}}>
         </Header>
-        <MidBreaker data={{id : "paralaxSlice9", text: "Hosting & Support", header: true }}>
+        <MidBreaker data={{id : "paralaxSlice19", text: "Hosting & Support", header: true }}>
         </MidBreaker>
         <Posts data={this.getServiceData()}>
         </Posts>

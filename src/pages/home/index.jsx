@@ -77,12 +77,12 @@ class Home extends React.Component{
         break;
       case 1:
         data = {
-          id : "paralaxSlice2", icon : "icon-camera", text : "Software that connects with your customers"
+          id : "paralaxSlice17", icon : "icon-camera", text : "Software that connects with your customers"
         };
         break;
       case 2:
         data = {
-          id : "paralaxSlice4", icon : "icon-mail", text : "Keep in touch with us"
+          id : "paralaxSlice20", icon : "icon-mail", text : "Keep in touch with us"
         };
         break;
     }

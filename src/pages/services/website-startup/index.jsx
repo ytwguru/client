@@ -12,7 +12,6 @@ import Helmet from "react-helmet";
 class WebsiteStartup extends React.Component{
   getServiceData(){
     return {
-      mainImage : "https://cdn.ytadvisors.com/images/services/website_design.png",
       page : "website-startup",
       params : this.props.location.query,
       content: `
@@ -77,7 +76,7 @@ class WebsiteStartup extends React.Component{
       <div id="globalWrapper" className="localscroll">
         <Header data={{page : "services"}}>
         </Header>
-        <MidBreaker data={{id : "paralaxSlice9", text: "Websites Design", header: true }}>
+        <MidBreaker data={{id : "paralaxSlice19", text: "Websites Design", header: true }}>
         </MidBreaker>
         <Posts  data={this.getServiceData()}>
         </Posts>

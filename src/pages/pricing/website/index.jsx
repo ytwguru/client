@@ -90,6 +90,7 @@ class Website extends React.Component{
         meta={[
         { name: 'description', content: 'Pricing Plans for website development' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' },
+        { property: 'og:image', content: 'https://cdn.ytadvisors.com/images/services/website.png' },
         { property: 'og:title', content: "Website Pricing" },
         { property: 'og:description', content: "Pricing Plans for website development" },
         { property: 'og:site_name', content: "ytadvisors" },
@@ -100,6 +101,7 @@ class Website extends React.Component{
         { name: 'author', content: "Yomi Toba" },
         { name: 'twitter:title', content: "Website Pricing" },
         { name: 'twitter:description', content: "Pricing Plans for website development" },
+        { name: 'twitter:image', content: 'https://cdn.ytadvisors.com/images/services/website.png' },
         { name: 'twitter:site', content: '@ytadvisors' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:creator', content: '@ytadvisors' }

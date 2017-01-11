@@ -16,6 +16,11 @@ class Posts extends React.Component{
     let month = this.props.data.month ? <span>{this.props.data.month}</span> : null;
     let day = this.props.data.day ? <h4>{this.props.data.day}</h4> : null;
     let date = month && day ? <div className="newsDate">{day}{month}</div> : () => {};
+    let img = this.props.data.mainImage ?
+      <div className="imgWrapper">
+        <img src={this.props.data.mainImage} alt="Main post image" />
+      </div> :
+      () => {};
     return <section className="slice color1" id="postSlice">
       <div className="container">
         <div className="col-md-8">
@@ -23,9 +28,7 @@ class Posts extends React.Component{
             <header>
               {title}
               <div className="postPic">
-                <div className="imgWrapper">
-                  <img src={this.props.data.mainImage} alt="Main post image" />
-                </div>
+                {img}
                 {date}
               </div>
             </header>
