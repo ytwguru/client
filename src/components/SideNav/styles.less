@@ -1,0 +1,109 @@
+#sideNav{
+  #menuBar{
+    -webkit-transition: left .3s; /* Safari */
+    transition: left .3s;
+    transition-timing-function: ease-out;
+    top:0;
+    width: 50px;
+    left:0;
+    background:#2c499c;
+    height:100%;
+    position:fixed;
+    z-index: 1000;
+    .menuContainer{
+      margin-top: 10px;
+      width: 50px;
+      cursor:pointer;
+      .icon-menu:before{
+        content:"\f0c9";
+        color:#fff;
+        font-size:35px;
+      }
+      .icon-x:before{
+        content:"\2715";
+        color:#fff;
+        font-size:35px;
+      }
+      .menuText{
+        color:#fff;
+        font-size:.7em;
+        font-weight:bold;
+        text-transform: uppercase;
+      }
+    }
+  }
+  #menuList{
+    -webkit-transition: left .3s; /* Safari */
+    transition: left .3s;
+    transition-timing-function: ease-out;
+    top:0;
+    list-style: none;
+    left:-300px;
+    background:#1d294b;
+    width:300px;
+    height:100%;
+    position:fixed;
+    z-index: 1000;
+    text-align: left;
+    padding-top:3em;
+    li {
+      font-size:1.4em;
+      color:#fff;
+      a{
+        text-decoration: none;
+        width:100%;
+        display:block;
+        padding: 1em 0;
+        text-transform: uppercase;
+        position:relative;
+        -webkit-transition: color .5s, left .3s; /* Safari */
+        transition: color .5s, left .3s;
+        left:-40px;
+        color:#1d294b;
+        &.open{
+          left:0px;
+          color:#fff;
+        }
+      }
+
+      a:hover{
+        color:#2c499c;
+      }
+    }
+
+  }
+
+  #navOverlay{
+    background :rgba(18,39,56,0.94);
+    z-index:999;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    position:fixed;
+    display:none;
+    -webkit-transition: display .3s; /* Safari */
+    transition: display .3s;
+  }
+}
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+  #sideNav{
+    #menuBar {
+      width: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 50px;
+      background: #2c499c;
+    }
+  }
+  .menuContainer{
+    .menuText {
+      display: none;
+    }
+  }
+}

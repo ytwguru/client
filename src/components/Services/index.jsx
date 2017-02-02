@@ -8,29 +8,21 @@ class Services extends React.Component{
   }
 
   componentDidMount(){
-    var $boxIcon = $('.boxIcon');
-    /*if($boxIcon.length){
+    var $boxIcon = $('.serviceContainer');
+    if($boxIcon.length > 0){
 
-      $boxIcon.hover(function() {
-        var $this = $(this);
-        $this.addClass('hover');
-        $this.find('.iconWrapper i').addClass('triggeredHover');
-        $this.find('.boxContent>p')
-          .stop(true, false)
-          .css({'display': 'block'})
-          .animate({'margin-top': '0px'}, 300, function() {
-            // stuff to do after animation is complete
-          });
-
-      }, function() {
-        var $this = $(this);
-        $this.removeClass('hover');
-        $this.find('.iconWrapper i').removeClass('triggeredHover');
-        $this.find('.boxContent>p')
-          .stop(true, false)
-          .css({'display' : 'none', 'margin-top' : '250px'});
+      $boxIcon.hover(function(){
+        let $this = $(this);
+        $this.find(".iconWrapper").addClass("color4");
+        $this.addClass("color3");
+      }, function(){
+        let $this = $(this);
+        $this.find(".iconWrapper").removeClass("color4");
+        $this.removeClass("color3");
       });
-    }*/
+    }
+
+    console.log($boxIcon.length);
   }
   render(){
     return <div id="services" >
@@ -41,7 +33,7 @@ class Services extends React.Component{
                 <h1>Our services</h1>
               </div>
               <div className="col-md-3">
-                <a href ="/services/product-development/">
+                <a className = "serviceContainer" href ="/services/product-development/">
                   <article className="boxIcon">
                     <div className="iconWrapper iconBig"> <i className="icon-mobile-1"></i></div>
                     <section className="boxContent">
@@ -52,7 +44,7 @@ class Services extends React.Component{
                 </a>
               </div>
               <div className="col-md-3">
-                <a href ="/services/technology-consulting/">
+                <a className = "serviceContainer" href ="/services/technology-consulting/">
                   <article className="boxIcon">
                     <div className="iconWrapper iconBig"> <i className="icon-light-bulb"></i></div>
                     <section className="boxContent">
@@ -63,7 +55,7 @@ class Services extends React.Component{
                 </a>
               </div>
               <div className="col-md-3">
-                <a href ="/services/system-integration/">
+                <a className = "serviceContainer" href ="/services/system-integration/">
                   <article className="boxIcon">
                     <div className="iconWrapper iconBig"> <i className="icon-star-empty"></i></div>
                     <section className="boxContent">
@@ -74,7 +66,7 @@ class Services extends React.Component{
                 </a>
               </div>
               <div className="col-md-3">
-                <a href ="/services/hosting-support/">
+                <a className = "serviceContainer" href ="/services/hosting-support/">
                   <article className="boxIcon">
                     <div className="iconWrapper iconBig"> <i className="icon-server"></i></div>
                     <section className="boxContent">
