@@ -13,11 +13,6 @@ class Footer extends React.Component{
         <section id="mainFooter">
           <div className="container" id="footer">
             <div className="row">
-              <div className="col-md-12 text-center">
-                <div className="blocPhone">
-                  <div className="iconWrapper color3"><i className="icon-phone"></i></div>
-                  314.669.1750 </div>
-              </div>
               <div className="col-md-12">
                 <ul className="socialNetwork">
                   <li><a href="https://www.facebook.com/ytadvisors" className="iconWrapper color4 tips icoFacebook" title="Facebook"><i className="icon-facebook"></i></a></li>

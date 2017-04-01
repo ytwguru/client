@@ -1,7 +1,6 @@
 "use strict";
 
 import "animate.css";
-import "flickity/dist/flickity.min.css"
 import "bootstrap/dist/js/bootstrap.js";
 import "jquery-ui";
 import "jquery.scrollto";
@@ -14,4 +13,3 @@ import "smooth-scroll";
 import "jquery.stellar";
 import "google-fonts";
 import "blueimp-gallery";
-import "flickity";

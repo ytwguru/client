@@ -21,24 +21,24 @@ class HostingSupport extends React.Component{
       content: `
       <p>
       We setup production environments, oversee server security, perform daily backups and monitor performance.
-      </p>
+      </p><br/>
       <h3>Hosting</h3>
       <p>
       Our team have expertise in working with a variety of Cloud platforms (Amazon Web Services, Azure, Rackspace, and more),
        migrating local infrastructure to the Cloud, Cloud infrastructure design, etc.  We perform security audits, maintain
         and manage servers, setup backup storage, update OS and software dependencies, and monitor performance and resource availability. 
-      </p>
+      </p><br/>
       <h3>Deployment</h3>
       <p>
       For launching stable production applications, we setup pre-release / staging environments, implement continuous
        integration, monitor production servers, and automate scalability.
-      </p>
+      </p><br/>
       <h3>Support services</h3>
       <p>
       We offer 1st, 2nd, and 3rd level support services for application developed by YT Advisors or any third party vendor. 
        Our team will help you with troubles of any complexity level - from providing workarounds and hot fixes to security
         audits and application enhancements. 
-      </p>
+      </p><br/>
       <p>
         <b>L1 support</b>: user guidance, standard issue fixes, monitor system, data analysis, etc. <br />
         <b>L2 support</b>: server administration, IT environment support (issue detection and fixing).  Monitoring systems setup<br />
@@ -78,8 +78,6 @@ class HostingSupport extends React.Component{
       <div id="globalWrapper" className="localscroll">
         <Header data={{page : "services"}}>
         </Header>
-        <MidBreaker data={{id : "paralaxSlice19", text: "Hosting & Support", header: true }}>
-        </MidBreaker>
         <Posts data={this.getServiceData()}>
         </Posts>
       </div>

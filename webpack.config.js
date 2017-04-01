@@ -107,7 +107,8 @@ let config  = {
         API_URL : JSON.stringify(apiUrl),
         SITE_URL : JSON.stringify(process.env.SITE_URL),
         STRIPE_KEY : JSON.stringify(stripeKey),
-        STRIPE_PUBLISH_KEY : JSON.stringify(stripePublishKey)
+        STRIPE_PUBLISH_KEY : JSON.stringify(stripePublishKey),
+        HUBSPOT_ID : JSON.stringify(process.env.HUBSPOT_ID)
       }
     }),
     new SitemapPlugin(process.env.SITE_URL, routes, 'sitemap.xml'),

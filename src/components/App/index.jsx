@@ -19,6 +19,8 @@ class App extends React.Component{
         link={[
         { rel : 'stylesheet', href :"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"},
         { rel : 'stylesheet', href :"https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"},
+        { rel : 'stylesheet', href :"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"},
+        { rel : 'stylesheet', href :"https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"},
         { rel: 'stylesheet', href: '/main.min.css' },
         { rel: 'shortcut icon', href: 'https://cdn.ytadvisors.com/favicons/favicon.ico' },
         { rel: 'apple-touch-icon', sizes : "57x57", href : "https://cdn.ytadvisors.com/favicons/apple-icon-57x57.png"},
@@ -38,7 +40,8 @@ class App extends React.Component{
       ]}
         meta={[
         { name: 'description', content: 'Custom web, mobile, and desktop software development and consulting services' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' }
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0' },
+        {'charset': 'utf-8'}
       ]}
         script={ process.env.DEPLOY === "true" ? [
         { "type": "text/javascript", "innerHTML": `
@@ -56,6 +59,8 @@ mixpanel.init("${process.env.MIXPANEL_TRACKER}");
         ga('create', '${process.env.GA_TRACKER}', 'auto');
         ga('send', 'pageview');
         `
+        },{
+          src: `//js.hs-scripts.com/${process.env.HUBSPOT_ID}.js`, type: "text/javascript", id : "hs-script-loader", async : true
         }
       ] : [] }
         defaultTitle = 'Consulting software development for small, medium and large business'

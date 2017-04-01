@@ -21,18 +21,18 @@ class ProductDevelopment extends React.Component{
       content : `
       <p>
       We design and develop web, mobile and desktop applications following a value-driven, iterative process.
-      </p>
+      </p><br/>
       <h3>Full Cycle Product Development</h3>
       <p>
       We are a full-cycle software product development service provider supporting you at any stage of your product evolution. 
        We bring your product vision to life, whether it's a new product, new features, or re-platforming legacy products.  
-      </p>
+      </p><br/>
       <h3>Project Rescue</h3>
       <p>
       If you have a partially completed product and you need it completed under tight deadlines we can be a great solution. 
        While documentation might be incomplete or unavailable, we will analyze what you have, assess the remain requirements to reach
         a finished product, and provide you with a plan and budget.
-      </p>
+      </p><br/>
       <h3>Team Expansion</h3>
       <p>
       If you have an existing established team with well defined processes, but need to extend your development capability,
@@ -74,8 +74,6 @@ class ProductDevelopment extends React.Component{
       <div id="globalWrapper" className="localscroll">
         <Header data={{page : "services"}}>
         </Header>
-        <MidBreaker data={{id : "paralaxSlice19", text: "Product Development", header: true }}>
-        </MidBreaker>
         <Posts data={this.getServiceData()}>
         </Posts>
       </div>

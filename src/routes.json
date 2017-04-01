@@ -51,6 +51,11 @@
     "page" : "./pages/error/index.jsx"
   },
   {
+    "path" : "/team/",
+    "key" : "team",
+    "page" : "./pages/team/index.jsx"
+  },
+  {
     "path" : "/team/tanya/",
     "key" : "team_tanya",
     "page" : "./pages/team/tanya/index.jsx"

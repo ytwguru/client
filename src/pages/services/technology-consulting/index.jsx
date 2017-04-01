@@ -20,17 +20,17 @@ class TechnologyConsulting extends React.Component{
       page : "technology-consulting",
       params : this.props.location.query,
       content : `
-      <p>We help teams understand trends, and security risks, and create road maps to reach development goals.</p>
+      <p>We help teams understand trends, and security risks, and create road maps to reach development goals.</p><br/>
       <h3>Practical and enduring results</h3>
       <p>We serve clients at every level of their organization, in whatever capacity we can be most useful,
         whether as a trusted advisor to top management or as a coach for front line employees. 
         Our focus is always to deliver practical and enduring results that equip our clients with the tools to grow and lead.
-      </p>
+      </p><br/>
       <h3>Specialists work directly with our clients</h3>
       <p>Partnerships with clients lead to recommendations they can put immediately into practice. 
         Our implementation specialist work directly with our clients to help develop workforce skills,
         improve operational experience, and apply new working methods.
-      </p>
+      </p><br/>
       <h3>Internal and external security infrastructure</h3>
       <p>We offer a complete line of audit services covering a range of both system analysis and review.  Our system review highlights
        the strengths and weaknesses of a company's internal and external security infrastructure.  While our detailed analysis allow
@@ -71,8 +71,6 @@ class TechnologyConsulting extends React.Component{
       <div id="globalWrapper" className="localscroll">
         <Header data={{page : "services"}}>
         </Header>
-        <MidBreaker data={{id : "paralaxSlice19", text: "Technology Consulting", header: true }}>
-        </MidBreaker>
         <Posts  data={this.getServiceData()}>
         </Posts>
       </div>

@@ -20,8 +20,6 @@ export default React.createClass({
       <div id="globalWrapper" className="localscroll">
         <Header data={{page : "careers"}}>
         </Header>
-        <MidBreaker data={{id : "paralaxSlice16", text: "Careers", header : true   }}>
-        </MidBreaker>
         <div className = "careerHeader container">
           <h1>Join our team</h1>
           <p>

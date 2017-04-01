@@ -13,12 +13,12 @@ class Services extends React.Component{
 
       $boxIcon.hover(function(){
         let $this = $(this);
-        $this.find(".iconWrapper").addClass("color4");
-        $this.addClass("color3");
+        $this.find(".iconWrapper").addClass("color3");
+        $this.addClass("color0");
       }, function(){
         let $this = $(this);
-        $this.find(".iconWrapper").removeClass("color4");
-        $this.removeClass("color3");
+        $this.find(".iconWrapper").removeClass("color3");
+        $this.removeClass("color0");
       });
     }
 
@@ -26,7 +26,7 @@ class Services extends React.Component{
   }
   render(){
     return <div id="services" >
-        <section className="slice no-bottom-padding color4">
+        <section className="slice no-bottom-padding color1">
           <div className="container">
             <div className="row">
               <div className="col-md-12">
@@ -38,7 +38,7 @@ class Services extends React.Component{
                     <div className="iconWrapper iconBig"> <i className="icon-mobile-1"></i></div>
                     <section className="boxContent">
                       <h2>Product Development</h2>
-                      <p>We design and develop web, mobile and desktop applications following a value-driven, iterative process.</p>
+                      <p>We design and develop web, mobile and desktop applications.</p>
                     </section>
                   </article>
                 </a>
@@ -49,7 +49,7 @@ class Services extends React.Component{
                     <div className="iconWrapper iconBig"> <i className="icon-light-bulb"></i></div>
                     <section className="boxContent">
                       <h2>Technology Consulting</h2>
-                      <p>We help teams understand trends, and security risks, and create road maps to reach development goals.</p>
+                      <p>We help teams understand new trends, and security risks.</p>
                     </section>
                   </article>
                 </a>
@@ -60,7 +60,7 @@ class Services extends React.Component{
                     <div className="iconWrapper iconBig"> <i className="icon-star-empty"></i></div>
                     <section className="boxContent">
                       <h2>System Integration</h2>
-                      <p>We create software integration solutions allowing companies to integrate with third party platforms.</p>
+                      <p>We create solutions to integrate with third party platforms.</p>
                     </section>
                   </article>
                 </a>
@@ -71,7 +71,7 @@ class Services extends React.Component{
                     <div className="iconWrapper iconBig"> <i className="icon-server"></i></div>
                     <section className="boxContent">
                       <h2>Hosting & Support</h2>
-                      <p>We setup production environments, oversee server security, perform daily backups and monitor performance.</p>
+                      <p>We host production environments and oversee server security.</p>
                     </section>
                   </article>
                 </a>

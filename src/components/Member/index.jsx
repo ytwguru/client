@@ -43,7 +43,7 @@ class Member extends React.Component{
       header : "Message Sent",
       message : "<p>We just received your message </p><p>A member of our team will get in touch with you soon.</p>"
     };
-    return <section className="slice color1" id="memberSlice">
+    return <section className="slice color1" id="memberSlice" style={{paddingTop:"3em", paddingBottom:"3em"}}>
       <div className="container">
         <div className="row mb40">
           <div className="col-md-12">

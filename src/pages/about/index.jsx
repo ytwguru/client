@@ -17,7 +17,7 @@ export default React.createClass({
       />
       <Preloader >
       </Preloader>
-      <div id="globalWrapper" className="localscroll">
+      <div id="globalWrapper" >
         <Header data={{page : "about"}}>
         </Header>
         <MidBreaker data={{id : "paralaxSlice9"   }}>

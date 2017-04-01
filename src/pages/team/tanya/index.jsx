@@ -67,8 +67,6 @@ class Tanya extends React.Component{
       <div id="globalWrapper" className="localscroll">
         <Header data={{page : "team"}}>
         </Header>
-        <MidBreaker data={{id : "paralaxSlice19"   }}>
-        </MidBreaker>
         <Member data={this.getMemberData()}>
         </Member>
       </div>

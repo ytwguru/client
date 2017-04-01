@@ -19,12 +19,12 @@ class SystemIntegration extends React.Component {
       page : "system-integration",
       params : this.props.location.query,
       content: `
-      <p>We create software integration solutions allowing companies to integrate with third party platforms.</p>
+      <p>We create software integration solutions allowing companies to integrate with third party platforms.</p><br/>
       <h3>Manage the complexity</h3>
       <p>We create solutions that allow clients to integrate with complex systems within their organization walls and with
        external partners, suppliers, and clients.  Our system integration specialist will help you manage the complexity
         inherent with technology changes, from requirements planning to architecture, testing, deployment and beyond. 
-        </p>
+        </p><br/>
       <h3>Services to help with integration</h3>
       <p>We offer a complete range of industry leading services to help with integration. 
        These include systems development solutions, platform integration, program management,
@@ -64,8 +64,6 @@ class SystemIntegration extends React.Component {
       <div id="globalWrapper" className="localscroll">
         <Header data={{page : "services"}}>
         </Header>
-        <MidBreaker data={{id : "paralaxSlice19", text: "System Integration", header: true }}>
-        </MidBreaker>
         <Posts  data={this.getServiceData()}>
         </Posts>
       </div>

@@ -18,7 +18,7 @@ class CustomApplicationDevelopment extends React.Component{
         <p>
         We design and develop software tailored to your specific demands in a way
          that ultimately meets all your business goals, expectations, and requirements.
-        </p>
+        </p><br/>
         <h3>
         Latest in web and mobile technologies
         </h3>
@@ -26,14 +26,14 @@ class CustomApplicationDevelopment extends React.Component{
         Our applications are built using the latest in web and mobile technologies
          solving your toughest problems and fitting seamlessly into your current processes
          and systems, to produce measurable results for your business.
-        </p>
+        </p><br/>
         <h3>
         Personalized Solutions
         </h3>
         <p>
         We provide solutions that satisfy customers' needs more precisely than any off-the-shelf product. 
          We have ample experience providing personalized solutions in Media, Entertainment, Education and Talent sourcing.
-        </p>
+        </p><br/>
         <h3>
         Technologies
         </h3>
@@ -78,8 +78,6 @@ class CustomApplicationDevelopment extends React.Component{
       <div id="globalWrapper" className="localscroll">
         <Header data={{page : "services"}}>
         </Header>
-        <MidBreaker data={{id : "paralaxSlice19", text: "Custom Application Development", header: true }}>
-        </MidBreaker>
         <Posts data={this.getServiceData()}>
         </Posts>
       </div>
